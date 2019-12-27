@@ -13,14 +13,14 @@
 	justify-content: center;
 	min-height: 100vh;
 	max-width: 100%;
-	box-shadow: 0 0 3px rgba(0,0,0, 0.5);
+	box-shadow: 0 0 3px $theme-color-2;
 	width: $main-sidebar-width-collapse;
 	transition: $transition-speed $transition-fn;
 	width: $main-sidebar-width;
 	&__icon.svg-inline--fa{
-		margin: .5vw 1vmax;
-		font-size: 1.25vmax;
-		width: 1.75vmax;
+		margin: .5vw 1vw;
+		font-size: 1.25vw;
+		width: 1.75vw;
 	}
 	&__list{
 		list-style: none;
@@ -32,12 +32,6 @@
 			padding-right: 0;
 			line-height: 1;
 			width: 100%;
-			@include media-breakpoint-down(md) {
-				width: 30vw;
-			}			
-			@include media-breakpoint-down(md) {
-				width: 60vw;
-			}
 		}
 	}
 	&__link{
@@ -55,17 +49,17 @@
 		}
 
 		&__text{
-			font-size: .9vmax;
+			font-size: 1vw;
 			transition: $transition-speed $transition-fn;
 		}
 
 	}
 	&__user{
 		&__avatar{
-			width: 7.5vmax;
-			height: 7.5vmax;
-			margin: .25vmax auto;
-			border: solid .25vmax $gray-800;
+			width: 7.5vw;
+			height: 7.5vw;
+			margin: .25vw auto;
+			border: solid .25vw $theme-color-2;
 			border-radius: 100%;
 			transition: $transition-speed $transition-fn;
 			opacity: 1;
@@ -78,7 +72,7 @@
 			font-weight: bold;
 			text-align: center;
 			margin: 0 auto;
-			font-size: 1vmax;
+			font-size: 1vw;
 			opacity: 1;
 			visibility: visible;
 			transition: $transition-speed $transition-fn;
@@ -91,10 +85,10 @@
 				margin-bottom: 0;
 				position: relative;
 				.main-sidebar__icon.svg-inline--fa{
-					margin: .35vmax 1vmax
+					margin: .35vw 1vw
 				}
 				&__text{
-					font-size: 1.1vmax; 
+					font-size: 1.1vw; 
 					opacity: 1;
 					visibility: visible;
 					transition: $transition-speed $transition-fn;
@@ -102,9 +96,9 @@
 			}
 		}
 		&__replenish-balance{
-			color: $gray-800;
-			font-size: 1.5vmax;
-			margin: .25vmax;
+			color: $theme-color-2;
+			font-size: 1.5vw;
+			margin: .25vw;
 			&:hover{
 				color: $theme-color-text;
 			}
@@ -115,17 +109,17 @@
 		background: $theme-color-accent;
 		padding-left: 0;
 		border-bottom-right-radius: $main-sidebar-border-radius;
-		padding-bottom: .5vmax;
-		color: $gray-700;
-		height: 18.75vmax;
+		padding-bottom: .5vw;
+		color: $theme-color-2;
+		height: 18.75vw;
 		overflow: hidden;
 		transition: $transition-speed $transition-fn;
 		&__toggle-ctrl{
 			position: absolute;
-			right: 1.25vw;
+			right: 1.15vw;
 			top: 1.5vw;
 			&__i{
-				font-size: 1.75vmax;
+				font-size: 1.75vw;
 				transition: $transition-speed $transition-fn;
 				cursor: pointer;
 				&:hover{
@@ -135,7 +129,7 @@
 		}
 		&__brand{
 			&-wrapper{
-				padding-top: .75vmax;
+				padding-top: .75vw;
 				max-width: 100%;
 				text-align: center;
 			}
@@ -158,14 +152,14 @@
 				top: 1vw;
 				left: .75vw;
 				display: block;
-				width: 2.5vmax;
+				width: 2.5vw;
 				transition: $transition-speed $transition-fn;
 			}
 		}	
 	}
 	&__body{
 		width: $main-sidebar-width;
-		padding: 1vmax 0;
+		padding: 1vw 0;
 		margin-bottom: auto;
 		@include overflow-scroll-hide();
 	}
@@ -221,40 +215,73 @@
 
 /*burger menu*/
 .bmenu{
-	width:2vw;
-	height: 2vw;
-	transform-origin:center center;
 	transition: $transition-speed $transition-fn;
-	cursor:pointer;
-}
-.bmenu.active{
-}
-.bmenu .part{
-	margin:auto;
-	height: .25vw;
+	position: relative;
 	width: 1.75vw;
-	background: $gray-700;
-	border-radius: 0vw;
-	transform-origin:center right;
-}
-.bmenu .top{
-	transition: $transition-speed $transition-fn;
-	margin-bottom: .25vw;
-}
-.bmenu .bottom{
-	margin-top: .25vw;
-	transition: $transition-speed $transition-fn;
-}
-.bmenu.active .part{
-	opacity: 0;
-}
-.bmenu.active .top{
-	transform: rotate(-45deg);
-	opacity: 1;
-}
-
-.bmenu.active .bottom{
-	opacity: 1;
-	transform: rotate(45deg);
+	height: 1.75vw;
+	#bmenu__toggle{
+		opacity: 0;
+		&:checked{
+			& ~ .bmenu__btn>.bmenu__part{
+				background: transparent;
+				&:before{
+					position: absolute;
+					transform: rotate(45deg);
+					top: 0;
+					left: 0;
+				}
+				&:after{
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+	&__btn{
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		right: 0;
+		height: 100%;
+		margin: 0;
+	}
+	&__part{
+		width: 1.75vw;
+		height: .2vw;
+		display: inline-block;
+		background: $theme-color-2;
+		border-radius: 0;
+		transition: $transition-speed $transition-fn;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, 50%);
+		&:hover{
+			background: darker($theme-color-2, 5);
+			&:before, &:after{
+				background: darker($theme-color-2, 5);
+			}
+		}
+		&:before, &:after{
+			transition: $transition-speed $transition-fn;
+			background: $theme-color-2;
+			position: absolute;
+			content: '';
+			width: inherit;
+			height: inherit;
+			top: 0;
+			left: 0;
+			display: inline-block;
+		}
+		&:before{
+			top: -0.5vw;
+		}
+		&:after{
+			top: .5vw;
+		}
+	}
 }
 

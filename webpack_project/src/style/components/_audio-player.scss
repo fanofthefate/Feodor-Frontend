@@ -3,7 +3,8 @@
 	position: relative;
 	width: $audio-player-width;
 	&__header{
-		background: $audio-player-bg;
+		background: $theme-color-2;
+		transition: $transition-speed $transition-fn;
 		overflow: hidden;
 		padding: 0 .5vmax;
 		height: 100%;
@@ -12,39 +13,45 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: row;
+		&:hover{
+			background: lighter($theme-color-2, 1);
+		}
 	}
 	&__content{
 		position: absolute;
 		width: $audio-player-width;
 		top: $header-height;
-		height: 25vw;
-		background: lighter($audio-player-bg, 1);
+		transition: $transition-speed $transition-fn;
+		max-height: 25vw;
+		background: lighter($theme-color-2, 1);
 		@include overflow-scroll-hide();
-		padding: 1vw;
 		border-bottom-right-radius: $base-border-radius;
 		border-bottom-left-radius: $base-border-radius;
 		box-shadow: 0 0 15px rgba($black, .5);
 		h3{
 			font-size: 1vw;
 			margin-top: 1vw;
+			padding-left: 1vw;
 			margin-bottom: 0;
 			color: darker($theme-color-text, 2);
 		}
 	}
 	&__track-search{
+		padding: 1vw;
 		&__submit{
-			border-color: lighter($audio-player-bg, 3);
-			background: lighter($audio-player-bg, 3);
+			border-color: lighter($theme-color-2, 3);
+			background: lighter($theme-color-2, 3);
 		}
 		&__inp{
-			background: lighter($audio-player-bg, 3);
-			border-color: lighter($audio-player-bg, 3);
+			background: lighter($theme-color-2, 3);
+			border-color: lighter($theme-color-2, 3);
 		}
 	}
 	&__track-list{
 		margin-bottom: 0;
 		list-style: none;
-		padding-left: 0;
+		padding: 1vw;
+		padding-top: 0;
 		max-height: 11vw;
 		@include overflow-scroll-hide();
 		&__item{
@@ -136,12 +143,9 @@
 	align-items: center;
 	flex-direction: row;
 	height: 4.5vw;
-	background: lighter($audio-player-bg, 3);
+	background: lighter($theme-color-2, 3);
 	border-radius: $base-border-radius;
 	padding: .25vw;
-	&:hover{
-		background: lighter($audio-player-bg, 4);
-	}
 	&__cover{
 		height: 100%;
 		width: 4.5vw;

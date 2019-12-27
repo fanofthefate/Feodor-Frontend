@@ -36,14 +36,6 @@ import '../style/app.scss';
   //Открывает левое меню https://prnt.sc/q9zp9n
 
   $('[data-widget="pushmenu"]').on('click', function(){
-    function toggleBurger(){
-      var bmenu = document.querySelector('.bmenu');
-      if(bmenu.className.match('active'))
-        bmenu.className = 'bmenu';
-      else
-        bmenu.className= 'bmenu active';
-    }
-    toggleBurger();
     $('body').toggleClass('main-sidebar-collapse');
   });
 
