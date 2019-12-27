@@ -1,0 +1,176 @@
+
+.chat{
+	position: relative;
+	background: $gray-800;
+	&__close{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		margin-left: 1rem;
+		margin-bottom: .5rem;
+	}
+	&__input-group{
+		border: solid 1px $black;
+		border-radius: 2rem;
+		overflow: hidden;
+		& > .chat__form-control{
+			border-radius: 2rem;
+			border-bottom-right-radius: 2rem !important;
+			border-top-right-radius: 2rem !important; 
+			background: #48494a;
+			font-size: .75rem;
+			z-index: 3;
+			border: none;
+			height: calc(1.6em + 0.75rem + 6px);
+		}
+		.input-group{
+			&-append{
+				margin-left: -1.75rem;
+				.btn{
+					background: $primary;
+					color: $gray-800;
+					border: none;
+					z-index: 2;
+					display: flex;
+					align-items: center;
+					&:hover{
+						background: darker($primary, 2);
+						color: $white;
+					}
+					&:first-child{
+						border-bottom-left-radius: 2rem;
+						border-top-left-radius: 2rem;
+						padding-left: 2.5rem;
+						padding-right: .35rem;
+					}
+					&:last-child{
+						padding-left: .35rem;
+						padding-right: 1rem;
+					}
+				}
+			}
+		}
+	}
+	&__list{
+		height: 450px;
+		overflow-y: scroll; 
+		overflow: -moz-scrollbars-none;
+		-ms-overflow-style: none; 
+		&::-webkit-scrollbar{
+			width: 0;
+		}
+		&__item{
+			margin-bottom: 1rem;
+			border-radius: 1rem;
+			padding: .5rem;
+			&--author{
+				background: #1f232e;
+				display: flex;
+			}
+			&--recent{
+				background: #475d54;
+				display: flex;
+			}
+			&--system{
+				display: flex;
+				background: #6d2329;
+			}
+			&__avatar{
+				width: 25%;
+				height: 25%;
+				border: solid .15rem $primary;
+				padding: 0;
+			}
+			&__content{
+				font-size: 1rem;
+				margin-left: .5rem;
+			}
+			&__author-name{
+				font-weight: $font-weight-bold;
+			}
+			&__recent{
+				font-weight: $font-weight-semibold;
+			}
+			&__text{
+				font-style: italic;
+				color: $gray-300;
+			}
+		}
+	}
+}
+
+.chat--fixed{
+	border-radius: 1.5rem;
+	overflow: hidden;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	width: 350px;
+	max-width: 100%;
+	box-shadow: $box-shadow;
+	border: solid 1px $black;
+	z-index: 9;
+	.h3{
+		font-size: .9rem;
+	}
+	@include media-breakpoint-down(sm){
+		width: 100%;
+		box-shadow: none;
+		border-bottom-right-image: 0;
+		border-bottom-left-radius: 0;
+		margin: 0;
+		right: 0;
+		bottom: 0;
+		.chat__close{
+			font-size: 2rem;
+			color: $white;
+		}
+		.h3{
+			font-size: 1.25rem;
+		}
+	}
+
+	.chat{
+		&__close{
+			outline: none !important;
+			&:active, &:focus{
+				outline: none !important;
+			}
+			&__icon{
+				color: $primary;
+				font-size: 1.25rem;
+			}
+		}
+		&__header{
+			padding-top: .5rem;
+			padding: 1rem;
+			padding-bottom: .25rem;
+		}
+		&__input-group{
+			border-radius: 2rem;
+			& > .chat__form-control{
+				height: 2.5rem;
+				padding-right: 2.5rem;
+			}
+			&__icon{
+				font-size: 1.5rem;
+			}
+			.input-group-append{
+				margin-left: -2rem;
+			}
+		}
+
+		&__list{
+			height: 300px;
+			padding: 0 .5rem;
+			&__item{
+				&__content{
+					font-size: .75rem;
+				}
+			}
+		}
+		&__footer{
+			padding: .25rem;
+		}
+	}
+}

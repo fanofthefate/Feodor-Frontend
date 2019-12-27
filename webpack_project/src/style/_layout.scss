@@ -1,0 +1,21 @@
+body, html {
+	font-family: $font-family-base;
+}
+body{
+	background-color: $body-bg-color;
+	background: $body-bg-image;
+	min-height: 100%;
+	padding-top: $header-height;
+}
+.wrapper{
+	min-height: 100%;
+	position: relative;
+}
+.content-wrapper{
+	margin-left: $main-sidebar-width;
+	transition: margin-left $transition-speed $transition-fn;
+    transition-property: margin-left;
+    transition-duration: $transition-speed;
+    transition-timing-function: $transition-fn;
+    transition-delay: 0s;
+}

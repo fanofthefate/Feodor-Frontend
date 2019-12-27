@@ -1,0 +1,219 @@
+.audio-player{
+	height: 100%;
+	position: relative;
+	width: $audio-player-width;
+	&__header{
+		background: $audio-player-bg;
+		overflow: hidden;
+		padding: 0 .5vmax;
+		height: 100%;
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+	}
+	&__content{
+		position: absolute;
+		width: $audio-player-width;
+		top: $header-height;
+		height: 25vw;
+		background: lighter($audio-player-bg, 1);
+		@include overflow-scroll-hide();
+		padding: 1vw;
+		border-bottom-right-radius: $base-border-radius;
+		border-bottom-left-radius: $base-border-radius;
+		box-shadow: 0 0 15px rgba($black, .5);
+		h3{
+			font-size: 1vw;
+			margin-top: 1vw;
+			margin-bottom: 0;
+			color: darker($theme-color-text, 2);
+		}
+	}
+	&__track-search{
+		&__submit{
+			border-color: lighter($audio-player-bg, 3);
+			background: lighter($audio-player-bg, 3);
+		}
+		&__inp{
+			background: lighter($audio-player-bg, 3);
+			border-color: lighter($audio-player-bg, 3);
+		}
+	}
+	&__track-list{
+		margin-bottom: 0;
+		list-style: none;
+		padding-left: 0;
+		max-height: 11vw;
+		@include overflow-scroll-hide();
+		&__item{
+			margin: .75vw 0;
+		}
+	}
+	&__right-bar{
+		text-align: center;
+		&__logo{
+			height: 2vw;
+		}
+	}
+	&__ctrl{
+		color: darker($theme-color-text, 3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&__prev, &__next, &__play{
+			margin: .25vmax
+		}
+		&__prev, &__next{
+			font-size: 1vmax;
+		}
+		&__play{
+			font-size: 1.75vmax;
+		}
+		&__icon{
+			&:hover{
+				color: $theme-color-text;
+				cursor: pointer;
+			}
+		}
+		&__volume{
+			&-wrapper{
+				margin: 0 .75vmax;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			&__icon{
+				font-size: 1vw;
+			}
+			&__slider{
+				width: 5vmax;
+				max-width: 100%;
+				border: solid 2px $theme-color-text;
+				margin: 0 .25vmax;
+				position: relative;
+				background: $theme-color-text;
+			}
+		}
+	}
+	&__song{
+		margin-bottom: .25vmax;
+		text-align: center;	
+
+	}
+	&__track{
+		font-size: .75vmax;
+		color: $theme-color-text;
+		border-right: solid 1px $gray-700;
+		border-left: solid 1px $gray-700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		&__duration, &__countdown{
+			font-size: .75vw;
+		}
+		&__slider{
+			width: 20vmax;
+			max-width: 90%;
+			border: solid 2px $theme-color-text;
+			background: $theme-color-text;
+			height: 2px;
+			position: relative;
+			margin: 0 .25rem;
+			&-wrapper{
+				margin: 0 .25rem;
+				font-size: .85rem;
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
+.audio-row{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	height: 4.5vw;
+	background: lighter($audio-player-bg, 3);
+	border-radius: $base-border-radius;
+	padding: .25vw;
+	&:hover{
+		background: lighter($audio-player-bg, 4);
+	}
+	&__cover{
+		height: 100%;
+		width: 4.5vw;
+		position: relative;
+		overflow: hidden;
+		border-radius: $base-border-radius;
+		&:hover{
+			filter: brightness(65%);
+			.audio-row__cover__icon{
+				opacity: 1;
+				color: $theme-color-text;
+			}
+		}
+		&__icon{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 2;
+			font-size: 2.5vw;
+			cursor: pointer;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: $transition-speed $transition-fn;
+		}
+		&__banner{
+			top: 0;
+			left: 0;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	&__inner{
+		width: 100%;
+		padding-left: 1vw;
+		position: relative;
+		&__title{
+			font-size: 1.15vw;
+			color: darker($theme-color-text, 3);
+			font-weight: $font-weight-semibold;
+			cursor: pointer;
+			transition: $transition-speed $transition-fn;
+			&:hover{
+				color:$theme-color-text;
+			}
+		}
+		&__author{
+			font-size: .9vw;
+			color: darker($theme-color-text, 5)
+		}
+		&__duration{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 1vmax;
+			font-size: .8vw;
+			color: darker($theme-color-text, 5);
+		}
+	}
+
+
+}
+.slider-dot-control{
+	width: .5vmax;
+	height: .5vmax;
+	border-radius: 100%;
+	background-color: $primary;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translateY(-50%);
+	&:hover{
+		background-color: darker($primary, 3);
+		cursor: pointer;
+	}
+}

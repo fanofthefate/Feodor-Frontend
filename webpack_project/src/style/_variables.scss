@@ -1,0 +1,156 @@
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1900px
+);
+
+// Body
+$body-bg-color: #f8fafc;
+$body-bg-image: url('../public/img/bg.jpg');
+
+// layout
+$header-height: 4vw;
+//sidebar
+$main-sidebar-width: 16.25vmax;
+$main-sidebar-width-collapse: 4vw;
+$main-sidebar-border-radius: 2rem; 
+
+// Transition global options
+$transition-speed: 0.3s;
+$transition-fn: ease-in-out;
+
+// Typography
+$font-family-base: 'Nunito', sans-serif, 'Arial';
+$enable-responsive-font-sizes: true; 
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+$white: #fff;
+$color-lock: #424242;
+$primary: #81c28f;
+
+$theme-color-accent: $primary;
+$theme-color-1: #292b2f; //Почти чёрный
+$theme-color-2: #2e323b; //Очень тёмный синий
+$theme-color-text: $white;
+$theme-color-link: $theme-color-accent;
+
+$audio-player-bg: #383e4c;
+$audio-player-width: 50vw;
+
+
+// custom
+
+$base-border-radius: .5rem;
+$border-radius-lg: .75rem;
+$border-radius-sm: .2rem;
+$border-width: 3px;
+$border-width-lg: 5px;
+
+
+$rounded-pill: 15rem;
+
+$btn-border-width: 2px;
+$btn-border-radius: 1.5rem;
+
+$input-bg: transparent ;
+$input-color: $white;
+$input-placeholder-color: $white;
+$input-border-width: $btn-border-width;
+$input-border-radius: $btn-border-radius;
+
+$font-family-base: 'Montserrat';
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+$font-shadow: 1px 1px 1px rgba($black,.5);
+$font-shadow-primary: 0 0 25px rgba($primary,.75);
+
+$body-color: $white;
+
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow: 0 0 1rem rgba($primary, .75);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .75);
+
+//card
+$card-bg: rgba($gray-600, 0.2);
+$card-border-width: $border-width-lg;
+$card-border-color: $primary;
+
+$jumbotron-padding: 2rem;
+$jumbotron-color: $white;
+
+$jumbotron-bg: rgba($black, 0.2);
+
+.h1, .h2, .h3, .h4, .h5{
+  font-weight: bold;
+}
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+.font-weight-extrabold {
+  font-weight: $font-weight-extrabold;
+}
+.font-weight-black {
+  font-weight: $font-weight-black;
+}
+.font-weight-bold{
+  font-weight: 600;
+}
+.font-color-primary {
+  color: $primary;
+}
+.btn--gradient {
+  @include bg-gradient(lighter($primary, 1), darker($primary, 3));
+}
+.text-center{
+  text-align: center;
+}
+
+.text-shadow--primary {
+  text-shadow: $font-shadow-primary;
+}
+.text-gradient {
+  @include text-gradient(#ccc, #000);
+}
+
+.text-gradient--primary {
+  @include text-gradient($primary, darker($primary, 3));
+}
+.img-responsive{
+  max-width: 100%;
+}
+
+button:focus{
+  outline: none !important;
+}

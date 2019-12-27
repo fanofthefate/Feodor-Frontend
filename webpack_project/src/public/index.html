@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Личный кабинет | Feodor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body class="main-sidebar-collapse">
+  <div class="wrapper">
+    <aside class="main-sidebar sidebar-mini">
+      <div class="main-sidebar__header">
+        <div class="main-sidebar__header__brand-wrapper">
+          <img class="main-sidebar__header__brand-logo" src="./img/logo-feodor__thumb.png" alt="Logo">
+          <a class="main-sidebar__header__toggle-ctrl" data-widget="pushmenu">
+            <div class="bmenu main-sidebar__header__toggle-ctrl__i ">
+              <div class="part top"> </div>
+              <div class="part"> </div>
+              <div class="part bottom"> </div>
+            </div>
+          </a>
+          <a class="main-sidebar__header__brand-link" href="/">feodor.io</a>
+        </div>
+        <div class="main-sidebar__user">
+          <div class="main-sidebar__user__avatar">
+            <img src="./img/avatar-icon-images.jpg" alt="Аватар" width="50">
+          </div>
+          <div class="main-sidebar__user__name">Андрей Архипов</div>
+          <ul class="main-sidebar__list main-sidebar__user__info">
+            <li class="main-sidebar__list__item main-sidebar__user__info__item"><i class="main-sidebar__icon fas fa-envelope"></i> 
+              <span class="main-sidebar__user__info__item__text">archipov@feodor.io</span>
+            </li>
+            <li class="main-sidebar__list__item main-sidebar__user__info__item"><i class="main-sidebar__icon fas fa-phone-alt"></i> 
+              <span class="main-sidebar__user__info__item__text">+7(987) 654-32-10</span>
+            </li>
+            <li class="main-sidebar__list__item main-sidebar__user__info__item"><i class="main-sidebar__icon fas fa-wallet"></i> 
+              <span class="main-sidebar__user__info__item__text">2 500 ₽</span> 
+              <a class="main-sidebar__user__replenish-balance" href="#"><i class="
+               fas fa-plus-circle"></i></a>
+             </li>
+           </ul>
+         </div>
+       </div>
+       <div class="main-sidebar__body">
+        <ul class="main-sidebar__list">
+          <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#"><i class="main-sidebar__icon fas fa-newspaper"></i> <span class="main-sidebar__link__text">Новости</span></a></li>
+          <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#"><i class="main-sidebar__icon fas fa-unlock"></i> <span class="main-sidebar__link__text">Мои курсы</span></a></li>
+          <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#"><i class="main-sidebar__icon fas fa-book"></i> <span class="main-sidebar__link__text">Продукты</span></a></li>
+          <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#"><i class="main-sidebar__icon fas fa-video"></i> <span class="main-sidebar__link__text">Обучающие видео</span></a></li>
+        </ul>  
+      </div>
+      <div class="main-sidebar__footer">
+        <ul class="main-sidebar__support">
+         <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#CHAT" data-toggle="collapse"><i class="main-sidebar__icon fas fa-comment"></i> <span class="main-sidebar__link__text">Чат</span></a></li>
+         <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#"><i class="main-sidebar__icon fas fa-headset"></i> <span class="main-sidebar__link__text">Тех.Поддержка</span></a></li>
+         <li class="main-sidebar__list__item"><a class="main-sidebar__link" href="#"><i class="main-sidebar__icon fas fa-phone-alt"></i> <span class="main-sidebar__link__text">8 800 800-00-00</span></a></li>
+       </ul>
+     </div>
+   </aside>
+
+   <!-- content wrapper -->
+   <section class="personal-cabinet content-wrapper">
+
+    <header class="header">
+      <div class="header__left">
+        <form action="#" class="search-form header__search-form input-group">
+          <button class="search-form__submit header__search-form__submit"><i class="fas fa-search"></i></button>
+          <input class="form-control search-form__inp header__search-form__inp" type="text" name="search-query" id="search-query" placeholder="Поиск по сайту...">
+        </form>
+      </div>
+      <div class="audio-player">
+        <div class="audio-player__header">
+          <div class="audio-player__ctrl col">
+            <div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
+            <div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
+            <div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
+            <div class="audio-player__ctrl__volume-wrapper">
+              <i class="audio-player__ctrl__volume__icon fas fa-volume-down"></i>
+              <div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
+              <i class="audio-player__ctrl__volume__icon fas fa-volume-up"></i>
+            </div>
+          </div>
+          <div class="audio-player__track col">
+            <div class="audio-player__song">
+              <div class="audio-player__song__title">My Stupid Mouth</div>
+              <div class="audio-player__song__author">John Mayer - Room for Squares</div>
+            </div>
+            <div class="audio-player__track__slider-wrapper">
+              <div class="audio-player__track__duration">2:20</div>
+              <div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
+              <div class="audio-player__track__countdown">-1:23</div>
+            </div>
+          </div>
+          <div class="audio-player__right-bar col">
+            <img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music" data-target="#audio-player__content" data-toggle="collapse">
+          </div>
+        </div>
+      </div>
+      <div id="audio-player__content" class="audio-player__content collapse">
+        <div class="audio-player__track-search-wrapper">
+          <form action="#" class="search-form audio-player__track-search input-group">
+            <button class="search-form__submit audio-player__track-search__submit"><i class="fas fa-search"></i></button>
+            <input class="form-control search-form__inp audio-player__track-search__inp" type="text" name="search-query" id="search-query" placeholder="Поиск музыки...">
+          </form>
+          <h3>Результаты поиска</h3>
+          <ul class="audio-player__track-list">
+            <li class="audio-player__track-list__item">
+              <div class="audio-row">
+                <div class="audio-row__cover">
+                  <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+                  <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+                </div> 
+                <div class="audio-row__inner">
+                  <div class="audio-row__inner__title">Пачка сигарет</div>
+                  <div class="audio-row__inner__author">Виктор Цой</div>
+                  <div class="audio-row__inner__duration">2:20</div>
+                </div>
+              </div>     
+            </li>         
+          </ul>
+        </div>
+        <div class="audio-player__my-track">
+          <h3>Мои записи</h3>
+          <ul class="audio-player__track-list">
+            <li class="audio-player__track-list__item">
+              <div class="audio-row">
+                <div class="audio-row__cover">
+                  <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+                  <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+                </div> 
+                <div class="audio-row__inner">
+                  <div class="audio-row__inner__title">Пачка сигарет</div>
+                  <div class="audio-row__inner__author">Виктор Цой</div>
+                  <div class="audio-row__inner__duration">2:20</div>
+                </div>
+              </div>     
+            </li>         
+            <li class="audio-player__track-list__item">
+              <div class="audio-row">
+                <div class="audio-row__cover">
+                  <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+                  <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+                </div> 
+                <div class="audio-row__inner">
+                  <div class="audio-row__inner__title">Пачка сигарет</div>
+                  <div class="audio-row__inner__author">Виктор Цой</div>
+                  <div class="audio-row__inner__duration">2:20</div>
+                </div>
+              </div>     
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="container-fluid">
+      <!-- Тип Экзамена -->
+      <section class="personal-cabinet__home-page">
+        <div class="row">
+          <h2 class="h2 personal-cabinet__home-page__h2 ">Перейти на платформу</h2>
+          <nav class="nav personal-cabinet__home-page__nav">
+            <div class="card card__exam">
+              <img class="card__exam__img" src="./img/card__exam-img--1.jpg" alt="ЕГЭ">
+              <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ЕГЭ</div>
+            </div>      
+            <div class="card card__exam">
+              <img class="card__exam__img" src="./img/card__exam-img--2.jpg" alt="ЕГЭ">
+              <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ОГЭ</div>
+            </div>      
+            <div class="card card__exam card__exam--lock">
+              <img class="card__exam__img" src="./img/card__exam-img--3.jpg" alt="ЕГЭ">
+              <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> KIDS</div>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Кабинет -->
+      <section class="personal-cabinet__interface" >
+        <!-- begin nav -->
+        <div class="school-items-slider swiper-container">
+          <div class="school-items-slider__wrapper swiper-wrapper">
+            <!-- begin nav-item -->
+            <div class="school-items-slider__item swiper-slide">
+              <div class="school-items-slider__item__sale-shevron"><span class="nav__el__sale-shevron__number">-50%</span></div>
+              <h2 class="school-items-slider__item__title">Метематика</h2>
+              <p class="school-items-slider__item__info">Выберете уровень:</p>
+              <ul class="school-items-slider__item__list">
+               <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Порог</a></li>
+               <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Хорошо</a></li>
+               <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Отлично</a></li>
+             </ul>
+             <img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
+           </div>           
+           <!-- nav-item -->
+           <div class="school-items-slider__item swiper-slide">
+            <h2 class="school-items-slider__item__title">Английский язык</h2>
+            <p class="school-items-slider__item__info">Выберете уровень:</p>
+            <ul class="school-items-slider__item__list">
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
+           </ul>
+           <img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         </div> 
+
+         <!-- nav-item -->
+         <div class="school-items-slider__item swiper-slide">
+           <h2 class="school-items-slider__item__title">Русский язык</h2>
+           <p class="school-items-slider__item__info">Выберете уровень:</p>
+           <ul class="school-items-slider__item__list">
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
+           </ul>
+           <img src="./img/math-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         </div>     
+         <!-- nav-item -->
+         <div class="school-items-slider__item swiper-slide">
+          <h2 class="school-items-slider__item__title">Физика</h2>
+          <img src="./img/physics-bg.png" alt="Предмет" class="school-items-slider__item__img">
+          <div class="school-items-slider__item__lock">
+           <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img" alt="Lock">
+           <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         </div>
+       </div>     
+       <!-- nav-item -->
+       <div class="school-items-slider__item swiper-slide">
+         <h2 class="school-items-slider__item__title">Обществознание</h2>
+         <img src="./img/chemistry-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         <div class="school-items-slider__item__lock">
+           <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
+           <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         </div>
+       </div>
+       <!-- nav-item -->
+       <div class="school-items-slider__item swiper-slide">
+         <h2 class="school-items-slider__item__title">Английский язык</h2>
+         <img src="./img/social-science-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         <div class="school-items-slider__item__lock">
+           <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
+           <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- end nav -->
+
+   <!-- audio player -->
+   <div class="audio-player personal-cabinet__interface__audio-player" style="display: none;">
+    <div class="audio-player__ctrl col">
+      <div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
+      <div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
+      <div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
+      <div class="audio-player__ctrl__volume-wrapper">
+        <i class="fas fa-volume-down"></i>
+        <div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
+        <i class="fas fa-volume-up"></i>
+      </div>
+    </div>
+    <div class="audio-player__track col">
+      <div class="audio-player__songr">
+        <div class="audio-player__song__title">My Stupid Mouth</div>
+        <div class="audio-player__song__author">John Mayer - Room for Squares</div>
+      </div>
+      <div class="audio-player__track__slider-wrapper">
+        <div class="audio-player__track__duration">2:20</div>
+        <div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
+        <div class="audio-player__track__countdown">-1:23</div>
+      </div>
+    </div>
+    <div class="audio-player__right-bar col">
+      <img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music">
+    </div>
+  </div>
+  <!-- END audio player -->
+
+</section>
+
+<!-- Экзамен -->
+
+<section class="test-exam personal-cabinet__test-exam" style="display: none;">
+  <div class="row">
+    <aside class="test-exam__sidebar col-sm-3">
+      <header class="test-exam__sidebar__header">
+        <h3 class="h4 test-exam__sidebar__header__offer test-exam__h3">Русский язык</h3>
+        <img class="test-exam__sidebar__header__img" src="./img/russian-bg.png" alt=""> 
+      </header>
+      <div class="test-exam__type"><span class="font-weight-bold">Теория</span></div>
+      <div class="test-exam__thame"><span class="font-weight-bold">Тема:</span> Далеко-далеко за словесными горами в стране.</div>
+      <nav class="test-exam__nav">
+        <ul class="test-exam__nav__list">
+          <li class="test-exam__nav__list__item active">Задание 1</li>
+          <li class="test-exam__nav__list__item">Задание 2</li>
+          <li class="test-exam__nav__list__item">Задание 3</li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="test-exam__body col-sm-9">
+      <h3 class="test-exam__h3"><span class="font-weight-bold">Тема:</span> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h3>
+      <div class="test-exam__text-block">
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Строчка вопроса послушавшись дороге, ipsum города домах то которой, вскоре заглавных инициал дал если они приставка о правилами меня пунктуация деревни рыбными буквенных путь повстречался всеми. Вскоре которое большой рекламных единственное свой пустился рыбными. Журчит оксмокс бросил жаренные языком сих щеке текст снова грустный пояс если большой он семь свой, силуэт эта злых над даль единственное букв подзаголовок несколько? Большого имеет, возвращайся которой за моей текстами великий последний домах инициал скатился необходимыми города, выйти снова родного переписывается над своего послушавшись большой дороге правилами эта там буквенных свое семь! Продолжил, даль.</p>
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстов на берегу которое несколько прямо рот, домах собрал города над продолжил всеми буквенных жизни переулка текста свой последний, его рукопись. Вскоре что вопрос реторический дорогу мир курсивных все над толку домах которой на берегу точках, путь возвращайся, напоивший знаках дал продолжил семь, свой, журчит силуэт! Снова города но предупредила там текст рыбными рыбного себя рот которой напоивший заглавных безопасную продолжил маленькая возвращайся всеми силуэт, маленький взгляд мир своего текстами жизни меня за о. Бросил запятой рот они сбить переписывается. Своего решила послушавшись злых грустный жаренные от всех журчит, рыбными о свой дал.</p>
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель продолжил большой путь, рыбными использовало маленькая текста дал. Свою, домах всеми его все решила жаренные дал коварный дорогу возвращайся, страна скатился злых переписали, рукописи алфавит своего имеет переписывается! Назад бросил агенство, своего толку переписывается живет семантика букв последний путь ты, переписали великий силуэт предупреждал журчит. Заголовок последний мир путь, прямо сбить которой напоивший. Лучше даль несколько текст, домах это текста рекламных наш, ведущими, lorem коварный взгляд парадигматическая! За образ заманивший бросил продолжил запятых деревни прямо взгляд, моей однажды дороге что инициал родного возвращайся решила имени, переписали заголовок гор текстами.</p>
+      </div>
+      <ul class="test-exam__choice-answer-list">
+        <li class="test-exam__choice-answer-list__item">
+          <div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio1">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</label>
+          </div>
+        </li>
+        <li class="test-exam__choice-answer-list__item">       
+         <div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Далеко-далеко за словесными горами в стране, гласных и согласных.</label>
+        </div>
+      </li>
+      <li class="test-exam__choice-answer-list__item">
+        <div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+          <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio3">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Даже ему города, домах своих.</label>
+        </div>
+      </li>
+      <li class="test-exam__choice-answer-list__item">
+        <div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+          <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio4">Далеко-далеко за словесными горами в стране.</label>
+        </div>
+      </li>
+      <li class="test-exam__choice-answer-list__item">        
+        <div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+          <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio5">Далеко-далеко за словесными.</label>
+        </div>
+      </li>
+    </ul>
+    <div class="test-exam__btn-block">
+      <button type="button" class="btn test-exam__btn">Принять</button>
+    </div>
+  </div>
+</div>
+</section>
+
+</div> <!-- containder fluid end -->
+</section> <!-- END main wrapper -->
+
+<!-- Чат -->
+<div id="CHAT" class="chat collapse chat--fixed" role="modal">
+  <div class="chat__header" >
+    <h3 class="h3">Чат</h3>
+    <button type="button" class="close chat__close" data-target="#CHAT" data-toggle="collapse">
+      <span aria-hidden="true"><i class="fas chat__close__icon fa-times"></i></span>
+    </button>
+  </div>
+  <div class="chat__body">
+    <div class="chat__list">
+      <div class="chat__list__item chat__list__item--author">
+        <img class="chat__list__item__avatar col-2" src="./img/avatar-boy.svg" alt="Аватар">
+        <div class="chat__list__item__content">
+          <span class="chat__list__item__author-name">Андрей</span>: <span class="chat__list__item__recent">Анастасия</span> <span class="chat__list__item__text">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+          </span>
+        </div>
+      </div>      
+      <div class="chat__list__item chat__list__item--recent">
+        <img class="chat__list__item__avatar avatar col-2" src="./img/avatar-boy.svg" alt="Аватар">
+        <div class="chat__list__item__content">
+          <span class="chat__list__item__author-name">Анастасия</span>: <span class="chat__list__item__recent">Андрей</span> <span class="chat__list__item__text">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+          </span>
+        </div>
+      </div>         
+      <div class="chat__list__item chat__list__item--recent">
+        <img class="chat__list__item__avatar avatar col-2" src="./img/avatar-boy.svg" alt="Аватар">
+        <div class="chat__list__item__content">
+          <span class="chat__list__item__author-name">Анастасия</span>: <span class="chat__list__item__recent">Андрей</span> <span class="chat__list__item__text">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+          </span>
+        </div>
+      </div>      
+
+      <div class="chat__list__item chat__list__item--system">
+        <img class="chat__list__item__avatar avatar col-2" src="./img/avatar-boy.svg" alt="Аватар">
+        <div class="chat__list__item__content">
+          <span class="chat__list__item__author-name">FEODOR.IO</span>: <span class="chat__list__item__text">
+            <b>FO2020</b> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chat__footer">
+    <div class="input-group chat__input-group">
+      <input type="text" class="form-control chat__form-control" placeholder="Введите сообщение..." aria-label="Отправить сообщение">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button"><i class="chat__input-group__icon far fa-laugh"></i></button>
+        <button class="btn btn-outline-secondary" type="button" ><i class="chat__input-group__icon far fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- end wrapper -->
+<app></app>
+</body>
+</html>
