@@ -11,7 +11,14 @@
       <div class="main-sidebar__header">
         <div class="main-sidebar__header__brand-wrapper">
           <img class="main-sidebar__header__brand-logo" src="./img/logo-feodor__thumb.png" alt="Logo">
-          <a class="main-sidebar__header__toggle-ctrl" data-widget="pushmenu"><i class="main-sidebar__header__toggle-ctrl__i fas fa-bars"></i></a>
+          <a class="main-sidebar__header__toggle-ctrl" >
+            <div class="bmenu main-sidebar__header__toggle-ctrl__i" >
+            	<input id="bmenu__toggle" type="checkbox" />
+            	<label class="bmenu__btn" for="bmenu__toggle" data-widget="pushmenu">
+              	<span class="bmenu__part"></span>
+               </label>
+            </div>
+          </a>
           <a class="main-sidebar__header__brand-link" href="/">feodor.io</a>
         </div>
         <div class="main-sidebar__user">
@@ -63,211 +70,211 @@
       </div>
       <div class="audio-player">
         <div class="audio-player__header">
-        <div class="audio-player__ctrl col">
-          <div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
-          <div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
-          <div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
-          <div class="audio-player__ctrl__volume-wrapper">
-            <i class="audio-player__ctrl__volume__icon fas fa-volume-down"></i>
-            <div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
-            <i class="audio-player__ctrl__volume__icon fas fa-volume-up"></i>
+          <div class="audio-player__ctrl col">
+            <div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
+            <div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
+            <div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
+            <div class="audio-player__ctrl__volume-wrapper">
+              <i class="audio-player__ctrl__volume__icon fas fa-volume-down"></i>
+              <div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
+              <i class="audio-player__ctrl__volume__icon fas fa-volume-up"></i>
+            </div>
+          </div>
+          <div class="audio-player__track col">
+            <div class="audio-player__song">
+              <div class="audio-player__song__title">My Stupid Mouth</div>
+              <div class="audio-player__song__author">John Mayer - Room for Squares</div>
+            </div>
+            <div class="audio-player__track__slider-wrapper">
+              <div class="audio-player__track__duration">2:20</div>
+              <div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
+              <div class="audio-player__track__countdown">-1:23</div>
+            </div>
+          </div>
+          <div class="audio-player__right-bar col">
+            <img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music" data-target="#audio-player__content" data-toggle="collapse">
           </div>
         </div>
-        <div class="audio-player__track col">
-          <div class="audio-player__song">
-            <div class="audio-player__song__title">My Stupid Mouth</div>
-            <div class="audio-player__song__author">John Mayer - Room for Squares</div>
-          </div>
-          <div class="audio-player__track__slider-wrapper">
-            <div class="audio-player__track__duration">2:20</div>
-            <div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
-            <div class="audio-player__track__countdown">-1:23</div>
-          </div>
+      </div>
+      <div id="audio-player__content" class="audio-player__content collapse">
+        <div class="audio-player__track-search-wrapper">
+          <form action="#" class="search-form audio-player__track-search input-group">
+            <button class="search-form__submit audio-player__track-search__submit"><i class="fas fa-search"></i></button>
+            <input class="form-control search-form__inp audio-player__track-search__inp" type="text" name="search-query" id="search-query" placeholder="Поиск музыки...">
+          </form>
+          <h3>Результаты поиска</h3>
+          <ul class="audio-player__track-list">
+            <li class="audio-player__track-list__item">
+              <div class="audio-row">
+                <div class="audio-row__cover">
+                  <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+                  <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+                </div> 
+                <div class="audio-row__inner">
+                  <div class="audio-row__inner__title">Пачка сигарет</div>
+                  <div class="audio-row__inner__author">Виктор Цой</div>
+                  <div class="audio-row__inner__duration">2:20</div>
+                </div>
+              </div>     
+            </li>         
+          </ul>
         </div>
-        <div class="audio-player__right-bar col">
-          <img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music" data-target="#audio-player__content" data-toggle="collapse">
+        <div class="audio-player__my-track">
+          <h3>Мои записи</h3>
+          <ul class="audio-player__track-list">
+            <li class="audio-player__track-list__item">
+              <div class="audio-row">
+                <div class="audio-row__cover">
+                  <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+                  <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+                </div> 
+                <div class="audio-row__inner">
+                  <div class="audio-row__inner__title">Пачка сигарет</div>
+                  <div class="audio-row__inner__author">Виктор Цой</div>
+                  <div class="audio-row__inner__duration">2:20</div>
+                </div>
+              </div>     
+            </li>         
+            <li class="audio-player__track-list__item">
+              <div class="audio-row">
+                <div class="audio-row__cover">
+                  <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+                  <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+                </div> 
+                <div class="audio-row__inner">
+                  <div class="audio-row__inner__title">Пачка сигарет</div>
+                  <div class="audio-row__inner__author">Виктор Цой</div>
+                  <div class="audio-row__inner__duration">2:20</div>
+                </div>
+              </div>     
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div id="audio-player__content" class="audio-player__content collapse">
-      <div class="audio-player__track-search-wrapper">
-        <form action="#" class="search-form audio-player__track-search input-group">
-          <button class="search-form__submit audio-player__track-search__submit"><i class="fas fa-search"></i></button>
-          <input class="form-control search-form__inp audio-player__track-search__inp" type="text" name="search-query" id="search-query" placeholder="Поиск музыки...">
-        </form>
-        <h3>Результаты поиска</h3>
-        <ul class="audio-player__track-list">
-          <li class="audio-player__track-list__item">
-            <div class="audio-row">
-              <div class="audio-row__cover">
-                <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
-                <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
-              </div> 
-              <div class="audio-row__inner">
-                <div class="audio-row__inner__title">Пачка сигарет</div>
-                <div class="audio-row__inner__author">Виктор Цой</div>
-                <div class="audio-row__inner__duration">2:20</div>
-              </div>
-            </div>     
-          </li>         
-        </ul>
-      </div>
-      <div class="audio-player__my-track">
-        <h3>Мои записи</h3>
-        <ul class="audio-player__track-list">
-          <li class="audio-player__track-list__item">
-            <div class="audio-row">
-              <div class="audio-row__cover">
-                <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
-                <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
-              </div> 
-              <div class="audio-row__inner">
-                <div class="audio-row__inner__title">Пачка сигарет</div>
-                <div class="audio-row__inner__author">Виктор Цой</div>
-                <div class="audio-row__inner__duration">2:20</div>
-              </div>
-            </div>     
-          </li>         
-          <li class="audio-player__track-list__item">
-            <div class="audio-row">
-              <div class="audio-row__cover">
-                <img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
-                <div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
-              </div> 
-              <div class="audio-row__inner">
-                <div class="audio-row__inner__title">Пачка сигарет</div>
-                <div class="audio-row__inner__author">Виктор Цой</div>
-                <div class="audio-row__inner__duration">2:20</div>
-              </div>
-            </div>     
-          </li>
-        </ul>
-      </div>
-    </div>
 
-  </header>
+    </header>
 
-  <div class="container-fluid">
-    <!-- Тип Экзамена -->
-    <section class="personal-cabinet__home-page">
-      <div class="row">
-        <h2 class="h2 personal-cabinet__home-page__h2 ">Перейти на платформу</h2>
-        <nav class="nav personal-cabinet__home-page__nav">
-          <div class="card card__exam">
-            <img class="card__exam__img" src="./img/card__exam-img--1.jpg" alt="ЕГЭ">
-            <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ЕГЭ</div>
-          </div>      
-          <div class="card card__exam">
-            <img class="card__exam__img" src="./img/card__exam-img--2.jpg" alt="ЕГЭ">
-            <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ОГЭ</div>
-          </div>      
-          <div class="card card__exam card__exam--lock">
-            <img class="card__exam__img" src="./img/card__exam-img--3.jpg" alt="ЕГЭ">
-            <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> KIDS</div>
-          </div>
-        </nav>
-      </div>
-    </section>
+    <div class="container-fluid">
+      <!-- Тип Экзамена -->
+      <section class="personal-cabinet__home-page">
+        <div class="row">
+          <h2 class="h2 personal-cabinet__home-page__h2 ">Перейти на платформу</h2>
+          <nav class="nav personal-cabinet__home-page__nav">
+            <div class="card card__exam">
+              <img class="card__exam__img" src="./img/card__exam-img--1.jpg" alt="ЕГЭ">
+              <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ЕГЭ</div>
+            </div>      
+            <div class="card card__exam">
+              <img class="card__exam__img" src="./img/card__exam-img--2.jpg" alt="ЕГЭ">
+              <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ОГЭ</div>
+            </div>      
+            <div class="card card__exam card__exam--lock">
+              <img class="card__exam__img" src="./img/card__exam-img--3.jpg" alt="ЕГЭ">
+              <div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> KIDS</div>
+            </div>
+          </nav>
+        </div>
+      </section>
 
-    <!-- Кабинет -->
-    <section class="personal-cabinet__interface" >
-      <!-- begin nav -->
-      <div class="school-items-slider swiper-container">
-        <div class="school-items-slider__wrapper swiper-wrapper">
-          <!-- begin nav-item -->
-          <div class="school-items-slider__item swiper-slide">
-            <div class="school-items-slider__item__sale-shevron"><span class="nav__el__sale-shevron__number">-50%</span></div>
-            <h2 class="school-items-slider__item__title">Метематика</h2>
+      <!-- Кабинет -->
+      <section class="personal-cabinet__interface" >
+        <!-- begin nav -->
+        <div class="school-items-slider swiper-container">
+          <div class="school-items-slider__wrapper swiper-wrapper">
+            <!-- begin nav-item -->
+            <div class="school-items-slider__item swiper-slide">
+              <div class="school-items-slider__item__sale-shevron"><span class="nav__el__sale-shevron__number">-50%</span></div>
+              <h2 class="school-items-slider__item__title">Метематика</h2>
+              <p class="school-items-slider__item__info">Выберете уровень:</p>
+              <ul class="school-items-slider__item__list">
+               <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Порог</a></li>
+               <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Хорошо</a></li>
+               <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Отлично</a></li>
+             </ul>
+             <img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
+           </div>           
+           <!-- nav-item -->
+           <div class="school-items-slider__item swiper-slide">
+            <h2 class="school-items-slider__item__title">Английский язык</h2>
             <p class="school-items-slider__item__info">Выберете уровень:</p>
             <ul class="school-items-slider__item__list">
-             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Порог</a></li>
-             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Хорошо</a></li>
-             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Отлично</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
            </ul>
            <img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
-         </div>           
+         </div> 
+
          <!-- nav-item -->
          <div class="school-items-slider__item swiper-slide">
-          <h2 class="school-items-slider__item__title">Английский язык</h2>
-          <p class="school-items-slider__item__info">Выберете уровень:</p>
-          <ul class="school-items-slider__item__list">
-           <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
-           <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
-           <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
-         </ul>
-         <img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
-       </div> 
-
-       <!-- nav-item -->
-       <div class="school-items-slider__item swiper-slide">
-         <h2 class="school-items-slider__item__title">Русский язык</h2>
-         <p class="school-items-slider__item__info">Выберете уровень:</p>
-         <ul class="school-items-slider__item__list">
-           <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
-           <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
-           <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
-         </ul>
-         <img src="./img/math-bg.png" alt="Предмет" class="school-items-slider__item__img">
+           <h2 class="school-items-slider__item__title">Русский язык</h2>
+           <p class="school-items-slider__item__info">Выберете уровень:</p>
+           <ul class="school-items-slider__item__list">
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
+             <li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
+           </ul>
+           <img src="./img/math-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         </div>     
+         <!-- nav-item -->
+         <div class="school-items-slider__item swiper-slide">
+          <h2 class="school-items-slider__item__title">Физика</h2>
+          <img src="./img/physics-bg.png" alt="Предмет" class="school-items-slider__item__img">
+          <div class="school-items-slider__item__lock">
+           <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img" alt="Lock">
+           <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         </div>
        </div>     
        <!-- nav-item -->
        <div class="school-items-slider__item swiper-slide">
-        <h2 class="school-items-slider__item__title">Физика</h2>
-        <img src="./img/physics-bg.png" alt="Предмет" class="school-items-slider__item__img">
-        <div class="school-items-slider__item__lock">
-         <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img" alt="Lock">
-         <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         <h2 class="school-items-slider__item__title">Обществознание</h2>
+         <img src="./img/chemistry-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         <div class="school-items-slider__item__lock">
+           <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
+           <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         </div>
        </div>
-     </div>     
-     <!-- nav-item -->
-     <div class="school-items-slider__item swiper-slide">
-       <h2 class="school-items-slider__item__title">Обществознание</h2>
-       <img src="./img/chemistry-bg.png" alt="Предмет" class="school-items-slider__item__img">
-       <div class="school-items-slider__item__lock">
-         <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
-         <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
-       </div>
-     </div>
-     <!-- nav-item -->
-     <div class="school-items-slider__item swiper-slide">
-       <h2 class="school-items-slider__item__title">Английский язык</h2>
-       <img src="./img/social-science-bg.png" alt="Предмет" class="school-items-slider__item__img">
-       <div class="school-items-slider__item__lock">
-         <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
-         <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+       <!-- nav-item -->
+       <div class="school-items-slider__item swiper-slide">
+         <h2 class="school-items-slider__item__title">Английский язык</h2>
+         <img src="./img/social-science-bg.png" alt="Предмет" class="school-items-slider__item__img">
+         <div class="school-items-slider__item__lock">
+           <img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
+           <p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+         </div>
        </div>
      </div>
    </div>
- </div>
- <!-- end nav -->
+   <!-- end nav -->
 
- <!-- audio player -->
- <div class="audio-player personal-cabinet__interface__audio-player" style="display: none;">
-  <div class="audio-player__ctrl col">
-    <div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
-    <div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
-    <div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
-    <div class="audio-player__ctrl__volume-wrapper">
-      <i class="fas fa-volume-down"></i>
-      <div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
-      <i class="fas fa-volume-up"></i>
+   <!-- audio player -->
+   <div class="audio-player personal-cabinet__interface__audio-player" style="display: none;">
+    <div class="audio-player__ctrl col">
+      <div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
+      <div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
+      <div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
+      <div class="audio-player__ctrl__volume-wrapper">
+        <i class="fas fa-volume-down"></i>
+        <div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
+        <i class="fas fa-volume-up"></i>
+      </div>
+    </div>
+    <div class="audio-player__track col">
+      <div class="audio-player__songr">
+        <div class="audio-player__song__title">My Stupid Mouth</div>
+        <div class="audio-player__song__author">John Mayer - Room for Squares</div>
+      </div>
+      <div class="audio-player__track__slider-wrapper">
+        <div class="audio-player__track__duration">2:20</div>
+        <div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
+        <div class="audio-player__track__countdown">-1:23</div>
+      </div>
+    </div>
+    <div class="audio-player__right-bar col">
+      <img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music">
     </div>
   </div>
-  <div class="audio-player__track col">
-    <div class="audio-player__songr">
-      <div class="audio-player__song__title">My Stupid Mouth</div>
-      <div class="audio-player__song__author">John Mayer - Room for Squares</div>
-    </div>
-    <div class="audio-player__track__slider-wrapper">
-      <div class="audio-player__track__duration">2:20</div>
-      <div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
-      <div class="audio-player__track__countdown">-1:23</div>
-    </div>
-  </div>
-  <div class="audio-player__right-bar col">
-    <img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music">
-  </div>
-</div>
-<!-- END audio player -->
+  <!-- END audio player -->
 
 </section>
 
