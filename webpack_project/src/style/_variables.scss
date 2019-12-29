@@ -10,18 +10,11 @@ $grid-breakpoints: (
   lg: 1024px,
   xl: 1200px,
   xxl: 1900px
-);
+  );
 
 // Body
 $body-bg-color: #f8fafc;
 $body-bg-image: url('../public/img/bg.jpg');
-
-// layout
-$header-height: 4vw;
-//sidebar
-$main-sidebar-width: 18vmax;
-$main-sidebar-width-collapse: 4vw;
-$main-sidebar-border-radius: 2rem; 
 
 // Transition global options
 $transition-speed: 0.3s;
@@ -58,35 +51,32 @@ $white: #fff;
 $color-lock: #424242;
 $primary: #81c28f;
 
+// Colors Theme
 $theme-color-accent: $primary;
 $theme-color-1: #292b2f; //Почти чёрный
-$theme-color-2: #2e323b; //Очень тёмный синий
+$theme-color-2: #2e323b; // Тёмнл синий
 $theme-color-text: $white;
 $theme-color-link: $theme-color-accent;
 
-$audio-player-width: 50vw;
+//buttons
+$btn-border-width: 2px;
+$btn-border-radius: 2rem;
 
-
-// custom
-
+//Border
 $base-border-radius: .5rem;
 $border-radius-lg: .75rem;
 $border-radius-sm: .2rem;
 $border-width: 3px;
 $border-width-lg: 5px;
 
-
-$rounded-pill: 15rem;
-
-$btn-border-width: 2px;
-$btn-border-radius: 1.5rem;
-
+//Inputs
 $input-bg: transparent ;
 $input-color: $white;
 $input-placeholder-color: $white;
 $input-border-width: $btn-border-width;
 $input-border-radius: $btn-border-radius;
 
+//Fonts
 $font-family-base: 'Montserrat';
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
@@ -95,21 +85,43 @@ $font-weight-black: 900;
 $font-shadow: 1px 1px 1px rgba($black,.5);
 $font-shadow-primary: 0 0 25px rgba($primary,.75);
 
-$body-color: $white;
-
+//Shadows
 $box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
-$box-shadow: 0 0 1rem rgba($primary, .75);
+$box-shadow: 0 0 1rem rgba($black, .4);
 $box-shadow-lg: 0 1rem 3rem rgba($black, .75);
+
+// layout
+$header-height: 4vw;
+
+//sidebar
+$nav-sidebar-width: 18vmax;
+$nav-sidebar-width-collapse: 4vw;
+$nav-sidebar-border-radius: 2rem;
+$nav-sidebar-z-index: 900;
+
+//header
+$header-z-index: $nav-sidebar-z-index - 10;
 
 //card
 $card-bg: rgba($gray-600, 0.2);
 $card-border-width: $border-width-lg;
 $card-border-color: $primary;
 
-$jumbotron-padding: 2rem;
-$jumbotron-color: $white;
+//Аудио плейер
+$audio-player-width: 50vw;
+$audio-player-z-index: $nav-sidebar-z-index + 10;
 
-$jumbotron-bg: rgba($black, 0.2);
+//Чат
+$messanger-warapper-width: 25vw;
+$messanger-warapper-bg: #525b6e;
+$messanger-warapper-z-index: $nav-sidebar-z-index - 10;
+$messanger-dialog-card-height: 5vw;
+$messanger-message-bg--recent: $purple;
+$messanger-message-bg--author: $primary;
+$messanger-message-border-radius: $nav-sidebar-border-radius;
+$messanger-footer-height: 100%;
+$messanger-body-height: 100vh;
+
 
 .h1, .h2, .h3, .h4, .h5{
   font-weight: bold;
@@ -149,7 +161,18 @@ $jumbotron-bg: rgba($black, 0.2);
 .img-responsive{
   max-width: 100%;
 }
-
+*::selection{
+  background: rgba($theme-color-1, .75);
+}
 button:focus{
   outline: none !important;
+}
+
+%overflow-scroll-hide{
+  overflow-y: scroll; 
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; 
+  &::-webkit-scrollbar{
+    width: 0;
+  }
 }

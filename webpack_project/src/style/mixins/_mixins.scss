@@ -4,12 +4,10 @@
     position: absolute;
     content: "";
 }
-
-@mixin overflow-scroll-hide(){
-		overflow-y: scroll; 
-		overflow: -moz-scrollbars-none;
-		-ms-overflow-style: none; 
-		&::-webkit-scrollbar{
-			width: 0;
-		}
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
 }

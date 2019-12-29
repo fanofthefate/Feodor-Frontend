@@ -1,46 +1,215 @@
-
-.chat{
-	position: relative;
-	background: $gray-800;
-	&__close{
-		position: absolute;
-		right: 10px;
-		top: 10px;
-		margin-left: 1rem;
-		margin-bottom: .5rem;
+.messanger{
+	&-wrapper{
+		width: $messanger-warapper-width;
+		background: $messanger-warapper-bg;
+		position: fixed;
+		overflow: hidden;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		z-index: $messanger-warapper-z-index;
+		padding-right: $nav-sidebar-width-collapse;
+		border-bottom-left-radius: $nav-sidebar-border-radius;
+		border-top-left-radius: $nav-sidebar-border-radius;
+		box-shadow: $box-shadow;
 	}
-	&__input-group{
-		border: solid 1px $black;
+	&__body{
+		max-height: $messanger-body-height;
+		@extend %overflow-scroll-hide;
+		padding-bottom: 1vw;
+	}
+	&__footer{
+		width: 100%;
+		height: $messanger-footer-height;
+		&__input-text{
+			margin: 0 auto;
+		}
+	}
+	&__dialog-card{
+		position: relative;
+		height: $messanger-dialog-card-height;
+		&:hover{
+			background: lighter($messanger-warapper-bg, 1);
+		}
+		&__avatar{
+			position: absolute;
+			width: $messanger-dialog-card-height;
+			height: $messanger-dialog-card-height;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			overflow: hidden;
+			cursor: pointer;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			&__img{
+				position: absolute;
+				border-radius: 100%;
+				width: $messanger-dialog-card-height * .8;
+				height: $messanger-dialog-card-height * .8;
+				top: 50%;
+				right: 50%;
+				transform: translate(50%, -50%);
+			}
+			&__initials{
+				@extend .messanger__dialog-card__avatar__img;
+				@include  bg-gradient($theme-color-accent, darker($theme-color-accent, 3));
+				color: $theme-color-text;
+				text-transform: uppercase;
+				display: flex;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5vw;
+			}
+		}
+		&__inner{
+			margin-left: $messanger-dialog-card-height;
+			height: 100%;
+			padding-left: .25vw;
+			padding-right: 2vw;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+		}
+		&__title{
+			cursor: pointer;
+			font-size: 1vw;
+			font-weight: 600;
+			color: $theme-color-text;
+		}
+		&__desc{
+			cursor: pointer;
+			line-height: 1.4;
+			font-size: .8vw;
+			color: lighter($theme-color-text, 2);
+			opacity: .75;
+			font-weight: 200;
+		}
+		&__list{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&__header{
+		background: lighter($theme-color-2, 1);
+		transition: $transition-speed $transition-fn;
+		box-shadow: $box-shadow;
+	}
+	&__title{
+		padding: .75vw 1vw .75vw 2vw;
+		color: $theme-color-text;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		margin-right: -$nav-sidebar-width-collapse;
+		background: inherit;
+		font-size: 1.25vw;
+		&__text{
+			font-weight: 600;
+			font-size: 1vw;
+			margin: 0;
+		}
+		&__icon{
+			font-size: 1.5vw;
+			margin-right: .75vw
+		}
+	}
+	&__search{
+		.messanger__search-form{
+			&__submit{
+				background: inherit;
+				border-radius: 0;
+				padding-right: .75vw;
+				padding-left: .75vw;
+				border-color: lighter($theme-color-2, 1);
+			}
+			&__inp{
+				background: inherit;
+				padding-left: .5vw;
+				border-color: lighter($theme-color-2, 1);
+				border-radius: 0;
+				font-size: 1vw;
+				box-shadow: none;
+				&:focus{
+					background: lighter($theme-color-2, 2);
+				}
+			}
+		}
+	}
+	&__action-menu{
+		padding: .25vw;
+		&__list{
+			list-style-type: none;
+			padding-left: 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin: 0;
+			&__item{
+				display: flex;
+				align-items: center;
+				color: $theme-color-text;
+				font-size: .8vw;
+				margin: 0 .25vw;
+				opacity: .6;
+				border-radius: $base-border-radius;
+				cursor: pointer;
+				&__icon{
+					font-size: 1vw;
+					margin-right: .25vw;
+				}
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__input-text{
 		border-radius: 2rem;
 		overflow: hidden;
-		& > .chat__form-control{
+		border: solid 3px $theme-color-2;
+		max-width: 100%;
+		width: 20vw;
+		> .messanger__form-control{
 			border-radius: 2rem;
 			border-bottom-right-radius: 2rem !important;
 			border-top-right-radius: 2rem !important; 
-			background: #48494a;
+			background: lighten($theme-color-2, 8);
 			font-size: .75rem;
 			z-index: 3;
 			border: none;
 			height: calc(1.6em + 0.75rem + 6px);
+			&:focus{
+				box-shadow: none;
+				background: lighten($theme-color-2, 12);
+			}
+		}
+		&__icon{
+			font-size: 1.25vw;
 		}
 		.input-group{
 			&-append{
 				margin-left: -1.75rem;
 				.btn{
-					background: $primary;
-					color: $gray-800;
+					background: $theme-color-2;
+					color: $theme-color-text;
 					border: none;
 					z-index: 2;
 					display: flex;
 					align-items: center;
 					&:hover{
-						background: darker($primary, 2);
-						color: $white;
+						background: darker($theme-color-2, 2);
+						color: darker($theme-color-text, 4);
 					}
 					&:first-child{
-						border-bottom-left-radius: 2rem;
-						border-top-left-radius: 2rem;
-						padding-left: 2.5rem;
+						border-bottom-left-radius: $btn-border-radius;
+						border-top-left-radius: $btn-border-radius;
+						padding-left: 2.15rem;
 						padding-right: .35rem;
 					}
 					&:last-child{
@@ -51,126 +220,95 @@
 			}
 		}
 	}
-	&__list{
-		height: 450px;
-		overflow-y: scroll; 
-		overflow: -moz-scrollbars-none;
-		-ms-overflow-style: none; 
-		&::-webkit-scrollbar{
-			width: 0;
-		}
-		&__item{
-			margin-bottom: 1rem;
-			border-radius: 1rem;
-			padding: .5rem;
-			&--author{
-				background: #1f232e;
-				display: flex;
-			}
-			&--recent{
-				background: #475d54;
-				display: flex;
-			}
-			&--system{
-				display: flex;
-				background: #6d2329;
-			}
-			&__avatar{
-				width: 25%;
-				height: 25%;
-				border: solid .15rem $primary;
-				padding: 0;
-			}
-			&__content{
-				font-size: 1rem;
-				margin-left: .5rem;
-			}
-			&__author-name{
-				font-weight: $font-weight-bold;
-			}
-			&__recent{
-				font-weight: $font-weight-semibold;
-			}
-			&__text{
-				font-style: italic;
-				color: $gray-300;
+	&__dialog{
+		&__history{
+			@include clearfix;
+			&-fixer{
+				min-height: 8.5vw;
+				width: 100%;
+				clear: both;
 			}
 		}
-	}
-}
-
-.chat--fixed{
-	border-radius: 1.5rem;
-	overflow: hidden;
-	position: fixed;
-	right: 5%;
-	bottom: 5%;
-	width: 350px;
-	max-width: 100%;
-	box-shadow: $box-shadow;
-	border: solid 1px $black;
-	z-index: 9;
-	.h3{
-		font-size: .9rem;
-	}
-	@include media-breakpoint-down(sm){
-		width: 100%;
-		box-shadow: none;
-		border-bottom-right-image: 0;
-		border-bottom-left-radius: 0;
-		margin: 0;
-		right: 0;
-		bottom: 0;
-		.chat__close{
-			font-size: 2rem;
-			color: $white;
-		}
-		.h3{
-			font-size: 1.25rem;
-		}
-	}
-
-	.chat{
-		&__close{
-			outline: none !important;
-			&:active, &:focus{
-				outline: none !important;
-			}
-			&__icon{
-				color: $primary;
-				font-size: 1.25rem;
-			}
+		&__title{
+			padding-left: 1vw;
+			padding-bottom: 0;
 		}
 		&__header{
-			padding-top: .5rem;
-			padding: 1rem;
-			padding-bottom: .25rem;
-		}
-		&__input-group{
-			border-radius: 2rem;
-			& > .chat__form-control{
-				height: 2.5rem;
-				padding-right: 2.5rem;
+			&__avatar{
+				margin-right: .5vw;
+				width: 4vw;
+				height: 4vw;
+				border-radius: 100%;
 			}
-			&__icon{
-				font-size: 1.5rem;
-			}
-			.input-group-append{
-				margin-left: -2rem;
+			&__meta{
+				display: block;
+				font-size: .75vw;
+				opacity: .75;
+				font-weight: 200;
+				line-height: 1;
 			}
 		}
-
-		&__list{
-			height: 300px;
-			padding: 0 .5rem;
-			&__item{
-				&__content{
-					font-size: .75rem;
+		
+		&__message{
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			margin-bottom: 1vw;
+			max-width: 80%;
+			&__author{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				&__avatar{
+					margin-right: .5vw;
+					border-radius: 100%;
+					width: 2.5vw;
+					height: 2.5vw;
+				}
+				&__name{
+					color: $theme-color-text;
+					font-size: .9vw;
+				}
+			}
+			&__content{
+				color: $theme-color-text;
+				background: lighter($theme-color-1, 1);
+				padding: .5vw 1vw;
+				font-size: .9vw;
+				line-height: 1.4;
+				margin-top: .5vw;
+			}
+			&--recent{
+				float: left;
+				.messanger__dialog__message{
+					&__author{
+						padding-left: 1vw;
+					}
+					&__content{
+						background: $messanger-message-bg--recent;
+						@include bg-gradient($messanger-message-bg--recent, darker($messanger-message-bg--recent, 2));
+						border-top-right-radius: $messanger-message-border-radius;
+						border-bottom-right-radius: $messanger-message-border-radius;
+					}
+				}
+			}
+			&--author{
+				float: right;
+				margin-right: 0;
+				.messanger__dialog__message{
+					&__author{
+						padding-right: 1vw;
+						justify-content: flex-end;
+					}
+					&__content{
+						background: $messanger-message-bg--author;
+						@include bg-gradient($messanger-message-bg--author, darker($messanger-message-bg--author, 2));
+						border-bottom-left-radius: $messanger-message-border-radius;
+						border-top-left-radius: $messanger-message-border-radius;
+					}
 				}
 			}
 		}
-		&__footer{
-			padding: .25rem;
-		}
 	}
+
 }
