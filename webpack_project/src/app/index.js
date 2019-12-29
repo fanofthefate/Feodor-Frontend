@@ -77,9 +77,6 @@ import '../style/app.scss';
       case 'back-link':
          $(target).hide();
          break;
-      default:
-        return false;
-        break;
     }
 
 
