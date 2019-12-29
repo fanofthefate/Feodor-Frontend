@@ -34,6 +34,7 @@
 	}
 	&__dialog-card{
 		position: relative;
+		display: block;
 		height: $messanger-dialog-card-height;
 		&:hover{
 			background: lighter($messanger-warapper-bg, 1);
@@ -228,6 +229,13 @@
 		}
 	}
 	&__dialog{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: $messanger-warapper-z-index +10;
+		max-height: 100vh;
+		background: $messanger-warapper-bg;
+		padding-right: $nav-sidebar-width-collapse;
 		&__history{
 			@include clearfix;
 			&-fixer{

@@ -60,12 +60,32 @@ import '../style/app.scss';
     _autoHeightDialogHistory();
   };
 
-$('[data-target="messanger"]').on('click' , function(){
-  let target = $(this).attr('href');
-  $('.messanger-wrapper').toggleClass('open');
-  $(target).toggleClass('active');
-  $(this).toggleClass('active');
-});
+  $('[data-target]').on('click' , function(){
+    let target_type = $(this).data('target'),
+    target = $(this).attr('href');
+
+    switch(target_type){
+      case 'messanger':
+        $('.messanger-wrapper').toggleClass('open');
+        $(target).toggleClass('active');
+        $(this).toggleClass('active');
+        break;
+      case 'dialog':
+        $(target).show();
+        _autoHeightDialogHistory();
+        break;
+      case 'back-link':
+         $(target).hide();
+         break;
+      default:
+        return false;
+        break;
+    }
+
+
+
+
+  });
 })(jQuery);
 
 
