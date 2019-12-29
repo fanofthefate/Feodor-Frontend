@@ -12,6 +12,11 @@
 		border-bottom-left-radius: $nav-sidebar-border-radius;
 		border-top-left-radius: $nav-sidebar-border-radius;
 		box-shadow: $box-shadow;
+		transition: $transition-speed $transition-fn;
+		transform: translateX(100%);
+		&.open{
+			transform: translateX(0);
+		}
 	}
 	&__body{
 		max-height: $messanger-body-height;

@@ -44,6 +44,9 @@
 			transition: $transition-speed $transition-fn;
 		}
 	}
+	&__link.active{
+		color: $primary;
+	}
 	&__icon.svg-inline--fa{
 		margin: .5vw 1vw;
 		font-size: 1.25vw;
