@@ -44,21 +44,28 @@ import '../style/app.scss';
 
   function _autoHeightDialogHistory(){
     let msgDlg__header = document.querySelector('.messanger__dialog__header'),
-    msgDlg__footer = document.querySelector('.messanger__dialog__footer'),
-    msgDlg__history = document.querySelector('.messanger__dialog__history');
+        msgDlg__footer = document.querySelector('.messanger__dialog__footer'),
+        msgDlg__history = document.querySelector('.messanger__dialog__history'),
+        msgDlg__wrapper = document.querySelector('.messanger-wrapper');
 
-    let w_h = document.documentElement.clientHeight,
-    msgDlg__header_h = msgDlg__header.offsetHeight,
-    msgDlg__footer_h = msgDlg__header.offsetHeight,
-    msgDlg__history_h = w_h - msgDlg__footer_h - msgDlg__header_h;
-
-    msgDlg__history.style.height = msgDlg__history_h+'px';
+    let msgDlg__wrapper_h = msgDlg__wrapper.offsetHeight,
+        msgDlg__header_h = msgDlg__header.offsetHeight,
+        msgDlg__footer_h = msgDlg__footer.offsetHeight,
+        msgDlg__history_h = msgDlg__wrapper_h - msgDlg__footer_h - msgDlg__header_h;
+        console.log(msgDlg__wrapper_h);
+        console.log(msgDlg__header_h);
+        console.log(msgDlg__footer_h);
+        console.log(msgDlg__history_h);
+        msgDlg__history.style.height = msgDlg__wrapper_h - msgDlg__footer_h - msgDlg__header_h+'px';
   }
-  _autoHeightDialogHistory();
 
-  window.onresize = function() {
+_autoHeightDialogHistory();
+window.onresize = function() {
     _autoHeightDialogHistory();
-  };
+};
+
 
 })(jQuery);
+
+
 

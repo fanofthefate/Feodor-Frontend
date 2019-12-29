@@ -21,6 +21,8 @@
 	&__footer{
 		width: 100%;
 		height: $messanger-footer-height;
+		padding: .5vw;
+		padding-top: 0;
 		&__input-text{
 			margin: 0 auto;
 		}
