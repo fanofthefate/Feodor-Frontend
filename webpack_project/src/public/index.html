@@ -52,7 +52,7 @@
 				</div>
 				<div class="sidebar__footer">
 					<ul class="sidebar__list sidebar-left__list__support">
-						<li class="sidebar__list__item"><a class="sidebar__link"><i class="sidebar__icon fas fa-comment"></i> <span class="sidebar__link__text">Чат</span></a></li>
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-comment"></i> <span class="sidebar__link__text">Чат</span></a></li>
 						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-headset"></i> <span class="sidebar__link__text">Тех.Поддержка</span></a></li>
 						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-phone-alt"></i> <span class="sidebar__link__text">8 800 800-00-00</span></a></li>
 					</ul>
@@ -377,65 +377,63 @@
 			<section class="messanger">
 				<div class="messanger-wrapper">
 					<!-- Группы -->
-					<div id="messanger-groups" class="messanger-groups" >
-						<div class="messanger-groups__list">
-							<div class="messanger__header">
-								<div class="messanger__header">
-									<div class="messanger__title">
-										<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповой чат</span>
-									</div>
-									<div class="messanger__action-menu">
-										<ul class="messanger__action-menu__list">
-											<li class="messanger__action-menu__list__item"><i class="messanger__action-menu__list__item__icon fas fa-plus-circle"></i> Создать группу</li>
-											<li class="messanger__action-menu__list__item"><i class="messanger__action-menu__list__item__icon fas fa-edit"></i> Управление групп</li>
-										</ul>
-									</div>
-									<div class="messanger__search">
-										<form action="#" class="search-form messanger__search-form input-group">
-											<button class="search-form__submit messanger__search-form__submit"><i class="fas fa-search"></i></button>
-											<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск...">
-										</form>
-									</div>
-								</div>
-								<div class="messanger__body">
-									<ul class="messanger__dialog-card__list">
-										<li class="messanger__dialog-card__list__item">
-											<a class="messanger__dialog-card messanger__groupe-card" data-target="dialog" href="#dialog">
-												<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
-													<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
-												</div>
-												<div class="messanger__dialog-card__inner">
-													<div class="messanger__dialog-card__title">Название группы</div>
-													<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
-												</div>
-											</a>
-										</li>											
-
-										<li class="messanger__dialog__list__item">
-											<a class="messanger__dialog-card messanger__groupe-card">
-												<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
-													<div class="messanger__dialog-card__avatar__initials">НГ</div>
-												</div>
-												<div class="messanger__dialog-card__inner">
-													<div class="messanger__dialog-card__title">Название группы</div>
-													<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
-												</div>
-											</a>
-										</li>												
-									</ul>
-								</div>
+					<div id="messanger-groups" class="messanger-groups">
+						<div class="messanger__header">
+							<div class="messanger__title">
+								<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповые чаты</span>
+							</div>
+							<div class="messanger__action-menu" data-action="action-menu-more">
+								<a class="messanger__action-menu__more" href="#"><i class="fas fa-ellipsis-v"></i></a>
+								<ul class="messanger__action-menu__list">
+									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Создать</a></li>
+									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Удалить</a></li>
+									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Редактировать</a></li>
+								</ul>
+							</div>
+							<div class="messanger__search">
+								<form action="#" class="search-form messanger__search-form input-group">
+									<button class="search-form__submit messanger__search-form__submit"><i class="fas fa-search"></i></button>
+									<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск...">
+								</form>
 							</div>
 						</div>
+						<div class="messanger__body">
+							<ul class="messanger__dialog-card__list">
+								<li class="messanger__dialog-card__list__item">
+									<a class="messanger__dialog-card messanger__groupe-card" data-target="dialog" href="#dialog">
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+									</a>
+								</li>											
+								<li class="messanger__dialog__list__item">
+									<a class="messanger__dialog-card messanger__groupe-card">
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<div class="messanger__dialog-card__avatar__initials">НГ</div>
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+									</a>
+								</li>												
+							</ul>
+						</div>
 						<!-- Чат группы -->
-						<div id="dialog" class="messanger__dialog" style="display: none;">
+						<div id="dialog" class="messanger__dialog">
 							<div class="messanger__header messanger__dialog__header">
 								<div class="messanger__title messanger__dialog__title">
 									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
 									<span class="messanger__title__text">Название группы <span class="messanger__dialog__header__meta">139 783 участников</span></span>
 								</div>
-								<div class="messanger__action-menu">
+								<div class="messanger__action-menu"  data-action="action-menu-more">
+									<a class="messanger__action-menu__more" href="#"><i class="fas fa-ellipsis-v"></i></a>
 									<ul class="messanger__action-menu__list">
-										<li class="messanger__action-menu__list__item" data-target="back-link" href="#dialog"><i class="messanger__action-menu__list__item__icon fas fa-long-arrow-alt-left"></i>Назад</li>
+										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" data-target="back-link" href="#dialog">Назад к группам</a></li>
 									</ul>
 								</div>
 								<div class="messanger__search">
@@ -444,44 +442,55 @@
 										<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
 									</form>
 								</div>
+								<div class="messanger__dialog__pinned">
+									<div class="messanger__dialog__pinned__unpin">Открепить</div>
+									<div class="messanger__dialog__pinned__avatar">
+										<img class="messanger__dialog__pinned__avatar__img" src="./img/avatar-icon-images.jpg" alt="">
+									</div>
+									<div class="messanger__dialog__pinned__inner">
+										<div class="messanger__dialog__pinned__title">Закреплённая запись</div>
+										<div class="messanger__dialog__pinned__desc">Далеко-далеко за словесными горами в стране.</div>
+									</div>
+									
+								</div>
 							</div>
 							<div class="messanger__body messanger__dialog__history">
-									<div class="messanger__dialog__message messanger__dialog__message--recent">
-										<div class="messanger__dialog__message__author">
-											<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-											<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
-										</div>
-										<div class="messanger__dialog__message__content">
-											Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
-										</div>		
-									</div>									
-									<div class="messanger__dialog__message messanger__dialog__message--author">
-										<div class="messanger__dialog__message__author">
-											<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-											<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
-										</div>
-										<div class="messanger__dialog__message__content">
-											Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-										</div>		
-									</div>							
-									<div class="messanger__dialog__message messanger__dialog__message--author">
-										<div class="messanger__dialog__message__author">
-											<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-											<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
-										</div>
-										<div class="messanger__dialog__message__content">
-											Далеко-далеко.
-										</div>		
+								<div class="messanger__dialog__message messanger__dialog__message--recent">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
 									</div>
-									<div class="messanger__dialog__message messanger__dialog__message--recent">
-										<div class="messanger__dialog__message__author">
-											<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-											<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
-										</div>
-										<div class="messanger__dialog__message__content">
-											Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
-										</div>		
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
+									</div>		
+								</div>									
+								<div class="messanger__dialog__message messanger__dialog__message--author">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
 									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+									</div>		
+								</div>							
+								<div class="messanger__dialog__message messanger__dialog__message--author">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
+									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко.
+									</div>		
+								</div>
+								<div class="messanger__dialog__message messanger__dialog__message--recent">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
+									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
+									</div>		
+								</div>
 							</div>
 							<div class="messanger__footer messanger__dialog__footer">
 								<div class="messanger__input-text input-group messanger__footer__input-text">

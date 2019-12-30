@@ -86,6 +86,7 @@ $font-shadow: 1px 1px 1px rgba($black,.5);
 $font-shadow-primary: 0 0 25px rgba($primary,.75);
 
 //Shadows
+$box-shadow-xs: 0 1px 3px rgba($black, .1);
 $box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
 $box-shadow: 0 0 1rem rgba($black, .4);
 $box-shadow-lg: 0 1rem 3rem rgba($black, .75);
@@ -119,8 +120,10 @@ $messanger-dialog-card-height: 5vw;
 $messanger-message-bg--recent: $purple;
 $messanger-message-bg--author: $primary;
 $messanger-message-border-radius: $nav-sidebar-border-radius;
+$messanger-header-title-height: 3vw;
 $messanger-footer-height: 100%;
 $messanger-body-height: 100vh;
+$messanger-action-menu-width: 12vw;
 
 
 .h1, .h2, .h3, .h4, .h5{
