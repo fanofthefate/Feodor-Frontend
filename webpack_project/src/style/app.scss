@@ -30,10 +30,15 @@
 
 //feodor styles
 @import "layout";
+@import "base";
+@import "nav";
+@import "components/school-items-slider";
 @import "components/chat";
 @import "components/card";
 @import "components/search";
 @import "components/audio-player";
 @import "header";
 @import "sidebar";
-@import "custom";
+@import "page/personal-cabinet";
+@import "page/test-exam";
+@import "page/sign";

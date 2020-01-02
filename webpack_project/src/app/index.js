@@ -50,6 +50,10 @@ $('[data-action="action-menu-more"]').on('mouseout', function(){
   let  schoolItemsSlider = new Swiper('.school-items-slider', {
     slidesPerView: 5,
     spaceBetween: 20,
+    navigation: {
+      nextEl: '.school-items-slider__navigation__next',
+    prevEl: '.school-items-slider__navigation__prev',
+    },
     mousewheel: {
       sensitivity: 1
     },

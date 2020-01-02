@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный кабинет | Feodor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="./img/favicon/favicon.ico">
+</head>
+<body class="sidebar-left-collapse">
+	<div class="wrapper">
+		<!-- Левый сайдбар -->
+		<aside class="sidebar sidebar-left sidebar-mini">
+			<div class="sidebar-left__header">
+				<div class="sidebar-left__header__brand-wrapper">
+					<img class="sidebar-left__header__brand-logo" src="./img/logo-feodor__thumb.png" alt="Logo">
+					<a class="sidebar__toggle-ctrl sidebar-left__toggle-ctrl" >
+						<div class="bmenu" >
+							<input id="bmenu__left" class="bmenu__toggle" type="checkbox" />
+							<label class="bmenu__btn" for="bmenu__left" data-sidebar="left">
+								<span class="bmenu__part"></span>
+							</label>
+						</div>
+					</a>
+					<a class="sidebar-left__header__brand-link" href="/">feodor.io</a>
+				</div>
+				<div class="sidebar-left__user">
+					<div class="sidebar-left__user__avatar">
+						<img src="./img/avatar-icon-images.jpg" alt="Аватар" width="50">
+					</div>
+					<div class="sidebar-left__user__name">Андрей Архипов</div>
+					<ul class="sidebar__list sidebar-left__user__info">
+						<li class="sidebar__list__item sidebar-left__user__info__item"><i class="sidebar__icon fas fa-envelope"></i> 
+							<span class="sidebar-left__user__info__item__text">archipov@feodor.io</span>
+						</li>
+						<li class="sidebar__list__item sidebar-left__user__info__item"><i class="sidebar__icon fas fa-phone-alt"></i> 
+							<span class="sidebar-left__user__info__item__text">+7(987) 654-32-10</span>
+						</li>
+						<li class="sidebar__list__item sidebar-left__user__info__item"><i class="sidebar__icon fas fa-wallet"></i> 
+							<span class="sidebar-left__user__info__item__text">2 500 ₽</span> 
+							<a class="sidebar-left__user__replenish-balance" href="#"><i class="
+								fas fa-plus-circle"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sidebar__body sidebar-left__body">
+					<ul class="sidebar__list">
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-newspaper"></i> <span class="sidebar__link__text">Новости</span></a></li>
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-unlock"></i> <span class="sidebar__link__text">Мои курсы</span></a></li>
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-book"></i> <span class="sidebar__link__text">Продукты</span></a></li>
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-video"></i> <span class="sidebar__link__text">Обучающие видео</span></a></li>
+					</ul>  
+				</div>
+				<div class="sidebar__footer">
+					<ul class="sidebar__list sidebar-left__list__support">
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-comment"></i> <span class="sidebar__link__text">Чат</span></a></li>
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-headset"></i> <span class="sidebar__link__text">Тех.Поддержка</span></a></li>
+						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-phone-alt"></i> <span class="sidebar__link__text">8 800 800-00-00</span></a></li>
+					</ul>
+				</div>
+			</aside>
+
+			<!-- Правый сайдбар -->
+			<aside class="sidebar sidebar-right sidebar-mini">
+				<a class="sidebar__toggle-ctrl sidebar-right__toggle-ctrl" >
+					<div class="bmenu" >
+						<input id="bmenu__right" class="bmenu__toggle" type="checkbox" />
+						<label class="bmenu__btn" for="bmenu__right" data-sidebar="right">
+							<span class="bmenu__part"></span>
+						</label>
+					</div>
+				</a>
+				<ul class="sidebar__list">
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-comment"></i> <span class="sidebar__link__text">Чат</span></a></li>
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-comments"></i> <span class="sidebar__link__text">Диалоги</span></a></li>
+					<li class="sidebar__list__item"><a class="sidebar__link" data-target="messanger" href="#messanger-groups"><i class="sidebar__icon fas fa-users"></i> <span class="sidebar__link__text">Груповой чат</span></a></li>
+				</ul>  
+				<ul class="sidebar__list">
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-chalkboard-teacher"></i> <span class="sidebar__link__text">Чат с учителем</span></a></li>
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-headset"></i> <span class="sidebar__link__text">Тех.Поддержка</span></a></li>
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-university"></i> <span class="sidebar__link__text">Чат с ВУЗ'ом</span></a></li>
+				</ul>       
+				<ul class="sidebar__list">
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-user-plus"></i> <span class="sidebar__link__text">Добавить друга</span></a></li>
+					<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-music"></i> <span class="sidebar__link__text">Музыка</span></a></li>
+				</ul>
+
+			</aside>
+
+			<!-- content wrapper -->
+			<section class="personal-cabinet content-wrapper">
+				<header class="header">
+					<div class="header__left">
+						<form action="#" class="search-form header__search-form input-group">
+							<button class="search-form__submit header__search-form__submit"><i class="fas fa-search"></i></button>
+							<input class="form-control search-form__inp header__search-form__inp" type="text" name="search-query" id="search-query" placeholder="Поиск по сайту...">
+						</form>
+					</div>
+					<div class="audio-player">
+						<div class="audio-player__header">
+							<div class="audio-player__ctrl col">
+								<div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
+								<div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
+								<div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
+								<div class="audio-player__ctrl__volume-wrapper">
+									<i class="audio-player__ctrl__volume__icon fas fa-volume-down"></i>
+									<div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
+									<i class="audio-player__ctrl__volume__icon fas fa-volume-up"></i>
+								</div>
+							</div>
+							<div class="audio-player__track col">
+								<div class="audio-player__song">
+									<div class="audio-player__song__title">My Stupid Mouth</div>
+									<div class="audio-player__song__author">John Mayer - Room for Squares</div>
+								</div>
+								<div class="audio-player__track__slider-wrapper">
+									<div class="audio-player__track__duration">2:20</div>
+									<div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
+									<div class="audio-player__track__countdown">-1:23</div>
+								</div>
+							</div>
+							<div class="audio-player__right-bar col">
+								<img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music" data-target="#audio-player__content" data-toggle="collapse">
+							</div>
+						</div>
+					</div>
+					<div id="audio-player__content" class="audio-player__content collapse">
+						<div class="audio-player__track-search-wrapper">
+							<form action="#" class="search-form audio-player__track-search input-group">
+								<button class="search-form__submit audio-player__track-search__submit"><i class="fas fa-search"></i></button>
+								<input class="form-control search-form__inp audio-player__track-search__inp" type="text" name="search-query" id="search-query" placeholder="Поиск музыки...">
+							</form>
+							<h3>Результаты поиска</h3>
+							<ul class="audio-player__track-list">
+								<li class="audio-player__track-list__item">
+									<div class="audio-row">
+										<div class="audio-row__cover">
+											<img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+											<div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+										</div> 
+										<div class="audio-row__inner">
+											<div class="audio-row__inner__title">Пачка сигарет</div>
+											<div class="audio-row__inner__author">Виктор Цой</div>
+											<div class="audio-row__inner__duration">2:20</div>
+										</div>
+									</div>     
+								</li>         
+							</ul>
+						</div>
+						<div class="audio-player__my-track">
+							<h3>Мои записи</h3>
+							<ul class="audio-player__track-list">
+								<li class="audio-player__track-list__item">
+									<div class="audio-row">
+										<div class="audio-row__cover">
+											<img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+											<div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+										</div> 
+										<div class="audio-row__inner">
+											<div class="audio-row__inner__title">Пачка сигарет</div>
+											<div class="audio-row__inner__author">Виктор Цой</div>
+											<div class="audio-row__inner__duration">2:20</div>
+										</div>
+									</div>     
+								</li>         
+								<li class="audio-player__track-list__item">
+									<div class="audio-row">
+										<div class="audio-row__cover">
+											<img src="./img/track-cover.jpg" alt="Название" class="audio-row__cover__banner">
+											<div class="audio-row__cover__icon"><i class=" far fa-play-circle"></i></div>
+										</div> 
+										<div class="audio-row__inner">
+											<div class="audio-row__inner__title">Пачка сигарет</div>
+											<div class="audio-row__inner__author">Виктор Цой</div>
+											<div class="audio-row__inner__duration">2:20</div>
+										</div>
+									</div>     
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</header>
+
+				<div class="container-fluid">
+					<!-- Тип Экзамена -->
+					<section class="personal-cabinet__home-page">
+						<div class="row">
+							<h2 class="h2 personal-cabinet__home-page__h2 ">Перейти на платформу</h2>
+							<nav class="nav personal-cabinet__home-page__nav">
+								<div class="card card__exam">
+									<img class="card__exam__img" src="./img/card__exam-img--1.jpg" alt="ЕГЭ">
+									<div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ЕГЭ</div>
+								</div>      
+								<div class="card card__exam">
+									<img class="card__exam__img" src="./img/card__exam-img--2.jpg" alt="ЕГЭ">
+									<div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> ОГЭ</div>
+								</div>      
+								<div class="card card__exam card__exam--lock">
+									<img class="card__exam__img" src="./img/card__exam-img--3.jpg" alt="ЕГЭ">
+									<div class="card__exam__title"><span class="font-weight-bold">FEODOR</span> KIDS</div>
+								</div>
+							</nav>
+						</div>
+					</section>
+
+					<!-- Кабинет -->
+					<section class="personal-cabinet__interface" >
+						<!-- begin nav -->
+						<div class="school-items-slider swiper-container">
+							<div class="school-items-slider__wrapper swiper-wrapper">
+								<!-- begin nav-item -->
+								<div class="school-items-slider__item swiper-slide">
+									<div class="school-items-slider__item__sale-shevron"><span class="nav__el__sale-shevron__number">-50%</span></div>
+									<h2 class="school-items-slider__item__title">Метематика</h2>
+									<p class="school-items-slider__item__info">Выберете уровень:</p>
+									<ul class="school-items-slider__item__list">
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Порог</a></li>
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Хорошо</a></li>
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Отлично</a></li>
+									</ul>
+									<img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
+								</div>           
+								<!-- nav-item -->
+								<div class="school-items-slider__item swiper-slide">
+									<h2 class="school-items-slider__item__title">Английский язык</h2>
+									<p class="school-items-slider__item__info">Выберете уровень:</p>
+									<ul class="school-items-slider__item__list">
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
+									</ul>
+									<img src="./img/russian-bg.png" alt="Предмет" class="school-items-slider__item__img">
+								</div> 
+
+								<!-- nav-item -->
+								<div class="school-items-slider__item swiper-slide">
+									<h2 class="school-items-slider__item__title">Русский язык</h2>
+									<p class="school-items-slider__item__info">Выберете уровень:</p>
+									<ul class="school-items-slider__item__list">
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Junior</a></li>
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Senior</a></li>
+										<li class="school-items-slider__item__list__item"><a class="school-items-slider__item__list__item__link" href="#">Master</a></li>
+									</ul>
+									<img src="./img/math-bg.png" alt="Предмет" class="school-items-slider__item__img">
+								</div>     
+								<!-- nav-item -->
+								<div class="school-items-slider__item swiper-slide">
+									<h2 class="school-items-slider__item__title">Физика</h2>
+									<img src="./img/physics-bg.png" alt="Предмет" class="school-items-slider__item__img">
+									<div class="school-items-slider__item__lock">
+										<img src="./img/lock-bg.png" class="school-items-slider__item__lock__img" alt="Lock">
+										<p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+									</div>
+								</div>     
+								<!-- nav-item -->
+								<div class="school-items-slider__item swiper-slide">
+									<h2 class="school-items-slider__item__title">Обществознание</h2>
+									<img src="./img/chemistry-bg.png" alt="Предмет" class="school-items-slider__item__img">
+									<div class="school-items-slider__item__lock">
+										<img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
+										<p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+									</div>
+								</div>
+								<!-- nav-item -->
+								<div class="school-items-slider__item swiper-slide">
+									<h2 class="school-items-slider__item__title">Английский язык</h2>
+									<img src="./img/social-science-bg.png" alt="Предмет" class="school-items-slider__item__img">
+									<div class="school-items-slider__item__lock">
+										<img src="./img/lock-bg.png" class="school-items-slider__item__lock__img"  alt="Lock">
+										<p class="school-items-slider__item__lock__info">Курс будет доступен <span class="unlock-date">31 февраля</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="school-items-slider__navigation">							
+								<div class="school-items-slider__navigation__button school-items-slider__navigation__prev"><i class="fas fa-arrow-left"></i></div>
+								<div class="school-items-slider__navigation__button"><i class="fas fa-mouse"></i></div>
+								<div class="school-items-slider__navigation__button school-items-slider__navigation__next"><i class="fas fa-arrow-right"></i></div>
+							</div>
+						</div>
+						<!-- end nav -->
+
+						<!-- audio player -->
+						<div class="audio-player personal-cabinet__interface__audio-player" style="display: none;">
+							<div class="audio-player__ctrl col">
+								<div class="audio-player__ctrl__prev"><i class="audio-player__ctrl__icon fas fa-backward"></i></div>
+								<div class="audio-player__ctrl__play"><i class="audio-player__ctrl__icon far fa-play-circle"></i></div>
+								<div class="audio-player__ctrl__next"><i class="audio-player__ctrl__icon fas fa-forward"></i></div>
+								<div class="audio-player__ctrl__volume-wrapper">
+									<i class="fas fa-volume-down"></i>
+									<div class="audio-player__ctrl__volume__slider"><div class="slider-dot-control"></div></div>
+									<i class="fas fa-volume-up"></i>
+								</div>
+							</div>
+							<div class="audio-player__track col">
+								<div class="audio-player__songr">
+									<div class="audio-player__song__title">My Stupid Mouth</div>
+									<div class="audio-player__song__author">John Mayer - Room for Squares</div>
+								</div>
+								<div class="audio-player__track__slider-wrapper">
+									<div class="audio-player__track__duration">2:20</div>
+									<div class="audio-player__track__slider"><div class="slider-dot-control"></div></div>
+									<div class="audio-player__track__countdown">-1:23</div>
+								</div>
+							</div>
+							<div class="audio-player__right-bar col">
+								<img class="audio-player__right-bar__logo" src="./img/logo__feodor-music.png" alt="feodor music">
+							</div>
+						</div>
+						<!-- END audio player -->
+
+					</section>
+
+					<!-- Экзамен -->
+
+					<section class="test-exam personal-cabinet__test-exam" style="display: none;">
+						<div class="row">
+							<aside class="test-exam__sidebar col-sm-3">
+								<header class="test-exam__sidebar__header">
+									<h3 class="h4 test-exam__sidebar__header__offer test-exam__h3">Русский язык</h3>
+									<img class="test-exam__sidebar__header__img" src="./img/russian-bg.png" alt=""> 
+								</header>
+								<div class="test-exam__type"><span class="font-weight-bold">Теория</span></div>
+								<div class="test-exam__thame"><span class="font-weight-bold">Тема:</span> Далеко-далеко за словесными горами в стране.</div>
+								<nav class="test-exam__nav">
+									<ul class="test-exam__nav__list">
+										<li class="test-exam__nav__list__item active">Задание 1</li>
+										<li class="test-exam__nav__list__item">Задание 2</li>
+										<li class="test-exam__nav__list__item">Задание 3</li>
+									</ul>
+								</nav>
+							</aside>
+							<div class="test-exam__body col-sm-9">
+								<h3 class="test-exam__h3"><span class="font-weight-bold">Тема:</span> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h3>
+								<div class="test-exam__text-block">
+									<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Строчка вопроса послушавшись дороге, ipsum города домах то которой, вскоре заглавных инициал дал если они приставка о правилами меня пунктуация деревни рыбными буквенных путь повстречался всеми. Вскоре которое большой рекламных единственное свой пустился рыбными. Журчит оксмокс бросил жаренные языком сих щеке текст снова грустный пояс если большой он семь свой, силуэт эта злых над даль единственное букв подзаголовок несколько? Большого имеет, возвращайся которой за моей текстами великий последний домах инициал скатился необходимыми города, выйти снова родного переписывается над своего послушавшись большой дороге правилами эта там буквенных свое семь! Продолжил, даль.</p>
+									<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстов на берегу которое несколько прямо рот, домах собрал города над продолжил всеми буквенных жизни переулка текста свой последний, его рукопись. Вскоре что вопрос реторический дорогу мир курсивных все над толку домах которой на берегу точках, путь возвращайся, напоивший знаках дал продолжил семь, свой, журчит силуэт! Снова города но предупредила там текст рыбными рыбного себя рот которой напоивший заглавных безопасную продолжил маленькая возвращайся всеми силуэт, маленький взгляд мир своего текстами жизни меня за о. Бросил запятой рот они сбить переписывается. Своего решила послушавшись злых грустный жаренные от всех журчит, рыбными о свой дал.</p>
+									<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель продолжил большой путь, рыбными использовало маленькая текста дал. Свою, домах всеми его все решила жаренные дал коварный дорогу возвращайся, страна скатился злых переписали, рукописи алфавит своего имеет переписывается! Назад бросил агенство, своего толку переписывается живет семантика букв последний путь ты, переписали великий силуэт предупреждал журчит. Заголовок последний мир путь, прямо сбить которой напоивший. Лучше даль несколько текст, домах это текста рекламных наш, ведущими, lorem коварный взгляд парадигматическая! За образ заманивший бросил продолжил запятых деревни прямо взгляд, моей однажды дороге что инициал родного возвращайся решила имени, переписали заголовок гор текстами.</p>
+								</div>
+								<ul class="test-exam__choice-answer-list">
+									<li class="test-exam__choice-answer-list__item">
+										<div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+											<input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio1">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</label>
+										</div>
+									</li>
+									<li class="test-exam__choice-answer-list__item">       
+										<div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+											<input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio2">Далеко-далеко за словесными горами в стране, гласных и согласных.</label>
+										</div>
+									</li>
+									<li class="test-exam__choice-answer-list__item">
+										<div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+											<input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio3">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Даже ему города, домах своих.</label>
+										</div>
+									</li>
+									<li class="test-exam__choice-answer-list__item">
+										<div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+											<input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio4">Далеко-далеко за словесными горами в стране.</label>
+										</div>
+									</li>
+									<li class="test-exam__choice-answer-list__item">        
+										<div class="custom-control custom-radio test-exam__choice-answer-list__item__radio">
+											<input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+											<label class="custom-control-label" for="customRadio5">Далеко-далеко за словесными.</label>
+										</div>
+									</li>
+								</ul>
+								<div class="test-exam__btn-block">
+									<button type="button" class="btn test-exam__btn">Принять</button>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div> <!-- containder fluid end -->
+			</section> <!-- END main wrapper -->
+
+			<!-- Чат -->	
+			<section class="messanger">
+				<div class="messanger-wrapper">
+					<!-- Группы -->
+					<div id="messanger-groups" class="messanger-groups">
+						<div class="messanger__header">
+							<div class="messanger__title">
+								<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповые чаты</span>
+							</div>
+							<div class="messanger__action-menu" data-action="action-menu-more">
+								<a class="messanger__action-menu__more" href="#"><i class="fas fa-ellipsis-v"></i></a>
+								<ul class="messanger__action-menu__list">
+									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Создать</a></li>
+									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Удалить</a></li>
+									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Редактировать</a></li>
+								</ul>
+							</div>
+							<div class="messanger__search">
+								<form action="#" class="search-form messanger__search-form input-group">
+									<button class="search-form__submit messanger__search-form__submit"><i class="fas fa-search"></i></button>
+									<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск...">
+								</form>
+							</div>
+						</div>
+						<div class="messanger__body">
+							<ul class="messanger__dialog-card__list">
+								<li class="messanger__dialog-card__list__item">
+									<a class="messanger__dialog-card messanger__groupe-card" data-target="dialog" href="#dialog">
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+									</a>
+								</li>											
+								<li class="messanger__dialog__list__item">
+									<a class="messanger__dialog-card messanger__groupe-card">
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<div class="messanger__dialog-card__avatar__initials">НГ</div>
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+									</a>
+								</li>												
+							</ul>
+						</div>
+						<!-- Чат группы -->
+						<div id="dialog" class="messanger__dialog">
+							<div class="messanger__header messanger__dialog__header">
+								<div class="messanger__title messanger__dialog__title">
+									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
+									<span class="messanger__title__text">Название группы <span class="messanger__dialog__header__meta">139 783 участников</span></span>
+								</div>
+								<div class="messanger__action-menu"  data-action="action-menu-more">
+									<a class="messanger__action-menu__more" href="#"><i class="fas fa-ellipsis-v"></i></a>
+									<ul class="messanger__action-menu__list">
+										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" data-target="back-link" href="#dialog">Назад к группам</a></li>
+									</ul>
+								</div>
+								<div class="messanger__search">
+									<form action="#" class="search-form messanger__search-form input-group">
+										<button class="search-form__submit messanger__search-form__submit"><i class="fas fa-search"></i></button>
+										<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
+									</form>
+								</div>
+								<div class="messanger__dialog__pinned">
+									<div class="messanger__dialog__pinned__unpin"><i class="fas fa-thumbtack"></i></div>
+									<div class="messanger__dialog__pinned__avatar">
+										<img class="messanger__dialog__pinned__avatar__img" src="./img/avatar-icon-images.jpg" alt="">
+									</div>
+									<div class="messanger__dialog__pinned__inner">
+										<div class="messanger__dialog__pinned__title">Закреплённая запись</div>
+										<div class="messanger__dialog__pinned__desc">Далеко-далеко за словесными горами в стране.</div>
+									</div>
+									
+								</div>
+							</div>
+							<div class="messanger__body messanger__dialog__history">
+								<div class="messanger__dialog__message messanger__dialog__message--recent">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
+									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
+									</div>		
+								</div>									
+								<div class="messanger__dialog__message messanger__dialog__message--author">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
+									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+									</div>		
+								</div>							
+								<div class="messanger__dialog__message messanger__dialog__message--author">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
+									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко.
+									</div>		
+								</div>
+								<div class="messanger__dialog__message messanger__dialog__message--recent">
+									<div class="messanger__dialog__message__author">
+										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
+										<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
+									</div>
+									<div class="messanger__dialog__message__content">
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
+									</div>		
+								</div>
+							</div>
+							<div class="messanger__footer messanger__dialog__footer">
+								<div class="messanger__input-text input-group messanger__footer__input-text">
+									<input type="text" class="form-control messanger__form-control" placeholder="Введите сообщение..." aria-label="Отправить сообщение">
+									<div class="input-group-append">
+										<button class="btn btn-outline-secondary" type="button"><i class="messanger__input-text__icon far fa-laugh"></i></button>
+										<button class="btn btn-outline-secondary" type="button" ><i class="messanger__input-text__icon far fa-paper-plane"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>	
+			
+		</div> <!-- end wrapper -->
+		<app></app>
+	</body>
+	</html>
