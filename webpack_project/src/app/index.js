@@ -9,9 +9,8 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
+
 import '../style/app.scss';
-
-
 
 
 function _autoHeightDialogHistory(){
@@ -33,6 +32,7 @@ function _autoHeightDialogHistory(){
    $('.personal-cabinet__interface').show();
  });
 
+$('[data-toggle="popover"]').popover()
 
 $('[data-action="action-menu-more"]').on('mouseover', function(){
   if ($(this).hasClass('show') == false){
@@ -60,7 +60,6 @@ $('[data-action="action-menu-more"]').on('mouseout', function(){
     on:{
       observerUpdate: function(){
         this.updateSize();
-        console.log('update')
       }
     }
   });
@@ -74,11 +73,9 @@ $('[data-action="action-menu-more"]').on('mouseout', function(){
     }
   });
 
-
-
-  $('[data-target]').on('click' , function(){
-    let target_type = $(this).data('target'),
-    target = $(this).attr('href');
+  $('[data-action]').on('click' , function(){
+    let target_type = $(this).data('action'),
+    target = $(this).data('target');
 
     switch(target_type){
       case 'messanger':
@@ -93,6 +90,17 @@ $('[data-action="action-menu-more"]').on('mouseout', function(){
       case 'back-link':
       $(target).hide();
       break;
+      case 'switch-logo':
+      $('.sign-logo').hide();
+      $(target).show();
+      break;
+      case 'sign-submit':
+        $('.sign__form__phone').hide(); 
+        $('.sign__form__verifiled').show(); 
+        $('#btnSignSubmit').html('Отправить <i class="fas fa-arrow-right"></i>'); 
+        $('[name="typeSignForm"]').attr('disabled', 'disabled'); 
+
+
     }
   });
 

@@ -58,16 +58,19 @@ $theme-color-2: #2e323b; // Тёмнл синий
 $theme-color-text: $white;
 $theme-color-link: $theme-color-accent;
 
+//Border
+$border-radius: 2rem;
+$base-border-radius: .5rem;
+$border-radius-lg: .75rem;
+$border-radius-sm: 2rem;
+$border-width: 3px;
+$border-width-lg: 5px;
+
 //buttons
 $btn-border-width: 2px;
 $btn-border-radius: 2rem;
-
-//Border
-$base-border-radius: .5rem;
-$border-radius-lg: .75rem;
-$border-radius-sm: .2rem;
-$border-width: 3px;
-$border-width-lg: 5px;
+$btn-active-box-shadow: none;
+$btn-focus-box-shadow: none;
 
 //Inputs
 $input-bg: transparent ;
@@ -75,6 +78,7 @@ $input-color: $white;
 $input-placeholder-color: $white;
 $input-border-width: $btn-border-width;
 $input-border-radius: $btn-border-radius;
+$input-btn-focus-box-shadow: none;
 
 //Fonts
 $font-family-base: 'Montserrat';
