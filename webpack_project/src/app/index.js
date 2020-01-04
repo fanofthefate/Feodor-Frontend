@@ -41,7 +41,13 @@ $(document).on('click', function(e){
     if (!$(e.target).closest(action_menu).length) {
         $(action_menu).parent().removeClass('show');
     } else {
-      action_menu.parent().toggleClass('show')
+      action_menu.parent().toggleClass('show');
+      
+    }
+    if ($(e.target).parent().hasClass('show') ) {
+      $(action_menu).siblings().css('z-index', '999999');
+    } else {
+      $(e.target).siblings().css('z-index', '');
     }
     e.stopPropagation();
 });
