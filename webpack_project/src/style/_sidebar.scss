@@ -131,6 +131,18 @@
 		left: 0;
 		border-top-right-radius: $nav-sidebar-border-radius;
 		border-bottom-right-radius: $nav-sidebar-border-radius;
+		&-collapse{
+			.content-wrapper{
+				margin-left: $nav-sidebar-width-collapse;
+			}
+			.sidebar{
+				&-left{
+					&__header{
+						width: $nav-sidebar-width-collapse;
+					}
+				}
+			}
+		}
 		&__toggle-ctrl{
 			right: 1.15vw;
 		}
@@ -231,23 +243,6 @@
 		&__list{
 			&__support{
 				padding-left: 0;
-			}
-		}
-		&-collapse{
-			.sidebar{
-			&-left{
-				&__user{
-					&__name{
-						
-					}
-				}
-				&__header{
-					width: $nav-sidebar-width-collapse;
-				}
-			}
-			.content-wrapper{
-				margin-left: $nav-sidebar-width-collapse;
-			}
 			}
 		}
 	}

@@ -382,14 +382,18 @@
 			<!-- Чат -->	
 			<section class="messanger">
 				<div class="messanger-wrapper">
+				<div class="messanger-control">
+					<div class="messanger-control__item messanger-control__close"><i class="fas fa-times"></i></div>
+					<div class="messanger-control__item messanger-control__back" data-action="back-link" data-target="#dialog"><i class="fas fa-arrow-left"></i></div>
+				</div>
 					<!-- Группы -->
-					<div id="messanger-groups" class="messanger-groups">
+					<div id="messanger-groups" class="messanger-groups messanger__tab">
 						<div class="messanger__header">
 							<div class="messanger__title">
 								<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповые чаты</span>
 							</div>
-							<div class="messanger__action-menu" data-action="action-menu-more">
-								<a class="messanger__action-menu__more" href="#"><i class="fas fa-ellipsis-v"></i></a>
+							<div class="messanger__action-menu">
+								<div class="messanger__action-menu__more" data-action="action-menu-more"><i class="fas fa-ellipsis-v"></i></div>
 								<ul class="messanger__action-menu__list">
 									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Создать</a></li>
 									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Удалить</a></li>
@@ -436,10 +440,13 @@
 									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
 									<span class="messanger__title__text">Название группы <span class="messanger__dialog__header__meta">139 783 участников</span></span>
 								</div>
-								<div class="messanger__action-menu" data-action="action-menu-more">
-									<a class="messanger__action-menu__more" href="#"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="messanger__action-menu" >
+									<div class="messanger__action-menu__more" data-action="action-menu-more"><i class="fas fa-ellipsis-v"></i></div>
 									<ul class="messanger__action-menu__list">
-										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" data-action="back-link" data-target="#dialog">Назад к группам</a></li>
+										<li class="messanger__action-menu__item"><a href="#">Покинуть группу</a></li>
+										<li class="messanger__action-menu__item"><a href="#">Отключить звук</a></li>
+										<li class="messanger__action-menu__item"><a href="#">Пригласить друга</a></li>
+										<li class="messanger__action-menu__item"><a href="#">Добавить в избранное</a></li>
 									</ul>
 								</div>
 								<div class="messanger__search">

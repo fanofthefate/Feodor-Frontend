@@ -59,16 +59,16 @@ $theme-color-text: $white;
 $theme-color-link: $theme-color-accent;
 
 //Border
-$border-radius: 30px;
-$base-border-radius: .5rem;
-$border-radius-lg: .75rem;
-$border-radius-sm: 2rem;
+$border-radius: 1.75vw;
+$base-border-radius: $border-radius;
+$border-radius-lg: .75vw;
+$border-radius-sm: 1vw;
 $border-width: 3px;
 $border-width-lg: 5px;
 
 //buttons
 $btn-border-width: 2px;
-$btn-border-radius: 30px;
+$btn-border-radius: $border-radius;
 $btn-active-box-shadow: none;
 $btn-focus-box-shadow: none;
 
@@ -99,9 +99,9 @@ $box-shadow-lg: 0 1rem 3rem rgba($black, .75);
 $header-height: 4vw;
 
 //sidebar
-$nav-sidebar-width: 18vmax;
+$nav-sidebar-width: 18vw;
 $nav-sidebar-width-collapse: 4vw;
-$nav-sidebar-border-radius: 30px;
+$nav-sidebar-border-radius: $border-radius;
 $nav-sidebar-z-index: 900;
 
 //header
