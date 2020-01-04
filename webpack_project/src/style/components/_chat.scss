@@ -226,20 +226,18 @@
 		}
 	}
 	&__input-text{
-		border-radius: 2rem;
+		border-radius: $input-border-radius;
 		overflow: hidden;
-		border: solid 3px $theme-color-2;
+		border: solid 2px $theme-color-2;
 		max-width: 100%;
 		width: 20vw;
 		> .messanger__form-control{
-			border-radius: 2rem;
-			border-bottom-right-radius: 2rem !important;
-			border-top-right-radius: 2rem !important; 
+			border-radius: $input-border-radius !important;
 			background: lighten($theme-color-2, 8);
-			font-size: .75rem;
+			font-size: .9vw;
 			z-index: 3;
 			border: none;
-			height: calc(1.6em + 0.75rem + 6px);
+			height: calc(1.5vw + .9vw + 4px);
 			&:focus{
 				box-shadow: none;
 				background: lighten($theme-color-2, 12);
