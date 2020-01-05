@@ -61,10 +61,11 @@ $theme-color-link: $theme-color-accent;
 //Border
 $border-radius: 1.75vw;
 $base-border-radius: $border-radius;
-$border-radius-lg: .75vw;
-$border-radius-sm: 1vw;
+$border-radius-lg: 1vw;
+$border-radius-sm: .75vw;
 $border-width: 3px;
-$border-width-lg: 5px;
+$border-width-lg: $border-width * 1.25;
+$border-width-sm: .1vw;
 
 //buttons
 $btn-border-width: 2px;
@@ -121,9 +122,9 @@ $messanger-warapper-width: 25vw;
 $messanger-warapper-bg: #525b6e;
 $messanger-warapper-z-index: $nav-sidebar-z-index - 10;
 $messanger-dialog-card-height: 5vw;
-$messanger-message-bg--recent: $purple;
-$messanger-message-bg--author: $primary;
-$messanger-message-border-radius: $nav-sidebar-border-radius;
+$messanger-message-bg--recent: $theme-color-2;
+$messanger-message-bg--author: transparent;
+$messanger-message-border-radius: $border-radius-sm;
 $messanger-header-title-height: 3vw;
 $messanger-footer-height: 100%;
 $messanger-body-height: 100vh;

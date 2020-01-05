@@ -382,28 +382,28 @@
 			<!-- Чат -->	
 			<section class="messanger">
 				<div class="messanger-wrapper">
-				<div class="messanger-control">
-					<div class="messanger-control__item messanger-control__close"><i class="fas fa-times"></i></div>
-					<div class="messanger-control__item messanger-control__back" data-action="back-link" data-target="#dialog"><i class="fas fa-arrow-left"></i></div>
-				</div>
+					<div class="messanger-control">
+						<div class="messanger-control__item messanger-control__close"><i class="fas fa-times"></i></div>
+						<div class="messanger-control__item messanger-control__back" data-action="back-link" data-target="#dialog"><i class="fas fa-arrow-left"></i></div>
+					</div>
 					<!-- Группы -->
 					<div id="messanger-groups" class="messanger-groups messanger__tab">
 						<div class="messanger__header">
 							<div class="messanger__title">
 								<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповые чаты</span>
 							</div>
-							<div class="messanger__action-menu">
-								<div class="messanger__action-menu__more" data-action="action-menu-more"><i class="fas fa-ellipsis-v"></i></div>
-								<ul class="messanger__action-menu__list">
-									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Создать</a></li>
-									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Удалить</a></li>
-									<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Редактировать</a></li>
-								</ul>
+							<div class="messanger__action-menu dropdown dropleft" >
+								<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+								<div class="messanger__action-menu__list dropdown-menu">
+									<a class="messanger__action-menu__item dropdown-item" href="#">Создать</a>
+									<a class="messanger__action-menu__item dropdown-item" href="#">Удалить</a>
+									<a class="messanger__action-menu__item dropdown-item" href="#">Редактировать</a>
+								</div>
 							</div>
-							<div class="messanger__search">
+							<div class="messanger__search search-form ">
 								<form action="#" class="search-form messanger__search-form input-group">
-									<button class="search-form__submit messanger__search-form__submit"><i class="fas fa-search"></i></button>
-									<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск...">
+									<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
+									<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск...">
 								</form>
 							</div>
 						</div>
@@ -440,19 +440,19 @@
 									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
 									<span class="messanger__title__text">Название группы <span class="messanger__dialog__header__meta">139 783 участников</span></span>
 								</div>
-								<div class="messanger__action-menu" >
-									<div class="messanger__action-menu__more" data-action="action-menu-more"><i class="fas fa-ellipsis-v"></i></div>
-									<ul class="messanger__action-menu__list">
-										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Покинуть группу</a></li>
-										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Отключить звук</a></li>
-										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Пригласить друга</a></li>
-										<li class="messanger__action-menu__item"><a class="messanger__action-menu__link" href="#">Добавить в избранное</a></li>
-									</ul>
+								<div class="messanger__action-menu dropdown dropleft" >
+									<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+									<div class="messanger__action-menu__list dropdown-menu">
+										<a class="messanger__action-menu__item dropdown-item" href="#">Покинуть группу</a>
+										<a class="messanger__action-menu__item dropdown-item" href="#">Отключить звук</a>
+										<a class="messanger__action-menu__item dropdown-item" href="#">Пригласить друга</a>
+										<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в избранное</a>
+									</div>
 								</div>
 								<div class="messanger__search">
 									<form action="#" class="search-form messanger__search-form input-group">
-										<button class="search-form__submit messanger__search-form__submit"><i class="fas fa-search"></i></button>
-										<input class="form-control search-form__inp messanger__search-form__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
+										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
+										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
 									</form>
 								</div>
 								<div class="messanger__dialog__pinned">
@@ -463,7 +463,7 @@
 									<div class="messanger__dialog__pinned__inner">
 										<div class="messanger__dialog__pinned__title">Закреплённая запись</div>
 										<div class="messanger__dialog__pinned__desc">Далеко-далеко за словесными горами в стране.</div>
-										
+
 									</div>
 									<div class="messanger__dialog__pinned__unpin"><i class="fas fa-thumbtack"></i></div>
 								</div>
@@ -471,39 +471,75 @@
 							<div class="messanger__body messanger__dialog__history">
 								<div class="messanger__dialog__message messanger__dialog__message--recent">
 									<div class="messanger__dialog__message__author">
+										<div class="messanger__dialog__message__author__name">Василий Пупкин</div>
 										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-										<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
 									</div>
 									<div class="messanger__dialog__message__content">
-										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
-									</div>		
+										<div class="messanger__dialog__message__text">
+											Далеко-далеко.
+										</div>
+										<div class="messanger__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Ответить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Отметить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Копировать</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Удалить</a>
+											</div>
+										</div>	
+									</div>	
 								</div>									
 								<div class="messanger__dialog__message messanger__dialog__message--author">
-									<div class="messanger__dialog__message__author">
-										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-										<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
-									</div>
 									<div class="messanger__dialog__message__content">
-										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-									</div>		
+										<div class="messanger__dialog__message__text">
+											Далеко-далеко.
+										</div>
+										<div class="messanger__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Ответить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Отметить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Копировать</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Удалить</a>
+											</div>
+										</div>	
+								</div>	
 								</div>							
 								<div class="messanger__dialog__message messanger__dialog__message--author">
-									<div class="messanger__dialog__message__author">
-										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-										<div class="messanger__dialog__message__author__name">Арнольд Шварценеггер</div>
-									</div>
 									<div class="messanger__dialog__message__content">
-										Далеко-далеко.
-									</div>		
+										<div class="messanger__dialog__message__text">
+											Далеко-далеко. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Решила текстов своего себя выйти, страна власти не журчит однажды.
+										</div>
+										<div class="messanger__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Ответить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Отметить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Копировать</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Удалить</a>
+											</div>
+										</div>	
+								</div>		
 								</div>
 								<div class="messanger__dialog__message messanger__dialog__message--recent">
 									<div class="messanger__dialog__message__author">
+										<div class="messanger__dialog__message__author__name">Василий Пупкин</div>
 										<img src="./img/avatar-icon-images.jpg" alt="Андрей Архипов" width="50" class="messanger__dialog__message__author__avatar">
-										<div class="messanger__dialog__message__author__name">Альхаматумени-ибн Хабер аль Фуфырхамат джемадетдин Куль</div>
 									</div>
 									<div class="messanger__dialog__message__content">
-										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек там образ жизни, до, большого, он ведущими пояс родного запятых прямо не коварный первую.
-									</div>		
+										<div class="messanger__dialog__message__text">
+											Далеко-далеко. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+										</div>
+										<div class="messanger__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Ответить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Отметить</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Копировать</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Удалить</a>
+											</div>
+										</div>	
+								</div>		
 								</div>
 							</div>
 							<div class="messanger__footer messanger__dialog__footer">

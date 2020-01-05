@@ -35,23 +35,6 @@ function _autoHeightDialogHistory(){
 $('[data-toggle="popover"]').popover()
 
 
-
-$(document).on('click', function(e){
-  let action_menu = $('[data-action="action-menu-more"]');
-    if (!$(e.target).closest(action_menu).length) {
-        $(action_menu).parent().removeClass('show');
-    } else {
-      action_menu.parent().toggleClass('show');
-      
-    }
-    if ($(e.target).parent().hasClass('show') ) {
-      $(action_menu).siblings().css('z-index', '999999');
-    } else {
-      $(e.target).siblings().css('z-index', '');
-    }
-    e.stopPropagation();
-});
-
   let  schoolItemsSlider = new Swiper('.school-items-slider', {
     slidesPerView: 5,
     spaceBetween: 20,
@@ -86,6 +69,9 @@ $(document).on('click', function(e){
       $('.messanger-wrapper').toggleClass('open');
       $(target).toggleClass('active');
       $(this).toggleClass('active');
+      if (!$('.sidebar-right').hasClass('sidebar-mini')) {
+        $('.sidebar-right').addClass('sidebar-mini');
+      }
       break;
       case 'dialog':
       $(target).show();

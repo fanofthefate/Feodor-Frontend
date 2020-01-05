@@ -252,26 +252,9 @@
 	transition: $transition-speed $transition-fn;
 	position: relative;
 	width: 1.75vw;
-	height: 1.75vw;
+	height: 1.25vw;
 	.bmenu__toggle{
 		opacity: 0;
-		&:checked{
-			& ~ .bmenu__btn>.bmenu__part{
-				background: transparent;
-				&:before{
-					position: absolute;
-					transform: rotate(45deg);
-					top: 0;
-					left: 0;
-				}
-				&:after{
-					position: absolute;
-					top: 0;
-					left: 0;
-					transform: rotate(-45deg);
-				}
-			}
-		}
 	}
 	&__btn{
 		cursor: pointer;
@@ -283,8 +266,8 @@
 		margin: 0;
 	}
 	&__part{
-		width: 1.75vw;
-		height: 3px;
+		width: 1.5vw;
+		height: 2px;
 		display: inline-block;
 		background: $theme-color-2;
 		border-radius: 0;
@@ -311,10 +294,10 @@
 			display: inline-block;
 		}
 		&:before{
-			top: -6px;
+			top: -5px;
 		}
 		&:after{
-			top: 6px;
+			top: 5px;
 		}
 	}
 }

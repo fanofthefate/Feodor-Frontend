@@ -18,8 +18,7 @@
 		}
 	}
 	&__tab{
-		border-radius:  $nav-sidebar-border-radius;
-		overflow: hidden;
+		border-radius: $nav-sidebar-border-radius;
 	}
 	&-control{
 		position: absolute;
@@ -158,42 +157,21 @@
 	}
 	&__search{
 		width: 100%;
-		.messanger__search-form{
-			&__submit{
-				background: inherit;
-				border-radius: 0;
-				padding-right: .75vw;
-				padding-left: .75vw;
-				border-color: lighter($theme-color-2, 1);
-			}
-			&__inp{
-				background: inherit;
-				padding-left: .5vw;
-				border-color: lighter($theme-color-2, 1);
-				border-radius: 0;
-				font-size: 1vw;
-				box-shadow: none;
-				&:focus{
-					background: lighter($theme-color-2, 2);
-				}
-			}
+		padding: .75vw;
+		&__inp{
+			padding-left: .25vw;
+			font-size: .9vw;
 		}
 	}
 	&__action-menu{
-		width: 15%;
+		width: 2.6vw;
 		height: 2.5vw;
 		position: relative;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
-		padding: .25vw;
 		&.show{
-			.messanger__action-menu__list{
-				visibility: visible;
-				pointer-events: auto;
-				opacity: 1;
-				display: block !important;
-			}
+			z-index: 9999999;
 		}
 		&__more{
 			display: inline-flex;
@@ -204,17 +182,18 @@
 			align-items: center;
 			background: lighter($theme-color-2, 1);
 			border-radius: 100%;
+			border: none;
 			&:hover{
 				background: lighter($theme-color-2, 2);
 			}
 			&:active{
 				background: lighter($theme-color-2, 3);
 			}
+			&:before{
+				display: none !important;
+			}
 		}
 		&__list{
-			transition: .1s $transition-fn;
-			position: absolute;
-			pointer-events: none;
 			z-index: $messanger-warapper-z-index + 1;
 			background: lighter($theme-color-2, 1);
 			width: $messanger-action-menu-width;
@@ -223,27 +202,24 @@
 			border: solid 1px $theme-color-2;
 			list-style-type: none;
 			padding-left: 0;
+			border-radius: 0;
+			padding: 0;
 			margin: 0;
-			opacity: 0;
+			margin-top: 1vw;
 			box-shadow: $box-shadow-xs;
 		}
 		&__item{
 			display: flex;
 			align-items: center;
-		}
-		&__link{
 			color: darker($theme-color-text, 2);
 			font-size: .9vw;
 			padding: .5vw;
 			width: 100%;
 			&:hover{
 				text-decoration: none;
+				cursor: pointer;
 				color: $theme-color-text;
 				background: lighter($theme-color-2, 2);
-			}
-			&__icon{
-				font-size: 1vw;
-				margin-right: .25vw;
 			}
 		}
 	}
@@ -304,32 +280,23 @@
 		max-height: 100vh;
 		background: $messanger-warapper-bg;
 		padding-right: $nav-sidebar-width-collapse;
+		border-top-left-radius: $nav-sidebar-border-radius;
 		&__pinned{
 			max-height: 6vw;
 			position: relative;
 			overflow: hidden;
 			width: 100%;
-			background: lighter($theme-color-2, 1);
+			background: lightner($theme-color-2, 1);
 			display: flex;
-			flex-wrap: wrap;
 			justify-content: center;
-			padding: .5vw 0;
-			box-shadow: $box-shadow;
-			&:after{
-				@include pseudo;
-				bottom: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				z-index: 9999;
-				box-shadow: 
-				inset 0 0 0 rgba(0, 0, 0, 0), 
-				inset 0 -2.25vw 1vw -1vw rgba(lighter($theme-color-2, 1), 1);
-			}
+			padding: 1vw 0;
+			border-top: solid $border-width-sm $theme-color-1;
 			&__avatar{
-				width: 25%;
-				padding: .5vw;
+				padding-left: 1vw;
+				margin-right: .5vw;
 				&__img{
+					width: 4vw;
+					height: 4vw;
 					max-width: 100%;
 				}
 			}
@@ -357,10 +324,10 @@
 				font-size: .85vw;
 				position: absolute;
 				color: $theme-color-text;
-				z-index: 99;
 				top: .5vw;
 				right: 1vw;
 				transform: rotate(45deg);
+				z-index: $nav-sidebar-z-index + 100;
 				&:hover{
 					cursor: pointer;
 					color: darker($theme-color-text, 4);
@@ -370,6 +337,7 @@
 		}
 		&__history{
 			@include clearfix;
+			padding-top: .5vw;
 		}
 		&__title{
 			padding-left: 1vw;
@@ -390,19 +358,19 @@
 				line-height: 1;
 			}
 		}
-
 		&__message{
-			display: flex;
+			display: inline-flex;
 			flex-direction: column;
 			margin: 0;
 			margin-bottom: 1vw;
-			max-width: 80%;
+			max-width: 100%;
 			&__author{
 				display: flex;
 				flex-direction: row;
 				align-items: center;
+				justify-content: flex-end;
 				&__avatar{
-					margin-right: .5vw;
+					margin-right: 1vw;
 					border-radius: 100%;
 					width: 2.5vw;
 					height: 2.5vw;
@@ -410,43 +378,75 @@
 				&__name{
 					color: $theme-color-text;
 					font-size: .9vw;
+					margin: 0 .5vw 
 				}
 			}
 			&__content{
+				display: flex;
+				align-items: flex-end;
+				max-width: 100%;
+				.messanger__action-menu{
+					width: 2vw;
+					height: 2vw;
+					margin: 0 .25vw;
+					&__more{
+						padding: 0;
+						width: 2vw;
+						height: 2vw;
+						opacity: 0;
+						background: none;
+					}
+				}
+				&:hover{
+					.messanger__action-menu{
+						&__more{
+							opacity: 1;
+							&:hover{
+								background: $theme-color-2;
+							}
+						}
+						
+					}
+				}
+			}
+			&__text{
 				color: $theme-color-text;
 				background: lighter($theme-color-1, 1);
 				padding: .5vw 1vw;
 				font-size: .9vw;
 				line-height: 1.4;
 				margin-top: .5vw;
+				max-width: 80%;
 			}
 			&--recent{
-				float: left;
 				.messanger__dialog__message{
-					&__author{
-						padding-left: 1vw;
-					}
-					&__content{
-						background: $messanger-message-bg--recent;
-						@include bg-gradient($messanger-message-bg--recent, darker($messanger-message-bg--recent, 2));
+					&__text{
+						background: lighter($messanger-message-bg--recent, 1);
 						border-top-right-radius: $messanger-message-border-radius;
 						border-bottom-right-radius: $messanger-message-border-radius;
 					}
 				}
 			}
 			&--author{
-				float: right;
 				margin-right: 0;
+				justify-content: flex-end;
+				align-items: flex-end;
+				width: 100%;
 				.messanger__dialog__message{
 					&__author{
 						padding-right: 1vw;
 						justify-content: flex-end;
 					}
 					&__content{
+						flex-direction: row-reverse;
+					}
+					&__text{
 						background: $messanger-message-bg--author;
-						@include bg-gradient($messanger-message-bg--author, darker($messanger-message-bg--author, 2));
+						border: solid $border-width-sm $theme-color-text;
+						border-right: none;
 						border-bottom-left-radius: $messanger-message-border-radius;
 						border-top-left-radius: $messanger-message-border-radius;
+						max-width: 80%;
 					}
 				}
 			}
