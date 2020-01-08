@@ -13,7 +13,10 @@
 	.dropdown-menu, .dropdown-toggle{
 		font-size: 1vw;
 		color: $theme-color-text;
-		background-color: $theme-color-2;
+		background-color: lighter($theme-color-2, 1);
+	}
+	&__icon{
+		margin-right: .5vw;
 	}
 	.dropdown-menu{
 		border: none;
@@ -24,12 +27,13 @@
 			}
 			a, .dropdown-item{
 				outline: none;
+				padding: .35vw 1vw;
 				&:hover{
-					background-color: lighter($theme-color-2, 1);
+					background-color: lighter($theme-color-2, 3);
 					color: $theme-color-text;
 				}
 				&.active, &:active{
-					background-color: lighter($theme-color-2, 1);
+					background-color: lighter($theme-color-2, 3);
 				}
 			}
 		}

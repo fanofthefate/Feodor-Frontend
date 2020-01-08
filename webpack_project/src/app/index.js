@@ -40,6 +40,9 @@ import '../style/app.scss';
     }
   });
 
+  $('.messanger-control__close').on('click', function(){
+    $('.messanger-wrapper').toggleClass('open');
+  });
 
   $('[data-sidebar]').on('click', function(){
     let sidebar_push = $(this).data('sidebar');
@@ -58,14 +61,14 @@ import '../style/app.scss';
       $('.messanger-wrapper').addClass('open');
     }
 
-if ($('.messanger-wrapper').hasClass('open') == false) {
-        $('.messanger-wrapper').addClass('open');
-      }
+    if ($('.messanger-wrapper').hasClass('open') == false) {
+      $('.messanger-wrapper').addClass('open');
+    }
     
 
-    });
+  });
 
-  $('[data-action]').on('click' , function(){
+  $('[data-action]').on('click' , function(e){
     let target_type = $(this).data('action'),
     target = $(this).data('target');
     switch(target_type){
@@ -73,7 +76,7 @@ if ($('.messanger-wrapper').hasClass('open') == false) {
       $(target).show();
       break;
       case 'back-link':
-      $(target).hide();
+     
       break;
       case 'switch-logo':
       $('.sign-logo').hide();
@@ -87,7 +90,7 @@ if ($('.messanger-wrapper').hasClass('open') == false) {
     }
   });
 
-})(jQuery);
+    })(jQuery);
 
 
 

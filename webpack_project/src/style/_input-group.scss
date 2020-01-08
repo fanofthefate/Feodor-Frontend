@@ -1,5 +1,6 @@
 .form-control{
+	height: auto;
 	&:focus, &:active{
-		border-color: $theme-color-1;
+		border-color: lighter($theme-color-2, 1);
 	}
 }

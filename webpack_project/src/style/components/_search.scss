@@ -2,8 +2,8 @@
 	overflow: hidden;
 	color: $theme-color-text;
 	&__inp{
-		border: solid 2px $theme-color-2;
-		background: $theme-color-2;
+		border: solid 2px lighter($theme-color-2, 1);
+		background: lighter($theme-color-2, 1);
 		border-top-right-radius: $input-border-radius;
 		border-bottom-right-radius: $input-border-radius;
 		color: $theme-color-text;
@@ -12,8 +12,8 @@
 		}
 	}
 	&__submit{
-		border: solid 2px $theme-color-2;
-		background: $theme-color-2;
+		border: solid 2px lighter($theme-color-2, 1);
+		background: lighter($theme-color-2, 1);
 		padding-left: 1vmax;
 		padding-right: .5vmax;
 		color: darker($theme-color-text, 5);

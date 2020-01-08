@@ -31,6 +31,9 @@
 		.dropdown-menu, .dropdown-toggle{
 			border-radius: 0;
 		}
+		.dropdown-menu{
+			border-bottom: solid 2px $theme-color-2;
+		}
 	}
 	&-control{
 		position: absolute;
@@ -84,11 +87,12 @@
 		flex: 1 1 auto;
 	}
 	&__footer{
-		background: $theme-color-2;
+		background: lighter($theme-color-2, 1);
 		margin-right: -$nav-sidebar-width-collapse;
 		padding-right: $nav-sidebar-width-collapse;
 		&__input-text{
 			margin: 0 auto;
+			border-top: solid 1px $theme-color-2;
 		}
 	}
 	&__dialog-card{
@@ -164,14 +168,18 @@
 	}
 	&__search{
 		width: 100%;
-		margin-top: .75vw;
+		max-width: 100%;
+		margin: 0 .5vw;
+		border-top: solid 1px $theme-color-2;
+		border-bottom: solid 1px $theme-color-2;
 		&__inp{
-			padding-left: .25vw;
+			padding-left: .5vw;
 			font-size: .9vw;
 			border-radius: 0;
 		}
 		&__submit{
 			border-radius: 0;
+			padding: .25vw .5vw;
 		}
 	}
 	&__action-menu{
@@ -266,7 +274,7 @@
 					border-radius: 0;
 					padding: .5vw;
 					&:hover{
-						background: darker($theme-color-2, 2);
+						background: lighter($theme-color-2, 2);
 						color: darker($theme-color-text, 4);
 					}
 				}
@@ -291,7 +299,6 @@
 			display: flex;
 			justify-content: center;
 			padding: 1vw 0;
-			border-top: solid $border-width-sm $theme-color-1;
 			&__avatar{
 				padding-left: 1vw;
 				margin-right: .5vw;
@@ -343,6 +350,7 @@
 		&__title{
 			padding-left: 1vw;
 			padding-bottom: 0;
+			margin-bottom: .75vw;
 		}
 		&__header{
 			&__avatar{
@@ -363,13 +371,16 @@
 			display: inline-flex;
 			flex-direction: column;
 			margin: 0;
-			margin-bottom: 1vw;
+			margin-bottom: .5vw;
 			max-width: 100%;
 			&__author{
 				display: flex;
 				flex-direction: row;
 				align-items: center;
 				justify-content: flex-end;
+				margin-right: 2vw;
+				margin-bottom: -.5vw;
+				z-index: 1;
 				&__avatar{
 					margin-right: 1vw;
 					border-radius: 100%;
@@ -377,15 +388,35 @@
 					height: 2.5vw;
 				}
 				&__name{
-					color: $theme-color-text;
+					color: $theme-color-accent;
 					font-size: .9vw;
 					margin: 0 .5vw 
+				}
+			}
+			&__status{
+				display: flex;
+				flex-direction: row;
+				align-items: flex-end;
+				justify-content: flex-end;
+			}
+			&__time{
+					font-size: .75vw;
+					color: darker($theme-color-text, 4);
+					margin: 0 .25vw;
+			}
+			&__status-send{
+				margin: 0 .25vw;
+				font-size: 1vw;
+				color: darker($theme-color-text, 4);
+				.read{
+					color: $theme-color-accent;
 				}
 			}
 			&__content{
 				display: flex;
 				align-items: flex-end;
 				max-width: 100%;
+				margin-bottom: .5vw;
 				.messanger__action-menu{
 					width: 2vw;
 					height: 2vw;
@@ -416,12 +447,18 @@
 				padding: .5vw 1vw;
 				font-size: .9vw;
 				line-height: 1.4;
-				margin-top: .5vw;
 				max-width: 80%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				p{
+					margin: 0;
+				}
 			}
 			&--recent{
 				.messanger__dialog__message{
 					&__text{
+						padding-top: .5vw;
 						background: lighter($messanger-message-bg--recent, 1);
 						border-top-right-radius: $messanger-message-border-radius;
 						border-bottom-right-radius: $messanger-message-border-radius;
@@ -448,6 +485,7 @@
 						border-bottom-left-radius: $messanger-message-border-radius;
 						border-top-left-radius: $messanger-message-border-radius;
 						max-width: 80%;
+						padding-right: .5vw;
 					}
 				}
 			}

@@ -22,12 +22,11 @@
 		width: $audio-player-width;
 		top: $header-height;
 		transition: $transition-speed $transition-fn;
-		max-height: 25vw;
-		background: lighter($theme-color-2, 1);
+		max-height: $audio-player-width;
+		background: $theme-color-2;
 		@extend %overflow-scroll-hide;
-		border-bottom-right-radius: $base-border-radius;
-		border-bottom-left-radius: $base-border-radius;
-		box-shadow: 0 0 15px rgba($black, .5);
+		border-bottom-right-radius: $border-radius-sm;
+		border-bottom-left-radius: $border-radius-sm;
 		z-index: $audio-player-z-index;
 		h3{
 			font-size: 1vw;
@@ -35,6 +34,9 @@
 			padding-left: 1vw;
 			margin-bottom: 0;
 			color: darker($theme-color-text, 2);
+		}
+		&:hover{
+			background: lighter($theme-color-2, 1);
 		}
 	}
 	&__track-search{
@@ -71,13 +73,13 @@
 		align-items: center;
 		justify-content: center;
 		&__prev, &__next, &__play{
-			margin: .25vmax
+			margin: .15vw
 		}
 		&__prev, &__next{
-			font-size: 1vmax;
+			font-size: .75vw;
 		}
 		&__play{
-			font-size: 1.75vmax;
+			font-size: 1.25vw;
 		}
 		&__icon{
 			&:hover{
@@ -87,18 +89,18 @@
 		}
 		&__volume{
 			&-wrapper{
-				margin: 0 .75vmax;
+				margin: 0 .75vw;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 			&__icon{
-				font-size: 1vw;
+				font-size: .75vw;
 			}
 			&__slider{
-				width: 5vmax;
+				width: 3vw;
 				max-width: 100%;
-				border: solid 2px $theme-color-text;
+				border: solid 1px $theme-color-text;
 				margin: 0 .25vmax;
 				position: relative;
 				background: $theme-color-text;
@@ -124,9 +126,9 @@
 			font-size: .75vw;
 		}
 		&__slider{
-			width: 17vmax;
+			width: 15vw;
 			max-width: 90%;
-			border: solid 2px $theme-color-text;
+			border: solid 1px $theme-color-text;
 			background: $theme-color-text;
 			height: 2px;
 			position: relative;
@@ -144,16 +146,16 @@
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	height: 4.5vw;
+	height: 4vw;
 	background: lighter($theme-color-2, 3);
-	border-radius: $base-border-radius;
+	border-radius: $border-radius-sm;
 	padding: .25vw;
 	&__cover{
 		height: 100%;
-		width: 4.5vw;
+		width: 4vw;
 		position: relative;
 		overflow: hidden;
-		border-radius: $base-border-radius;
+		border-radius: $border-radius-sm;
 		&:hover{
 			filter: brightness(65%);
 			.audio-row__cover__icon{
@@ -184,7 +186,7 @@
 		padding-left: 1vw;
 		position: relative;
 		&__title{
-			font-size: 1.15vw;
+			font-size: 1vw;
 			color: darker($theme-color-text, 3);
 			font-weight: $font-weight-semibold;
 			cursor: pointer;
@@ -194,7 +196,8 @@
 			}
 		}
 		&__author{
-			font-size: .9vw;
+			font-size: .85vw;
+			line-height: 1;
 			color: darker($theme-color-text, 5)
 		}
 		&__duration{
