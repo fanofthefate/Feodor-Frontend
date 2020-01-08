@@ -1,6 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+//libares
+@import "~swiper/css/swiper";
+@import "~bootstrap-select/sass/variables";
+@import "~bootstrap-select/sass/bootstrap-select";
+
 // Variables
 @import 'mixins/mixins';
 @import 'variables';
@@ -26,19 +31,17 @@
 
 @import "fonts";
 
-//libares
-@import "~swiper/css/swiper";
-
-
 //feodor styles
 @import "layout";
 @import "base";
 @import "nav";
+@import "input-group";
 @import "components/school-items-slider";
-@import "components/chat";
-@import "components/card";
 @import "components/search";
+@import "components/card";
+@import "components/chat";
 @import "components/audio-player";
+@import "components/select";
 @import "header";
 @import "sidebar";
 @import "page/personal-cabinet";

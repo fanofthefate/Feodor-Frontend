@@ -4,27 +4,14 @@ import bootstrap from 'bootstrap';
 import Swiper from 'swiper';
 
 //Font Avesome
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
+import 'bootstrap-select';
 
 import '../style/app.scss';
-
-
-function _autoHeightDialogHistory(){
-  let msgDlg__header = document.querySelector('.messanger__dialog__header'),
-  msgDlg__footer = document.querySelector('.messanger__dialog__footer'),
-  msgDlg__history = document.querySelector('.messanger__dialog__history'),
-  msgDlg__wrapper = document.querySelector('.messanger-wrapper');
-
-  let msgDlg__wrapper_h = msgDlg__wrapper.offsetHeight,
-  msgDlg__header_h = msgDlg__header.offsetHeight,
-  msgDlg__footer_h = msgDlg__footer.offsetHeight,
-  msgDlg__history_h = msgDlg__wrapper_h - msgDlg__footer_h - msgDlg__header_h;
-  msgDlg__history.style.height = msgDlg__wrapper_h - msgDlg__footer_h - msgDlg__header_h+'px';
-}
 
 (function ($) {
   $('.card__exam').on('click', function(){
@@ -32,7 +19,8 @@ function _autoHeightDialogHistory(){
    $('.personal-cabinet__interface').show();
  });
 
-$('[data-toggle="popover"]').popover()
+  $('[data-toggle="popover"]').popover();
+  $('select').selectpicker();
 
 
   let  schoolItemsSlider = new Swiper('.school-items-slider', {
@@ -40,7 +28,7 @@ $('[data-toggle="popover"]').popover()
     spaceBetween: 20,
     navigation: {
       nextEl: '.school-items-slider__navigation__next',
-    prevEl: '.school-items-slider__navigation__prev',
+      prevEl: '.school-items-slider__navigation__prev',
     },
     mousewheel: {
       sensitivity: 1
@@ -61,21 +49,28 @@ $('[data-toggle="popover"]').popover()
     }
   });
 
+  $('.sidebar__link[data-toggle="pill"]').on('click', function(e){
+    if ($('.sidebar-right').hasClass('sidebar-mini') == false) {
+      $('.sidebar-right').addClass('sidebar-mini');
+    }
+
+    if ($('.messanger-wrapper').hasClass('open') == false) {
+      $('.messanger-wrapper').addClass('open');
+    }
+
+if ($('.messanger-wrapper').hasClass('open') == false) {
+        $('.messanger-wrapper').addClass('open');
+      }
+    
+
+    });
+
   $('[data-action]').on('click' , function(){
     let target_type = $(this).data('action'),
     target = $(this).data('target');
     switch(target_type){
-      case 'messanger':
-      $('.messanger-wrapper').toggleClass('open');
-      $(target).toggleClass('active');
-      $(this).toggleClass('active');
-      if (!$('.sidebar-right').hasClass('sidebar-mini')) {
-        $('.sidebar-right').addClass('sidebar-mini');
-      }
-      break;
       case 'dialog':
       $(target).show();
-      _autoHeightDialogHistory();
       break;
       case 'back-link':
       $(target).hide();
@@ -85,22 +80,14 @@ $('[data-toggle="popover"]').popover()
       $(target).show();
       break;
       case 'sign-submit':
-        $('.sign__form__phone').hide(); 
-        $('.sign__form__verifiled').show(); 
-        $('#btnSignSubmit').html('Отправить <i class="fas fa-arrow-right"></i>'); 
-        $('[name="typeSignForm"]').attr('disabled', 'disabled'); 
-
-
+      $('.sign__form__phone').hide(); 
+      $('.sign__form__verifiled').show(); 
+      $('#btnSignSubmit').html('Отправить <i class="fas fa-arrow-right"></i>'); 
+      $('[name="typeSignForm"]').attr('disabled', 'disabled'); 
     }
   });
 
-  _autoHeightDialogHistory();
-
 })(jQuery);
-
-window.onresize = function() {
-  _autoHeightDialogHistory();
-};
 
 
 

@@ -1,0 +1,37 @@
+.bootstrap-select{
+	&:focus{
+		outline: none !important;
+	}
+	> select.mobile-device:focus + .dropdown-toggle,
+	.dropdown-toggle{
+		border: none;
+		&:focus {
+			outline: none !important;
+			box-shadow: none !important; 
+		}
+	}
+	.dropdown-menu, .dropdown-toggle{
+		font-size: 1vw;
+		color: $theme-color-text;
+		background-color: $theme-color-2;
+	}
+	.dropdown-menu{
+		border: none;
+		margin: 0;
+		li {
+			&:focus{
+				outline: none
+			}
+			a, .dropdown-item{
+				outline: none;
+				&:hover{
+					background-color: lighter($theme-color-2, 1);
+					color: $theme-color-text;
+				}
+				&.active, &:active{
+					background-color: lighter($theme-color-2, 1);
+				}
+			}
+		}
+	}
+}

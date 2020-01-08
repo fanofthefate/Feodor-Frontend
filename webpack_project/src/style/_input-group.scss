@@ -1,0 +1,5 @@
+.form-control{
+	&:focus, &:active{
+		border-color: $theme-color-1;
+	}
+}

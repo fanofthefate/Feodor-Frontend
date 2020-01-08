@@ -2,8 +2,8 @@
 	overflow: hidden;
 	color: $theme-color-text;
 	&__inp{
-		border: solid 2px $gray-700;
-		background: $gray-700;
+		border: solid 2px $theme-color-2;
+		background: $theme-color-2;
 		border-top-right-radius: $input-border-radius;
 		border-bottom-right-radius: $input-border-radius;
 		color: $theme-color-text;
@@ -12,17 +12,17 @@
 		}
 	}
 	&__submit{
-		border: solid 2px $gray-700;
-		background: $gray-700;
+		border: solid 2px $theme-color-2;
+		background: $theme-color-2;
 		padding-left: 1vmax;
 		padding-right: .5vmax;
-		color: darker($white, 5);
+		color: darker($theme-color-text, 5);
 		border-bottom-left-radius: $btn-border-radius;
 		border-top-left-radius: $btn-border-radius;
 		transition: $transition-speed $transition-fn;
 		&:hover{
 			background: $theme-color-accent;
-			color: $gray-700;
+			color: $theme-color-1;
 		}
 	}
 }

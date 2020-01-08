@@ -40,8 +40,12 @@
 *::selection{
   background: rgba($theme-color-1, .75);
 }
-button:focus{
-  outline: none !important;
+button, select{
+  &:focus{
+     outline: none !important;
+     box-shadow: none;
+  }
+ 
 }
 
 %overflow-scroll-hide{

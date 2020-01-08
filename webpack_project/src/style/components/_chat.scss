@@ -8,7 +8,7 @@
 		height: 100vh;
 		z-index: $messanger-warapper-z-index;
 		padding-right: $nav-sidebar-width-collapse;
-		border-bottom-left-radius: $nav-sidebar-border-radius;
+		border-bottom-left-radius: 0;
 		border-top-left-radius: $nav-sidebar-border-radius;
 		box-shadow: $box-shadow;
 		transition: $transition-speed $transition-fn;
@@ -19,6 +19,18 @@
 	}
 	&__tab{
 		border-radius: $nav-sidebar-border-radius;
+		display: none;
+		&__content{
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			height: 100vh;
+		}
+	}
+	&__select{
+		.dropdown-menu, .dropdown-toggle{
+			border-radius: 0;
+		}
 	}
 	&-control{
 		position: absolute;
@@ -36,19 +48,6 @@
 				opacity: 1;
 			}
 		}
-		
-	}
-	&__header{
-		position: relative;
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		background: lighter($theme-color-2, 1);
-		transition: $transition-speed $transition-fn;
-		box-shadow: $box-shadow;
-		padding-right: $nav-sidebar-width-collapse;
-		margin-right: -$nav-sidebar-width-collapse;
-		border-top-left-radius: $nav-sidebar-border-radius;
 	}
 	&__title{
 		padding: .75vw 0 .75vw 2vw;
@@ -69,17 +68,25 @@
 			margin-right: .75vw
 		}
 	}
+	&__header{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		background: lighter($theme-color-2, 1);
+		transition: $transition-speed $transition-fn;
+		box-shadow: $box-shadow;
+		padding-right: $nav-sidebar-width-collapse;
+		margin-right: -$nav-sidebar-width-collapse;
+		border-top-left-radius: $nav-sidebar-border-radius;
+	}
 	&__body{
-		max-height: $messanger-body-height;
 		@extend %overflow-scroll-hide;
-		padding-bottom: 1vw;
+		flex: 1 1 auto;
 	}
 	&__footer{
-		width: 100%;
-		height: $messanger-footer-height;
-		padding: .5vw;
-		padding-top: 0;
-		background: transparent;
+		background: $theme-color-2;
+		margin-right: -$nav-sidebar-width-collapse;
+		padding-right: $nav-sidebar-width-collapse;
 		&__input-text{
 			margin: 0 auto;
 		}
@@ -157,10 +164,14 @@
 	}
 	&__search{
 		width: 100%;
-		padding: .75vw;
+		margin-top: .75vw;
 		&__inp{
 			padding-left: .25vw;
 			font-size: .9vw;
+			border-radius: 0;
+		}
+		&__submit{
+			border-radius: 0;
 		}
 	}
 	&__action-menu{
@@ -224,49 +235,39 @@
 		}
 	}
 	&__input-text{
-		border-radius: $input-border-radius;
-		overflow: hidden;
-		border: solid 2px $theme-color-2;
 		max-width: 100%;
-		width: 20vw;
+		width: 100%;
 		> .messanger__form-control{
-			border-radius: $input-border-radius !important;
-			background: lighten($theme-color-2, 8);
+			border-radius: 0;
+			background: lighter($theme-color-2, 1);
 			font-size: .9vw;
 			z-index: 3;
 			border: none;
+			padding-top: .5vw;
 			height: calc(1.5vw + .9vw + 4px);
+			@extend %overflow-scroll-hide;
 			&:focus{
 				box-shadow: none;
 				background: lighten($theme-color-2, 12);
 			}
 		}
 		&__icon{
-			font-size: 1.25vw;
+			font-size: 1.15vw;
 		}
 		.input-group{
 			&-append{
-				margin-left: -1.75rem;
 				.btn{
-					background: $theme-color-2;
+					background: lighter($theme-color-2, 1);
 					color: $theme-color-text;
 					border: none;
 					z-index: 2;
 					display: flex;
 					align-items: center;
+					border-radius: 0;
+					padding: .5vw;
 					&:hover{
 						background: darker($theme-color-2, 2);
 						color: darker($theme-color-text, 4);
-					}
-					&:first-child{
-						border-bottom-left-radius: $btn-border-radius;
-						border-top-left-radius: $btn-border-radius;
-						padding-left: 2.15rem;
-						padding-right: .35rem;
-					}
-					&:last-child{
-						padding-left: .35rem;
-						padding-right: 1rem;
 					}
 				}
 			}
@@ -277,7 +278,7 @@
 		top: 0;
 		width: 100%;
 		z-index: $messanger-warapper-z-index +10;
-		max-height: 100vh;
+		height: 100vh;
 		background: $messanger-warapper-bg;
 		padding-right: $nav-sidebar-width-collapse;
 		border-top-left-radius: $nav-sidebar-border-radius;
