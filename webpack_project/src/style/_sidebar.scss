@@ -16,15 +16,21 @@
 	&__list{
 		list-style: none;
 		padding-left: 0;
-		margin: .75vw 0;
 		width: $nav-sidebar-width;
 		border: none;
+		flex-wrap: nowrap;
+		display: flex;
+		flex-direction: column;
 		&__item{
 			display: flex;
 			align-items: center;
 			padding-right: 0;
 			line-height: 1;
 			width: 100%;
+		}
+		&__group{
+			margin: .75vw 0;
+			border-bottom: 0;
 		}
 	}
 	&__link{
@@ -127,6 +133,7 @@
 		border-bottom-left-radius: $nav-sidebar-border-radius;
 		border-top-left-radius: $nav-sidebar-border-radius;
 		align-items: flex-end;
+		flex-wrap: nowrap;
 		&__toggle-ctrl{
 			left: 1.15vw;
 			.bmenu{

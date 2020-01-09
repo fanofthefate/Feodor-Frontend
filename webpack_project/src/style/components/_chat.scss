@@ -20,6 +20,9 @@
 	&__tab{
 		border-radius: $nav-sidebar-border-radius;
 		display: none;
+		&.show{
+			display: block;
+		}
 		&__content{
 			display: flex;
 			flex-direction: column;
@@ -61,7 +64,7 @@
 		flex-direction: row;
 		font-size: 1.25vw;
 		width: 85%;
-		&__text{
+		&__name{
 			font-weight: 600;
 			font-size: 1vw;
 			margin: 0;
@@ -102,9 +105,6 @@
 			padding-bottom: .25vw;
 			border-top: solid 1px $theme-color-2;
 			border-bottom: solid 1px $theme-color-2;
-			label{
-				font-size: .75vw;
-			}
 			&__attach{
 				display: flex;
 				align-items: center;
@@ -123,6 +123,69 @@
 				&:focus{
 					border-color: $theme-color-2;
 				}
+			}
+			.custom-switch{
+				margin: 1.15vw 0
+			}
+		}
+	}
+		&__action-menu{
+		width: 2.6vw;
+		height: 2.5vw;
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		&.show{
+			z-index: 9999999;
+		}
+		&__more{
+			display: inline-flex;
+			color: $theme-color-text;
+			width: 3vw;
+			height: 2.5vw;
+			justify-content: center;
+			align-items: center;
+			background: transparent;
+			border-radius: 100%;
+			border: none;
+			&:hover{
+				background: lighter($theme-color-2, 2);
+			}
+			&:active{
+				background: lighter($theme-color-2, 3);
+			}
+			&:before{
+				display: none !important;
+			}
+		}
+		&__list{
+			z-index: $messanger-warapper-z-index + 1;
+			background: lighter($theme-color-2, 1);
+			width: $messanger-action-menu-width;
+			top: $messanger-header-title-height / 1.5;
+			right: $messanger-header-title-height / 2;
+			border: solid 1px $theme-color-2;
+			list-style-type: none;
+			padding-left: 0;
+			border-radius: 0;
+			padding: 0;
+			margin: 0;
+			margin-top: 1vw;
+			box-shadow: $box-shadow-xs;
+		}
+		&__item{
+			display: flex;
+			align-items: center;
+			color: darker($theme-color-text, 2);
+			font-size: .9vw;
+			padding: .5vw;
+			width: 100%;
+			&:hover{
+				text-decoration: none;
+				cursor: pointer;
+				color: $theme-color-text;
+				background: lighter($theme-color-2, 2);
 			}
 		}
 	}
@@ -171,7 +234,7 @@
 			margin-left: $messanger-dialog-card-height;
 			height: 100%;
 			padding-left: .25vw;
-			padding-right: 2vw;
+			padding-right: 3vw;
 			display: flex;
 			align-items: flex-start;
 			justify-content: center;
@@ -191,10 +254,23 @@
 			opacity: .75;
 			font-weight: 200;
 		}
-		&__list{
-			list-style: none;
-			margin: 0;
-			padding: 0;
+		&__action-menu{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: .25vw;
+			&__more{
+				font-size: 1.25vw;
+				opacity: .25;
+				&:hover{
+					background: transparent;
+					opacity: 1;
+				}
+				&:active{
+					background: lighter($theme-color-2, 2);
+				}
+			}
+			
 		}
 	}
 	&__search{
@@ -213,66 +289,7 @@
 			padding: .25vw .5vw;
 		}
 	}
-	&__action-menu{
-		width: 2.6vw;
-		height: 2.5vw;
-		position: relative;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		&.show{
-			z-index: 9999999;
-		}
-		&__more{
-			display: inline-flex;
-			color: $theme-color-text;
-			width: 3vw;
-			height: 2.5vw;
-			justify-content: center;
-			align-items: center;
-			background: lighter($theme-color-2, 1);
-			border-radius: 100%;
-			border: none;
-			&:hover{
-				background: lighter($theme-color-2, 2);
-			}
-			&:active{
-				background: lighter($theme-color-2, 3);
-			}
-			&:before{
-				display: none !important;
-			}
-		}
-		&__list{
-			z-index: $messanger-warapper-z-index + 1;
-			background: lighter($theme-color-2, 1);
-			width: $messanger-action-menu-width;
-			top: $messanger-header-title-height / 1.5;
-			right: $messanger-header-title-height / 2;
-			border: solid 1px $theme-color-2;
-			list-style-type: none;
-			padding-left: 0;
-			border-radius: 0;
-			padding: 0;
-			margin: 0;
-			margin-top: 1vw;
-			box-shadow: $box-shadow-xs;
-		}
-		&__item{
-			display: flex;
-			align-items: center;
-			color: darker($theme-color-text, 2);
-			font-size: .9vw;
-			padding: .5vw;
-			width: 100%;
-			&:hover{
-				text-decoration: none;
-				cursor: pointer;
-				color: $theme-color-text;
-				background: lighter($theme-color-2, 2);
-			}
-		}
-	}
+
 	&__input-text{
 		max-width: 100%;
 		width: 100%;
@@ -424,6 +441,11 @@
 				opacity: .75;
 				font-weight: 200;
 				line-height: 1;
+				margin-bottom: .5vw;
+				&--desc{
+					opacity: .9;
+					font-weight: 400;
+				}
 			}
 		}
 		&__message{

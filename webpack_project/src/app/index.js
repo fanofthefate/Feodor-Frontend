@@ -52,18 +52,15 @@ import '../style/app.scss';
     }
   });
 
-  $('.sidebar__link[data-toggle="pill"]').on('click', function(e){
-    if ($('.sidebar-right').hasClass('sidebar-mini') == false) {
-      $('.sidebar-right').addClass('sidebar-mini');
-    }
+  $('[data-toggle="pill"]').on('click', function(e){
+    let navLink = $('[data-toggle="nav-link"]');
+    let navLinkTarget = $('[data-toggle="nav-link"]').attr('href');
+    let wrapper = $('.messanger-wrapper');
 
-    if ($('.messanger-wrapper').hasClass('open') == false) {
-      $('.messanger-wrapper').addClass('open');
+    if (!wrapper.hasClass('open')) {
+      wrapper.addClass('open');
     }
-
-    if ($('.messanger-wrapper').hasClass('open') == false) {
-      $('.messanger-wrapper').addClass('open');
-    }
+    
     
 
   });
@@ -76,7 +73,7 @@ import '../style/app.scss';
       $(target).show();
       break;
       case 'back-link':
-     
+
       break;
       case 'switch-logo':
       $('.sign-logo').hide();
@@ -90,7 +87,7 @@ import '../style/app.scss';
     }
   });
 
-    })(jQuery);
+})(jQuery);
 
 
 

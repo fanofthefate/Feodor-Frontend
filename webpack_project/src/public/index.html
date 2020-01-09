@@ -63,7 +63,7 @@
 			</aside>
 
 			<!-- Правый сайдбар -->
-			<aside class="sidebar sidebar-right sidebar-mini">
+			<aside class="sidebar sidebar-right sidebar-mini ">
 				<a class="sidebar__toggle-ctrl sidebar-right__toggle-ctrl" >
 					<div class="bmenu" >
 						<input id="bmenu__right" class="bmenu__toggle" type="checkbox" />
@@ -72,19 +72,18 @@
 						</label>
 					</div>
 				</a>
-				<div class="sidebar__list nav nav-tabs">
-					<a class="sidebar__list__item sidebar__link notification" data-toggle="pill" href="#chat"> 
+				<div class="sidebar__list">	
+				<div class="sidebar__list__group nav nav-tabs">
+					<a class="sidebar__list__item sidebar__link notification" data-toggle="pill" href="#group-chat"> 
 						<i class="sidebar__icon fas fa-comment"></i><span class="sidebar__link__text">Чат</span>
 					</a>
-					<a class="sidebar__list__item sidebar__link" data-toggle="pill" href="#dialog">
+					<a class="sidebar__list__item sidebar__link" data-toggle="pill" href="#dialogs">
 						<i class="sidebar__icon fas fa-comments"></i><span class="sidebar__link__text">Диалоги</span>
 					</a>
-					<a class="sidebar__list__item sidebar__link notification" data-toggle="pill" href="#messanger-groups">
-						<i class="sidebar__icon fas fa-users"></i> <span class="sidebar__link__text">Груповой чат</span>
+					<a class="sidebar__list__item sidebar__link" data-toggle="pill" href="#messanger-groups">
+						<i class="sidebar__icon fas fa-users"></i> <span class="sidebar__link__text">Группы</span>
 					</a>
-				</div>  
-				<div class="sidebar__list">
-					<a class="sidebar__list__item sidebar__link" href="#">
+					<a class="sidebar__list__item sidebar__link notification" data-toggle="pill" href="#chat-teacher">
 						<i class="sidebar__icon fas fa-chalkboard-teacher"></i><span class="sidebar__link__text">Чат с учителем</span>
 					</a>
 					<a class="sidebar__list__item sidebar__link" href="#">
@@ -93,14 +92,13 @@
 					<a class="sidebar__list__item sidebar__link" href="#">
 						<i class="sidebar__icon fas fa-university"></i><span class="sidebar__link__text">Чат с ВУЗ'ом</span>
 					</a>
-				</div>       
-				<div class="sidebar__list">
 					<a class="sidebar__list__item sidebar__link" href="#">
 						<i class="sidebar__icon fas fa-user-plus"></i><span class="sidebar__link__text">Добавить друга</span>
 					</a>
 					<a class="sidebar__list__item sidebar__link" href="#">
 						<i class="sidebar__icon fas fa-music"></i> <span class="sidebar__link__text">Музыка</span>
 					</a>
+				</div>
 				</div>
 			</aside>
 
@@ -385,7 +383,14 @@
 						<div class="messanger__tab__content">	
 							<div class="messanger__header">
 								<div class="messanger__title">
-									<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповые чаты</span>
+									<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__name">Группы</span>
+								</div>
+								<!-- Управление группой -->
+								<div class="messanger__action-menu dropdown dropleft" >
+									<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+									<div class="messanger__action-menu__list dropdown-menu">
+										<a class="messanger__action-menu__item dropdown-item" href="#messanger-groups__edit" data-toggle="collapse">Создать группу</a>
+									</div>
 								</div>
 								<!-- Поиск групп -->
 								<div class="messanger__search search-form ">
@@ -395,7 +400,7 @@
 									</form>
 								</div>
 								<!-- Редактрование группы -->	
-								<form action="#" class="form messanger-groups__edit">
+								<form id="messanger-groups__edit" action="#" class="form messanger-groups__edit collapse">
 									<div class="form-group messanger-groups__edit__attach">
 										<div class="form-groupe form-groupe--attach form-groupe--attach-img">
 											<label for="attach-img">
@@ -426,48 +431,134 @@
 										</div>
 									</div>
 									<div class="form-group ">
-										<button class="btn btn-primary" tabindex="6">Сохранить</button>
-										<button class="btn btn-secondary" tabindex="7">Отменить</button>
+										<button class="btn btn-primary" type="button" tabindex="6">Сохранить</button>
+										<button class="btn btn-secondary" type="button" tabindex="7" data-toggle="collapse" data-target="#messanger-groups__edit">Отменить</button>
 									</div>
 									
 								</form>
 							</div>
 							<div class="messanger__body">
-								<ul class="messanger__dialog-card__list">
-									<li class="messanger__dialog-card__list__item">
-										<a class="messanger__dialog-card messanger__groupe-card" >
-											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
-												<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
+								<div class="messanger__dialog-card__list">
+									<div class="messanger__dialog-card" >
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+										<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Покинуть группу</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#messanger-groups__edit" data-toggle="collapse">Редактировать</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Пригласить друга</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в избранное</a>
 											</div>
-											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Название группы</div>
-												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+									</div>									
+									<div class="messanger__dialog-card">
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<div class="messanger__dialog-card__avatar__initials">НГ</div>
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+										<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Покинуть группу</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#messanger-groups__edit" data-toggle="collapse">Редактировать</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Пригласить друга</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в избранное</a>
 											</div>
-										</a>
-									</li>											
-									<li class="messanger__dialog__list__item">
-										<a class="messanger__dialog-card messanger__groupe-card">
-											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
-												<div class="messanger__dialog-card__avatar__initials">НГ</div>
+										</div>
+									</div>											
+								</div>
+							</div>
+						</div>
+					</div>					
+
+					<!-- Диалоги -->
+					<div id="dialogs" class="messanger-groups messanger__tab" >
+						<div class="messanger__tab__content">	
+							<div class="messanger__header">
+								<div class="messanger__title">
+									<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__name">Диалоги</span>
+								</div>
+								<!-- Управление -->
+								<div class="messanger__action-menu dropdown dropleft" >
+									<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+									<div class="messanger__action-menu__list dropdown-menu">
+										<a class="messanger__action-menu__item dropdown-item" href="#messanger-groups__edit" data-toggle="collapse">Создать диалог</a>
+										<a class="messanger__action-menu__item dropdown-item" href="#messanger-groups__edit" data-toggle="collapse">Пригласить друга</a>
+									</div>
+								</div>
+								<!-- Поиск -->
+								<div class="messanger__search search-form ">
+									<form action="#" class="search-form messanger__search-form input-group">
+										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
+										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск...">
+									</form>
+								</div>
+								<!-- Пригласить -->	
+							</div>
+							<div class="messanger__body">
+								<div class="messanger__dialog-card__list">
+									<div class="messanger__dialog-card" >
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Иван Иванов</div>
+											<div class="messanger__dialog-card__desc">Да я сделал ДЗ вчера вечером...</div>
+										</div>
+										<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Удалить из друзей</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в избранные</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Создать беседу</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Отключить уведомления</a>
 											</div>
-											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Название группы</div>
-												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+									</div>									
+									<div class="messanger__dialog-card">
+										<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+											<div class="messanger__dialog-card__avatar__initials">ВП</div>
+										</div>
+										<div class="messanger__dialog-card__inner">
+											<div class="messanger__dialog-card__title">Василий Пупкин</div>
+											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+										</div>
+										<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
+											<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+											<div class="messanger__action-menu__list dropdown-menu">
+												<a class="messanger__action-menu__item dropdown-item" href="#">Удалить из друзей</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в избранные</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Пригласить друга в беседу</a>
+												<a class="messanger__action-menu__item dropdown-item" href="#">Отключить уведомления</a>
 											</div>
-										</a>
-									</li>												
-								</ul>
+										</div>
+									</div>											
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Чат группы -->
-					<div id="dialog" class="messanger__dialog messanger__tab">
+					<!-- Чат с учителем -->
+					<div id="chat-teacher" class="messanger__dialog messanger__tab">
 						<div class="messanger__tab__content">
-							<div class="messanger__header messanger__dialog__header">
+							<div class="messanger__header">
 								<div class="messanger__title messanger__dialog__title">
 									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
-									<span class="messanger__title__text">Название группы <span class="messanger__dialog__header__meta">139 783 участников</span></span>
+									<div class="messanger__title__groupe">
+										<span class="messanger__title__name">Анастасия Петровна</span>
+										<span class="messanger__dialog__header__meta messanger__dialog__header__meta--desc">Преподаватель Математики</span>
+										
+									</div>
 								</div>
+								<!-- Управление чатом группы -->
 								<div class="messanger__action-menu dropdown dropleft" >
 									<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 									<div class="messanger__action-menu__list dropdown-menu">
@@ -517,7 +608,7 @@
 												<div class="messanger__dialog__message__status-send"><i class="fas fa-check-double"></i></div>
 											</div>
 										</div>
-										
+
 										<div class="messanger__action-menu dropdown dropleft" >
 											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 											<div class="messanger__action-menu__list dropdown-menu">
@@ -600,13 +691,17 @@
 							</div>
 						</div>
 					</div>					
-					<!-- Чат группы -->
-					<div id="chat" class="messanger__dialog messanger__tab">
+					<!-- Общий группы -->
+					<div id="group-chat" class="messanger__dialog messanger__tab">
 						<div class="messanger__tab__content">
 							<div class="messanger__header messanger__dialog__header">
 								<div class="messanger__title messanger__dialog__title">
 									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
-									<span class="messanger__title__text">Чат <span class="messanger__dialog__header__meta">139 783 участников</span></span>
+									<div class="messanger__title__groupe">
+										<span class="messanger__title__name">Тема чата</span>
+										<span class="messanger__dialog__header__meta messanger__dialog__header__meta--desc">Краткое описание чата</span>
+										<span class="messanger__dialog__header__meta">139 783 участников</span>
+									</div>
 								</div>
 								<div class="messanger__action-menu dropdown dropleft" >
 									<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
@@ -642,7 +737,7 @@
 									</div>
 									<div class="messanger__dialog__pinned__unpin"><i class="fas fa-thumbtack"></i></div>
 								</div>
-								
+
 							</div>
 							<div class="messanger__body messanger__dialog__history">
 								<div class="messanger__dialog__message messanger__dialog__message--recent">
@@ -657,7 +752,7 @@
 												<div class="messanger__dialog__message__time">23:40</div>
 											</div>
 										</div>
-										
+
 										<div class="messanger__action-menu dropdown dropleft" >
 											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 											<div class="messanger__action-menu__list dropdown-menu">
@@ -678,7 +773,7 @@
 												<div class="messanger__dialog__message__status-send"><i class="fas fa-check-double read"></i></div>
 											</div>
 										</div>
-										
+
 										<div class="messanger__action-menu dropdown dropleft" >
 											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 											<div class="messanger__action-menu__list dropdown-menu">
@@ -720,7 +815,7 @@
 												<div class="messanger__dialog__message__time">23:40</div>
 											</div>
 										</div>
-										
+
 										<div class="messanger__action-menu dropdown dropleft" >
 											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 											<div class="messanger__action-menu__list dropdown-menu">
@@ -738,7 +833,7 @@
 												<div class="messanger__dialog__message__time">23:40</div>
 											</div>
 										</div>
-										
+
 										<div class="messanger__action-menu dropdown dropleft" >
 											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 											<div class="messanger__action-menu__list dropdown-menu">
@@ -759,7 +854,7 @@
 												<div class="messanger__dialog__message__status-send"><i class="fas fa-check"></i></div>
 											</div>
 										</div>
-										
+
 										<div class="messanger__action-menu dropdown dropleft" >
 											<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
 											<div class="messanger__action-menu__list dropdown-menu">
