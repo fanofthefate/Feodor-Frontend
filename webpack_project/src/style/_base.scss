@@ -1,4 +1,7 @@
-
+body{
+  color: $theme-color-text;
+  font-size: 1vw;
+}
 .h1, .h2, .h3, .h4, .h5{
   font-weight: bold;
 }
@@ -37,14 +40,19 @@
 .img-responsive{
   max-width: 100%;
 }
-*::selection{
-  background: rgba($theme-color-1, .75);
+*{
+  &::selection{
+    background: rgba($theme-color-1, .75);
+  }
+  &:focus, &:active{
+    outline: none;
+  }
 }
 button, select{
   &:focus{
-     outline: none !important;
-     box-shadow: none;
-  }
+   outline: none !important;
+   box-shadow: none;
+ }
  
 }
 

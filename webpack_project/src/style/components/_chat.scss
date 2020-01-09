@@ -95,6 +95,37 @@
 			border-top: solid 1px $theme-color-2;
 		}
 	}
+	&-groups{
+		&__edit{
+			width: 100%;
+			margin-top: .5vw;
+			padding-bottom: .25vw;
+			border-top: solid 1px $theme-color-2;
+			border-bottom: solid 1px $theme-color-2;
+			label{
+				font-size: .75vw;
+			}
+			&__attach{
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+			}
+			&__title{
+				flex: 1 1 10vw;
+				max-width: 100%;
+				margin-right: .5vw;
+			}
+			.form-group{
+				margin: .5vw;
+			}
+			.form-control{
+				background: lighter($theme-color-2, 2);
+				&:focus{
+					border-color: $theme-color-2;
+				}
+			}
+		}
+	}
 	&__dialog-card{
 		position: relative;
 		display: block;

@@ -7,8 +7,8 @@
 		border-top-right-radius: $input-border-radius;
 		border-bottom-right-radius: $input-border-radius;
 		color: $theme-color-text;
-		@include placeholder {
-  			color: darker($theme-color-text, 5);
+		&:focus, &active{
+			border-color: lighter($theme-color-2, 1);
 		}
 	}
 	&__submit{

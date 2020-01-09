@@ -1,0 +1,19 @@
+.form{
+	&-groupe{
+		&--attach{
+			position: relative;
+			&-img{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 4vw;
+				height: 4vw;
+				margin: .5vw;
+			}
+		}
+		
+	}
+}
+.custom-control{
+	
+}

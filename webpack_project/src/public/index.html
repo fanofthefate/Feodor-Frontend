@@ -387,26 +387,49 @@
 								<div class="messanger__title">
 									<i class="messanger__title__icon fas fa-users"></i> <span class="messanger__title__text">Груповые чаты</span>
 								</div>
-								<div class="messanger__action-menu dropdown dropleft" >
-									<button class="messanger__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
-									<div class="messanger__action-menu__list dropdown-menu">
-										<a class="messanger__action-menu__item dropdown-item" href="#">Создать</a>
-										<a class="messanger__action-menu__item dropdown-item" href="#">Удалить</a>
-										<a class="messanger__action-menu__item dropdown-item" href="#">Редактировать</a>
-									</div>
-								</div>
+								<!-- Поиск групп -->
 								<div class="messanger__search search-form ">
 									<form action="#" class="search-form messanger__search-form input-group">
 										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
 										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск...">
 									</form>
 								</div>
-								<form action="#" class="messanger__groupe__edit">
-									<div class="attach__avatar form-group">
-										<input id="groupe_avatar" type="file" name="groupe-avatar" class="messanger__groupe__edit__inp form-control-file">
+								<!-- Редактрование группы -->	
+								<form action="#" class="form messanger-groups__edit">
+									<div class="form-group messanger-groups__edit__attach">
+										<div class="form-groupe form-groupe--attach form-groupe--attach-img">
+											<label for="attach-img">
+												<img class="form-control--attach-img" src="./img/avatar-icon-images.jpg" width="75" alt="Аватар группы">
+												<input class="form-control--attach-inp" id="attach-img" type="file" name="img-avatar" tabindex="1">
+												<div class="form-control--attach-btn"><i class="fas fa-image"></i></div>
+											</label>
+										</div>
+										<div class="form-group messanger-groups__edit__title">
+											<label for="messanger-groups__edit__title">Название группы<sup>*</sup></label>
+											<input  id="messanger-groups__edit__title" type="text" class="form-control is-valid"  placeholder="Введите название группы" tabindex="2">
+											<div class="valid-feedback">Всё в порядке!</div>
+										</div>
 									</div>
-									<input id="groupe_title" type="text" name="groupe-title" class="messanger__groupe__edit__inp">
-									<input id="groupe_title" type="text" name="" class="messanger__groupe__edit__inp">
+									<div class="form-group">
+										<label for="messanger-groups__edit__name">Подзаголовок<sup>*</sup></label>
+										<input type="text" class="form-control is-invalid" id="messanger-groups__edit__subtitle" placeholder="Напишите подзаголовок" tabindex="3">
+										<div class="invalid-feedback">Описание должно быть не менее 6 символов!</div>
+									</div>
+									<div class="form-group">
+										<label for="messanger-groups__edit__name">Описание группы </label>
+										<textarea class="form-control" id="messanger-groups__edit__desc" placeholder="Напишите сюда краткое описание группы" tabindex="4"></textarea>
+									</div>
+									<div class="form-group">
+										<div class="custom-control custom-switch">
+											<input type="checkbox" class="custom-control-input" id="typeGroup" tabindex="5">
+											<label class="custom-control-label" for="typeGroup">Сделать группу закрытой</label>
+										</div>
+									</div>
+									<div class="form-group ">
+										<button class="btn btn-primary" tabindex="6">Сохранить</button>
+										<button class="btn btn-secondary" tabindex="7">Отменить</button>
+									</div>
+									
 								</form>
 							</div>
 							<div class="messanger__body">

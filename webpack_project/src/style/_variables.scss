@@ -59,27 +59,39 @@ $theme-color-text: $white;
 $theme-color-link: $theme-color-accent;
 
 //Border
-$border-radius: 1.75vw;
+$border-radius: .75vw;
 $base-border-radius: $border-radius;
 $border-radius-lg: 1vw;
-$border-radius-sm: .75vw;
-$border-width: 3px;
+$border-radius-sm: .5vw;
+$border-width: 1px;
 $border-width-lg: $border-width * 1.25;
-$border-width-sm: .1vw;
-
-//buttons
-$btn-border-width: 2px;
-$btn-border-radius: $border-radius;
-$btn-active-box-shadow: none;
-$btn-focus-box-shadow: none;
+$border-width-sm: 1px;
 
 //Inputs
-$input-bg: transparent ;
+$input-bg: $theme-color-2 ;
 $input-color: $white;
-$input-placeholder-color: $white;
-$input-border-width: $btn-border-width;
-$input-border-radius: $btn-border-radius;
+$input-placeholder-color: $theme-color-text;
+$input-border-width: $border-width;
+$input-border-radius: $border-radius-sm;
 $input-btn-focus-box-shadow: none;
+$input-btn-padding-y: .5vw;
+$input-btn-padding-x: .5vw;
+$input-btn-border-width: $border-width;
+
+//buttons
+$btn-border-width: $input-btn-border-width;
+$btn-border-radius: $border-radius-sm;
+$btn-padding-y: .25vw;
+$btn-active-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-font-size: .85vw;
+
+//Custom Control
+$custom-select-indicator-padding: 1vw;
+$custom-select-padding-x: $input-btn-padding-x;
+$custom-select-padding-y: $input-btn-padding-y;
+$custom-control-indicator-border-color: $theme-color-2;
+$custom-control-indicator-bg: $theme-color-text;
 
 //Fonts
 $font-family-base: 'Montserrat';
@@ -102,7 +114,7 @@ $header-height: 4vw;
 //sidebar
 $nav-sidebar-width: 15vw;
 $nav-sidebar-width-collapse: 4vw;
-$nav-sidebar-border-radius: $border-radius;
+$nav-sidebar-border-radius: 1.75vw;
 $nav-sidebar-z-index: 900;
 
 //header
