@@ -33,6 +33,7 @@
 		color: $theme-color-text;
 		display: flex;
 		align-items: center;
+		position: relative;
 		&:hover{
 			text-decoration: none;
 			color: darker($theme-color-text, 4);
@@ -44,14 +45,29 @@
 			font-size: .95vw;
 			transition: $transition-speed $transition-fn;
 		}
+		&.notification{
+			&:after{
+				@include pseudo();
+				display: block;
+				width: 1vw;
+				height: 1vw;
+				background: $red;
+				left: .5vw;
+				top: .15vw;
+				border: solid 2px $theme-color-2;
+				border-radius: 100%;
+			}
+		}
 	}
 	&__link.active{
 		color: $primary;
 	}
-	&__icon.svg-inline--fa{
-		margin: .5vw 1vw;
-		font-size: 1.25vw;
-		width: 1.75vw;
+	&__icon{
+		&.svg-inline--fa{
+			margin: .5vw 1vw;
+			font-size: 1.25vw;
+			width: 1.75vw;
+		}
 	}
 	&__body{
 		padding: 1vw 0;
@@ -125,6 +141,12 @@
 		.sidebar{
 			&__link{
 				flex-direction: row-reverse;
+				&.notification{
+					&:after{
+						left: auto;
+						right: .5vw;
+					}
+				}
 			}
 		}
 	}

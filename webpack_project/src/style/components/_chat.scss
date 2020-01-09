@@ -68,7 +68,7 @@
 		}
 		&__icon{
 			font-size: 1.5vw;
-			margin-right: .75vw
+			margin-right: .75vw;
 		}
 	}
 	&__header{
@@ -281,6 +281,34 @@
 			}
 		}
 	}
+	&-bookmark{
+		position: absolute;
+		left: -2.35vw;
+		top: 5vw;
+		&__item{
+			width: 2vw;
+			height: 2vw;
+			display: block;
+			margin: .5vw 0;
+			opacity: .9;
+			&:hover{
+				text-decoration: none;
+				opacity: 1;
+			}
+			&__initials, &__avatar{
+				font-size: .75vw;
+				color: $theme-color-text;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include bg-gradient(lighter($primary, 1), darker($primary, 2));
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
+			}
+		}
+
+	}
 	&__dialog{
 		position: absolute;
 		top: 0;
@@ -400,9 +428,9 @@
 				justify-content: flex-end;
 			}
 			&__time{
-					font-size: .75vw;
-					color: darker($theme-color-text, 4);
-					margin: 0 .25vw;
+				font-size: .75vw;
+				color: darker($theme-color-text, 4);
+				margin: 0 .25vw;
 			}
 			&__status-send{
 				margin: 0 .25vw;

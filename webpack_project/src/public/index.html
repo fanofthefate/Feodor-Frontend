@@ -46,19 +46,19 @@
 					</div>
 				</div>
 				<div class="sidebar__body sidebar-left__body">
-					<ul class="sidebar__list">
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-newspaper"></i> <span class="sidebar__link__text">Новости</span></a></li>
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-unlock"></i> <span class="sidebar__link__text">Мои курсы</span></a></li>
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-book"></i> <span class="sidebar__link__text">Продукты</span></a></li>
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-video"></i> <span class="sidebar__link__text">Обучающие видео</span></a></li>
-					</ul>  
+					<div class="sidebar__list">
+						<a class="sidebar__list__item sidebar__link notification" href="#"><i class="sidebar__icon fas fa-newspaper"></i> <span class="sidebar__link__text">Новости</span></a>
+						<a class="sidebar__list__item sidebar__link" href="#"><i class="sidebar__icon fas fa-unlock"></i> <span class="sidebar__link__text">Мои курсы</span></a>
+						<a class="sidebar__list__item sidebar__link" href="#"><i class="sidebar__icon fas fa-book"></i> <span class="sidebar__link__text">Продукты</span></a>
+						<a class="sidebar__list__item sidebar__link" href="#"><i class="sidebar__icon fas fa-video"></i> <span class="sidebar__link__text">Обучающие видео</span></a>
+					</div>  
 				</div>
 				<div class="sidebar__footer">
-					<ul class="sidebar__list sidebar-left__list__support">
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-comment"></i> <span class="sidebar__link__text">Чат</span></a></li>
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-headset"></i> <span class="sidebar__link__text">Тех.Поддержка</span></a></li>
-						<li class="sidebar__list__item"><a class="sidebar__link" href="#"><i class="sidebar__icon fas fa-phone-alt"></i> <span class="sidebar__link__text">8 800 800-00-00</span></a></li>
-					</ul>
+					<div class="sidebar__list sidebar-left__list__support">
+						<a class="sidebar__list__item sidebar__link" href="#"><i class="sidebar__icon fas fa-comment"></i> <span class="sidebar__link__text">Чат</span></a>
+						<a class="sidebar__list__item sidebar__link" href="#"><i class="sidebar__icon fas fa-headset"></i> <span class="sidebar__link__text">Тех.Поддержка</span></a>
+						<a class="sidebar__list__item sidebar__link" href="#"><i class="sidebar__icon fas fa-phone-alt"></i> <span class="sidebar__link__text">8 800 800-00-00</span></a>
+					</dov>
 				</div>
 			</aside>
 
@@ -73,13 +73,13 @@
 					</div>
 				</a>
 				<div class="sidebar__list nav nav-tabs">
-					<a class="sidebar__list__item sidebar__link" data-toggle="pill" href="#chat"> 
+					<a class="sidebar__list__item sidebar__link notification" data-toggle="pill" href="#chat"> 
 						<i class="sidebar__icon fas fa-comment"></i><span class="sidebar__link__text">Чат</span>
 					</a>
 					<a class="sidebar__list__item sidebar__link" data-toggle="pill" href="#dialog">
 						<i class="sidebar__icon fas fa-comments"></i><span class="sidebar__link__text">Диалоги</span>
 					</a>
-					<a class="sidebar__list__item sidebar__link" data-toggle="pill" href="#messanger-groups">
+					<a class="sidebar__list__item sidebar__link notification" data-toggle="pill" href="#messanger-groups">
 						<i class="sidebar__icon fas fa-users"></i> <span class="sidebar__link__text">Груповой чат</span>
 					</a>
 				</div>  
@@ -375,6 +375,11 @@
 						<div class="messanger-control__item messanger-control__close"><i class="fas fa-times"></i></div>
 						<div class="messanger-control__item messanger-control__back" data-action="back-link" data-target="#dialog"><i class="fas fa-arrow-left"></i></div>
 					</div>
+					<div class="messanger-bookmark">
+						<a class="messanger-bookmark__item" href="#"><div class="messanger-bookmark__item__initials">НГ</div></a>
+						<a class="messanger-bookmark__item" href="#"><img src="./img/avatar-icon-images.jpg" width="75" class="messanger-bookmark__item__avatar"></a>
+						<a class="messanger-bookmark__item" href="#"><div class="messanger-bookmark__item__initials">ДВ</div></a>
+					</div>
 					<!-- Группы -->
 					<div id="messanger-groups" class="messanger-groups messanger__tab" >
 						<div class="messanger__tab__content">	
@@ -396,6 +401,13 @@
 										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск...">
 									</form>
 								</div>
+								<form action="#" class="messanger__groupe__edit">
+									<div class="attach__avatar form-group">
+										<input id="groupe_avatar" type="file" name="groupe-avatar" class="messanger__groupe__edit__inp form-control-file">
+									</div>
+									<input id="groupe_title" type="text" name="groupe-title" class="messanger__groupe__edit__inp">
+									<input id="groupe_title" type="text" name="" class="messanger__groupe__edit__inp">
+								</form>
 							</div>
 							<div class="messanger__body">
 								<ul class="messanger__dialog-card__list">
@@ -447,16 +459,6 @@
 										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
 										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
 									</form>
-								</div>
-								<div class="messanger__dialog__pinned">
-									<div class="messanger__dialog__pinned__avatar">
-										<img class="messanger__dialog__pinned__avatar__img" src="./img/avatar-icon-images.jpg" alt="">
-									</div>
-									<div class="messanger__dialog__pinned__inner">
-										<div class="messanger__dialog__pinned__title">Закреплённая запись</div>
-										<div class="messanger__dialog__pinned__desc">Далеко-далеко за словесными горами в стране.</div>
-									</div>
-									<div class="messanger__dialog__pinned__unpin"><i class="fas fa-thumbtack"></i></div>
 								</div>
 							</div>
 							<div class="messanger__body messanger__dialog__history">
@@ -606,6 +608,16 @@
 										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
 										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
 									</form>
+								</div>
+								<div class="messanger__dialog__pinned">
+									<div class="messanger__dialog__pinned__avatar">
+										<img class="messanger__dialog__pinned__avatar__img" src="./img/avatar-icon-images.jpg" alt="">
+									</div>
+									<div class="messanger__dialog__pinned__inner">
+										<div class="messanger__dialog__pinned__title">Закреплённая запись</div>
+										<div class="messanger__dialog__pinned__desc">Далеко-далеко за словесными горами в стране.</div>
+									</div>
+									<div class="messanger__dialog__pinned__unpin"><i class="fas fa-thumbtack"></i></div>
 								</div>
 								
 							</div>
