@@ -1,137 +1,61 @@
-.test-exam{
-	background: $gray-700;
-	border-radius: 2rem;
-	overflow: hidden;
-	@include box-shadow(#333, 3px);
+.test{
+	margin: 0 auto;
+	padding: 0;
 	position: relative;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	&__body{
-		margin-left: -15px;
-		@include media-breakpoint-down(sm){
-			margin-left: 0;
-		}
+	max-height: 80vh;
+	@extend %overflow-scroll-hide;
+	.disabled{
+		color: darker($theme-color-text, 4);
 	}
-	&__h3{
-		font-size: 1rem;
-		padding-top: 2rem;
-		margin-right: 1.5rem;
-		margin-left: 1.5rem;
+	.list-group{
+		@extend %overflow-scroll-hide;
+		&-item{
+			padding: .5vw 1vw;
+			&.active{
+				background: transparent;
+				color: $primary;
+				font-weight: 600;
+			}
+		}
 	}
 	&__sidebar{
-		background: $gray-800;
-		border-radius: 2rem;
-		padding-right: 0;
-		border: solid 2px $gray-800;
-		@include box-shadow($black, 5px);
-		&__header{
-			position: relative;
-			padding: 1rem;
-
-			&__offer{
-				padding: 3rem 0;
-				padding-left: 1rem;
-			}
-			&__img{
-				max-width: 100%;
-				max-height: 100%;
-				position: absolute;
+		flex: 0 0 25%;
+		max-width: 25%;
+		padding-right: 1vw;
+	}
+	&__content{
+		@extend %overflow-scroll-hide;
+		max-height: 18vw;
+	}
+	&__answer{
+		.custom-control{
+			display: flex;
+			align-items: center;
+			min-height: 2vw;
+			padding-left: 2.5vw;
+			margin: 1vw 0;
+			&-input{
+				width: 2vw;
+				height: 2vw;
 				top: 0;
-				right: 0;
-				z-index: 0;
 			}
-		}
-	}
-	&__text-block{
-		max-height: 250px;
-		padding: 1.5rem;
-		overflow-y: scroll; 
-		overflow: -moz-scrollbars-none;
-		-ms-overflow-style: none; 
-		&::-webkit-scrollbar{
-			width: 0;
-		}
-		color: $gray-400;
-		font-size: .95rem;
-		font-weight: 200;
-	}
-	&__choice-answer-list{
-		list-style: none;
-		padding-left: 0;
-		padding: 2rem;
-		border-top: solid 1px $gray-200;
-		&__item{
-			margin: .75rem 0;
-			&__radio{
-				&.custom-control{
-					min-height: 2.6rem;
-					padding-left: 3em;
+			&-label{
+				&:before{
+					left: -2.5vw;
+					top: 0;
+					width: 2vw;
+					height: 2vw;
+					border-radius: $border-radius-sm;
 				}
-				.custom-control{
-					&-input{
-						width: 2rem;
-						height: 2.4rem;
-					}
-					&-label{
-						padding-top: .2rem;
-						&:before, &:after{
-							width: 2rem;
-							height: 2rem;
-							left: -3rem;
-						}
-					}
+				&:after{
+					width: 2vw;
+					height: 2vw;
+					background: no-repeat 50% / 50% 50%;
+					left: -2.5vw;
+					top: 0;
 				}
 			}
 		}
-	}
-	&__type{
-		@include bg-gradient($white, $gray-200);
-		color: $gray-700;
-		padding: .15rem .5rem;
-		margin: .25rem 0;
-		font-size: .9rem;
-	}
-	&__thame{
-		@extend .test-exam__type;
-	}
-	&__nav{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		&__list{
-			padding-left: 0;
-			width: 100%;
-			&__item{
-				@extend .test-exam__type;
-				padding-left: 1.5rem;
-				cursor: pointer;
-				font-weight: 600;
-				&.active{
-					@include bg-gradient(lighter($primary, 3), $primary);
-				}
-			}
-		}
-	}
-	&__btn{
-		border-radius: .5rem;
-		border: solid 1px $gray-900;
-		background: $gray-800;
-		text-transform: uppercase;
-		font-size: .9rem;
-		font-weight: 600;
-		letter-spacing: 1px;
-		padding: .5rem 1.5rem;
-		transition: .2s ease;
-		&:hover{
-			background: $primary;
-			color: $gray-900;
-		}
-		&-btn-block{
-			padding-right: 2rem;
-			padding-left: 2rem;
-			padding-bottom: 1.5rem;
-			text-align: right;
-		} 
 	}
 }

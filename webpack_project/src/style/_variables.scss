@@ -81,10 +81,11 @@ $input-btn-border-width: $border-width;
 //buttons
 $btn-border-width: $input-btn-border-width;
 $btn-border-radius: $border-radius-sm;
+$btn-border-radius-lg: $border-radius;
 $btn-padding-y: .25vw;
 $btn-active-box-shadow: none;
 $btn-focus-box-shadow: none;
-$btn-font-size: .85vw;
+$btn-font-size: .95vw;
 
 //Custom Control
 $custom-select-indicator-padding: 1vw;
@@ -93,6 +94,11 @@ $custom-select-padding-y: $input-btn-padding-y;
 $custom-control-indicator-border-color: $theme-color-2;
 $custom-control-indicator-bg: $theme-color-text;
 
+//Lists
+$list-group-bg: transparent;
+
+//Badge
+$badge-border-radius: $border-radius-sm;
 //Fonts
 $font-family-base: 'Montserrat';
 $font-weight-semibold: 600;

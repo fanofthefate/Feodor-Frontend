@@ -18,6 +18,8 @@
 //optional Bootstrap
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/vendor/rfs";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/button-group";
 @import "~bootstrap/scss/forms";
@@ -31,8 +33,12 @@
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/utilities/background";
 @import "~bootstrap/scss/utilities/text";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/spacing";
+
 
 @import "fonts";
 

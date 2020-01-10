@@ -19,4 +19,7 @@ body{
     transition-duration: $transition-speed;
     transition-timing-function: $transition-fn;
     transition-delay: 0s;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
 }
