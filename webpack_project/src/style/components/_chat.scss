@@ -71,7 +71,7 @@
 		}
 		&__content{
 			display: flex;
-		flex-direction: row;
+			flex-direction: row;
 		}
 		&__left{
 			display: flex;
@@ -300,7 +300,14 @@
 		&:hover{
 			background: lighter($messanger-warapper-bg, 1);
 		}
-
+		&__status{
+			position: absolute;
+			top: 0;
+			left: .5vw;
+			font-size: 1vw;
+			color: $theme-color-2;
+			z-index: 1;
+		}
 		&__notification{
 			position: absolute;
 			bottom: .15vw;
@@ -410,7 +417,6 @@
 	&__search{
 		width: 100%;
 		max-width: 100%;
-		margin: 0 .5vw;
 		border-top: solid 1px $theme-color-2;
 		border-bottom: solid 1px $theme-color-2;
 		&__inp{
@@ -500,6 +506,49 @@
 		background: $messanger-warapper-bg;
 		padding-right: $nav-sidebar-width-collapse;
 		border-top-left-radius: $nav-sidebar-border-radius;
+		&__participant{
+			transition: $transition-speed / 2 $transition-fn;
+			&:hover{
+				background: $theme-color-2;
+			}
+			&__list{
+				@extend %overflow-scroll-hide;
+				max-height: 100vh;
+				.messanger__action-menu{
+					&__item{
+					font-size: .7vw;
+					padding: .25vw .5vw;
+				}
+				&__more{
+					font-size: 1vw;
+				}
+				}
+				.messanger__dialog-card{
+					height: 4vw;
+					&__inner{
+						margin-left: 3.5vw;
+					}
+					&__title{
+						font-size: .75vw;
+					}
+					&__desc{
+						font-size: .7vw;
+					}
+					&__avatar{
+						width: 3vw;
+						height: 3vw;
+						margin: 0 .25vw;
+						&__img, &__initials{
+							width: 3vw;
+							height: 3vw;
+							font-size: 1vw;
+						}
+					}
+				}
+
+			}
+			
+		}
 		&__pinned{
 			max-height: 6vw;
 			position: relative;
