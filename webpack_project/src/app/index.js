@@ -14,6 +14,9 @@ import 'bootstrap-select';
 import '../style/app.scss';
 
 (function ($) {
+
+  let sidebarRight = $('.sidebar-right');
+
   $('.card__exam').on('click', function(){
    $('.personal-cabinet__home-page').hide();
    $('.personal-cabinet__interface').show();
@@ -57,7 +60,6 @@ import '../style/app.scss';
     let navLink = $('[data-toggle="nav-link"]');
     let navLinkTarget = $('[data-toggle="nav-link"]').attr('href');
     let wrapper = $('.messanger-wrapper');
-    let sidebarRight = $('.sidebar-right');
 
     if (!wrapper.hasClass('open')) {
       wrapper.addClass('open');

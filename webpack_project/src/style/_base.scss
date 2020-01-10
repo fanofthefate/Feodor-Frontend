@@ -52,6 +52,16 @@ body{
       color: $red;
     }
   }
+  &__icon{
+    font-size: 1vw;
+    margin: 0 .25vw;
+    &--sm{
+      font-size: .75vw;
+    }
+    &--lg{
+     font-size: 1.25vw;
+    }
+  }
 }
 
 *{

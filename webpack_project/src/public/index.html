@@ -465,7 +465,7 @@
 											<div class="messanger__dialog-card__avatar__initials">НГ</div>
 										</div>
 										<div class="messanger__dialog-card__inner">
-											<div class="messanger__dialog-card__title">Название группы</div>
+											<div class="messanger__dialog-card__title">Название группы <i class="status__icon status__icon--sm fas fa-bell-slash"></i></div>
 											<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 										</div>
 										<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -558,7 +558,7 @@
 													<div class="messanger__dialog-card__avatar__initials">ВП</div>
 												</div>
 												<div class="messanger__dialog-card__inner">
-													<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+													<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status__icon--sm status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 													<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 												</div>
 												<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -574,7 +574,7 @@
 													<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
 												</div>
 												<div class="messanger__dialog-card__inner">
-													<div class="messanger__dialog-card__title">Иван Пупкин <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+													<div class="messanger__dialog-card__title">Иван Пупкин <i class="status__icon status__icon--sm status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 													<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 												</div>
 												<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -590,7 +590,7 @@
 													<div class="messanger__dialog-card__avatar__initials">АП</div>
 												</div>
 												<div class="messanger__dialog-card__inner">
-													<div class="messanger__dialog-card__title">Андрей Пупкин <i class="status__icon status-color--offline fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+													<div class="messanger__dialog-card__title">Андрей Пупкин <i class="status__icon status__icon--sm status-color--offline fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 													<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 												</div>
 												<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -648,16 +648,38 @@
 								</div>
 								<!-- Список контактов -->
 								<div class="messanger__dialog-card__list">
+									<!-- Заявки в друзья -->
+									<div class="messanger__body__list">
+										<h5 class="messanger__body__offer">Заявки в друзья</h5>
+										<div class="messanger__dialog-card">
+											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+												<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
+												
+											</div>
+											<div class="messanger__dialog-card__inner">
+												<div class="messanger__dialog-card__title">Иван Иванов <i class="status__icon status__icon--sm fas fa-chalkboard-teacher" data-toggle="tooltip" data-placement="left" title="Учитель"></i><i class="status__icon status__icon--sm status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Был в сети 15 минут назад"></i></div>
+												<div class="messanger__dialog-card__desc">Привет! У меня есть вопрос...</div>
+											</div>
+											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
+												<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+												<div class="messanger__action-menu__list dropdown-menu">
+													<a class="messanger__action-menu__item dropdown-item bg-success text-dark" href="#">Принять заявку</a>
+													<a class="messanger__action-menu__item dropdown-item" href="#">Отклонить заявку</a>
+													<a class="messanger__action-menu__item dropdown-item" data-toggle="collapse" href="#messanger__info__user"> Информация о пользователе </a>
+												</div>
+											</div>
+										</div>										
+									</div>
 									<!-- Избранные диалоги -->
-										<div class="messanger__body__list">
-										<h5 class="messanger__body__offer"><i class="title__icon fas fa-star"></i> Избранные диалоги</h5>
+									<div class="messanger__body__list">
+										<h5 class="messanger__body__offer">Избранные диалоги</h5>
 										<div class="messanger__dialog-card" >
 											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
 												<img src="./img/avatar-icon-images.jpg" width="75" class="messanger__dialog-card__avatar__img">
-												<div class="status__icon messanger__dialog-card__status"><i class="fas fa-volume-mute"></i></div>
+												
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Иван Иванов <i class="status__icon status-color--offline fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Был в сети 15 минут назад"></i></div>
+												<div class="messanger__dialog-card__title">Иван Иванов <i class="status__icon status__icon--sm fas fa-bell-slash"></i> <i class="status__icon status__icon--sm status-color--offline fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Был в сети 15 минут назад"></i></div>
 												<div class="messanger__dialog-card__desc">Да я сделал ДЗ вчера вечером...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -681,7 +703,7 @@
 												<div class="messanger__dialog-card__notification">99+</div>
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Иван Иванов <i class="status__icon status-color--offline fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Был в сети 15 минут назад"></i></div>
+												<div class="messanger__dialog-card__title">Иван Иванов <i class="status__icon status__icon--sm status-color--offline fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Был в сети 15 минут назад"></i></div>
 												<div class="messanger__dialog-card__desc">Да я сделал ДЗ вчера вечером...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -701,7 +723,7 @@
 												<div class="messanger__dialog-card__notification">9</div>
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+												<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status__icon--sm status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -721,7 +743,7 @@
 												<div class="messanger__dialog-card__notification">10</div>
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Василий Иванов <i class="status__icon status-color--without-notification fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Не беспокоить"></i></div>
+												<div class="messanger__dialog-card__title">Василий Иванов <i class="status__icon status__icon--sm status-color--without-notification fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="Не беспокоить"></i></div>
 												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -893,7 +915,7 @@
 								<div class="messanger__title messanger__dialog__title">
 									<img src="./img/avatar-icon-images.jpg" alt="Название группы" width="50" class="messanger__dialog__header__avatar">
 									<div class="messanger__title__groupe">
-										<span class="messanger__title__name">Тема чата</span>
+										<span class="messanger__title__name">Тема чата <i class="status__icon fas fa-bell-slash"></i></span>
 										<span class="messanger__dialog__header__meta messanger__dialog__header__meta--desc">Краткое описание чата</span>
 										<span class="messanger__dialog__header__meta">139 783 участников</span>
 									</div>
@@ -906,7 +928,7 @@
 										<a class="messanger__action-menu__item dropdown-item" href="#">Пригласить друга</a>
 										<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в избранное</a>
 										<a class="messanger__action-menu__item dropdown-item" data-toggle="collapse" href="#messanger__info__groupe">Информация о группе</a>
-										<a class="messanger__action-menu__item dropdown-item" data-toggle="collapse" href="#messanger__dialog__participant">Список участников</a>
+										<a class="messanger__action-menu__item dropdown-item" data-toggle="collapse" href="#messanger__dialog__participant">Список участников <span class="badge badge-primary">+10</span></a>
 									</div>
 								</div>
 								<!-- Выбор темы -->
@@ -923,27 +945,41 @@
 								<div class="messanger__search">
 									<form action="#" class="search-form messanger__search-form input-group">
 										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
-										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск сообщений...">
+										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Поиск...">
 									</form>
 								</div>
 								<!-- Участники -->
 								<div id="messanger__dialog__participant" class="messanger__dialog__participant collapse">
-									<h5 class="messanger__body__offer"> Участники группы <span class="badge badge-primary">139 783</span></h5>
-																	<!-- Поиск -->
-								<div class="messanger__search">
-									<form action="#" class="search-form messanger__search-form input-group">
-										<button class="search-form__submit messanger__search__submit"><i class="fas fa-search"></i></button>
-										<input class="form-control search-form__inp messanger__search__inp" type="text" name="search-query" placeholder="Найти пользователя...">
-									</form>
-								</div>
-										<div class="messanger__dialog__participant__list">
+									<div class="messanger__dialog__participant__list">
+										<h5 class="messanger__body__offer">Заявки в группу <span class="badge badge-primary">1</span></h5>
 										<!-- Пользователь -->
 										<div class="messanger__dialog-card">
 											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
 												<div class="messanger__dialog-card__avatar__initials">ВП</div>
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+												<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status__icon--sm  status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
+											</div>
+											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
+												<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+												<div class="messanger__action-menu__list dropdown-menu">
+													<a class="messanger__action-menu__item dropdown-item bg-success" href="#">Принять заявку</a>
+													<a class="messanger__action-menu__item dropdown-item" href="#">Отклонить</a>
+													<a class="messanger__action-menu__item dropdown-item" href="#">Посмотреть профиль</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="messanger__dialog__participant__list">
+										<h5 class="messanger__body__offer">Участники группы <span class="badge badge-primary">139 783</span></h5>
+										<!-- Пользователь -->
+										<div class="messanger__dialog-card">
+											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
+												<div class="messanger__dialog-card__avatar__initials">ВП</div>
+											</div>
+											<div class="messanger__dialog-card__inner">
+												<div class="messanger__dialog-card__title">Василий Пупкин <i class="status__icon status__icon--sm status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -959,7 +995,7 @@
 												<div class="messanger__dialog-card__avatar__initials">НП</div>
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Николай Пушкин <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+												<div class="messanger__dialog-card__title">Николай Пушкин <i class="status__icon status__icon--sm  status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -975,7 +1011,7 @@
 												<div class="messanger__dialog-card__avatar__initials">АГ</div>
 											</div>
 											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Антон Гаврилов <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
+												<div class="messanger__dialog-card__title">Антон Гаврилов <i class="status__icon status__icon--sm  status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
 												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
 											</div>
 											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
@@ -985,39 +1021,7 @@
 												</div>
 											</div>
 										</div>
-										<!-- Пользователь -->
-										<div class="messanger__dialog-card">
-											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
-												<div class="messanger__dialog-card__avatar__initials">АГ</div>
-											</div>
-											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Антон Гаврилов <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
-												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
-											</div>
-											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
-												<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
-												<div class="messanger__action-menu__list dropdown-menu">
-													<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в друзья</a>
-												</div>
-											</div>
-										</div>
-										<!-- Пользователь -->
-										<div class="messanger__dialog-card">
-											<div class="messanger__dialog-card__avatar messanger__groupe-card__avatar">
-												<div class="messanger__dialog-card__avatar__initials">АГ</div>
-											</div>
-											<div class="messanger__dialog-card__inner">
-												<div class="messanger__dialog-card__title">Антон Гаврилов <i class="status__icon status-color--online fas fa-dot-circle" data-toggle="tooltip" data-placement="left" title="В сети"></i></div>
-												<div class="messanger__dialog-card__desc">Далеко-далеко за словесными горами в стране...</div>
-											</div>
-											<div class="messanger__action-menu messanger__dialog-card__action-menu dropdown dropleft" >
-												<button class="messanger__action-menu__more messanger__dialog-card__action-menu__more dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
-												<div class="messanger__action-menu__list dropdown-menu">
-													<a class="messanger__action-menu__item dropdown-item" href="#">Добавить в друзья</a>
-												</div>
-											</div>
-										</div>
-										</div>
+									</div>
 								</div>
 								<!-- Информация -->
 								<div id="messanger__info__groupe" class="messanger__info collapse">
