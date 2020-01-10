@@ -21,6 +21,7 @@ import '../style/app.scss';
 
   $('[data-toggle="popover"]').popover();
   $('select').selectpicker();
+  $('[data-toggle="tooltip"]').tooltip()
 
 
   let  schoolItemsSlider = new Swiper('.school-items-slider', {
@@ -56,9 +57,14 @@ import '../style/app.scss';
     let navLink = $('[data-toggle="nav-link"]');
     let navLinkTarget = $('[data-toggle="nav-link"]').attr('href');
     let wrapper = $('.messanger-wrapper');
+    let sidebarRight = $('.sidebar-right');
 
     if (!wrapper.hasClass('open')) {
       wrapper.addClass('open');
+    }   
+
+    if (!sidebarRight.hasClass('sidebar-mini')) {
+      sidebarRight.addClass('sidebar-mini');
     }
     
     

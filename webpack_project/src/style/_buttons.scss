@@ -1,0 +1,10 @@
+.btn{
+	display: inline-flex;
+	align-items: center;
+	&__spinner, &__icon{
+		margin: 0 .15vw;
+		height: 1vw;
+		width: 1vw;
+		font-size: 1vw;
+	}
+}

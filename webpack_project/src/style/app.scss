@@ -27,7 +27,10 @@
 @import "~bootstrap/scss/custom-forms";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/badge";
 @import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/tooltip";
 
 @import "fonts";
 
@@ -37,6 +40,7 @@
 @import "nav";
 @import "input-group";
 @import "forms";
+@import "buttons";
 @import "components/school-items-slider";
 @import "components/search";
 @import "components/card";

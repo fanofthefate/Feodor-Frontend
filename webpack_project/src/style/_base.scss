@@ -40,6 +40,20 @@ body{
 .img-responsive{
   max-width: 100%;
 }
+.status{
+  &-color{
+    &--online{
+      color: $green;
+    }
+    &--offline{
+      color: $gray-300;
+    }
+    &--without-notification{
+      color: $red;
+    }
+  }
+}
+
 *{
   &::selection{
     background: rgba($theme-color-1, .75);
