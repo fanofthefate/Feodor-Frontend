@@ -50,11 +50,12 @@ $black: #000;
 $white: #fff;
 $color-lock: #424242;
 $primary: #81c28f;
-
+$dark: #525b6e;
 // Colors Theme
 $theme-color-accent: $primary;
 $theme-color-1: #292b2f; //Почти чёрный
 $theme-color-2: #2e323b; // Тёмнл синий
+$theme-color-3: #525b6e; // Серо-голубой
 $theme-color-text: $white;
 $theme-color-link: $theme-color-accent;
 
@@ -82,10 +83,12 @@ $input-btn-border-width: $border-width;
 $btn-border-width: $input-btn-border-width;
 $btn-border-radius: $border-radius-sm;
 $btn-border-radius-lg: $border-radius;
-$btn-padding-y: .25vw;
+$btn-padding-y: .35vw;
+$btn-padding-x: 1vw;
 $btn-active-box-shadow: none;
 $btn-focus-box-shadow: none;
-$btn-font-size: .95vw;
+$btn-font-size: 1vw;
+
 
 //Custom Control
 $custom-select-indicator-padding: 1vw;
@@ -107,6 +110,8 @@ $font-weight-extrabold: 800;
 $font-weight-black: 900;
 $font-shadow: 1px 1px 1px rgba($black,.5);
 $font-shadow-primary: 0 0 25px rgba($primary,.75);
+// Определение путей к шрифтам иконок
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 //Shadows
 $box-shadow-xs: 0 1px 3px rgba($black, .1);
@@ -137,7 +142,7 @@ $audio-player-z-index: $nav-sidebar-z-index + 10;
 
 //Чат
 $messanger-warapper-width: 25vw;
-$messanger-warapper-bg: #525b6e;
+$messanger-warapper-bg: $theme-color-3;
 $messanger-warapper-z-index: $nav-sidebar-z-index - 10;
 $messanger-dialog-card-height: 5vw;
 $messanger-message-bg--recent: $theme-color-2;

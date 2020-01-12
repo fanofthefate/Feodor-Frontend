@@ -296,11 +296,10 @@
 					</section>
 
 					<!-- Экзамен -->
-					<div class="row">
-						<section class="test col-8">
+						<section class="test">
 							<aside class="test__sidebar">
 								<header class="test__sidebar__header">
-									<h1 class="h4 mb-3">Русский язык</h1>
+									<h1 class="h4 mb-3"><i class="fas fa-book-open"></i> Русский язык</h1>
 								</header>
 								<h6 class="mb-3">Удовлетворительно</h6>
 								<div class="test__thame"><i class="fas fa-chalkboard-teacher"></i> Тема: Множители</div>
@@ -328,21 +327,29 @@
 							<div class="test__answer">
 								<div class="test__answer-list">
 									<div class="custom-control custom-radio test__answer__radio">
-										<input type="radio" id="answer1" name="customRadio" class="custom-control-input">
-										<label class="custom-control-label" for="answer1">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные.</label>
+										<input type="radio" id="answer1" name="customRadio" class="custom-control-input is-valid">
+										<label class="custom-control-label" for="answer1">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переписали сбить, дорогу пустился безопасную!</label>
+										<div class="valid-feedback"> Красавчик! Это правильный ответ.</div>
 									</div>
 									<div class="custom-control custom-radio test__answer__radio">
-										<input type="radio" id="answer2" name="customRadio" class="custom-control-input">
+										<input type="radio" id="answer2" name="customRadio" class="custom-control-input is-invalid">
 										<label class="custom-control-label" for="answer2">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные. </label>
+										<div class="invalid-feedback"> Ответ не верный потому что, я так сказал. </div>
+				
 									</div>
+														<div class="custom-control custom-radio test__answer__radio">
+										<input type="radio" id="noAnswer" name="customRadio" class="custom-control-input" checked>
+										<label class="custom-control-label" for="noAnswer">Не знаю.</label>
+
+									</div>
+									
 								</div>
 							</div>
 							<div class="test__footer">
-								<div class="btn btn-primary btn-lg">Принять</div>
+								<div class="btn btn-dark btn-long">Принять</div>
 							</div>
 							</div>
 						</section>
-					</div>
 				</div> <!-- containder fluid end -->
 			</section> 
 			<!-- END main wrapper -->
@@ -530,7 +537,7 @@
 								<!-- Найти друга -->
 								<div id="messanger-groups__search-result" class="messanger__search-result collapse">
 									<div class="messanger__search-result__header">
-										<h4 class="messanger__search-result__title">Результаты поиска <span class="badge badge-primary">4</span></h4>
+										<h6 class="messanger__search-result__title py-2">Результаты поиска <span class="badge badge-primary">4</span></h6>
 									</div>
 									<!-- Результаты поиска: Пользователи -->
 									<div class="messanger__search-result__body">

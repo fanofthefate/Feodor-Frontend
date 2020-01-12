@@ -3,7 +3,7 @@
 	padding: 0;
 	position: relative;
 	display: flex;
-	max-height: 80vh;
+	width: 65vw;
 	@extend %overflow-scroll-hide;
 	.disabled{
 		color: darker($theme-color-text, 4);
@@ -12,6 +12,7 @@
 		@extend %overflow-scroll-hide;
 		&-item{
 			padding: .5vw 1vw;
+			margin-left: 1vw;
 			&.active{
 				background: transparent;
 				color: $primary;
@@ -25,28 +26,67 @@
 		padding-right: 1vw;
 	}
 	&__content{
-		@extend %overflow-scroll-hide;
+		overflow-y: scroll;
+		@include custom-scroll-bar();
 		max-height: 18vw;
 	}
+	&__footer{
+		text-align: center;
+	}
 	&__answer{
+		&-list{
+			margin: .5vw 0
+		}
 		.custom-control{
 			display: flex;
 			align-items: center;
+			flex-wrap: wrap;
 			min-height: 2vw;
-			padding-left: 2.5vw;
-			margin: 1vw 0;
+			padding: .5vw 0;
+			padding-left: 3vw;
+			&:hover{
+				background: rgba($theme-color-3, .5);
+			}
 			&-input{
 				width: 2vw;
 				height: 2vw;
-				top: 0;
+				top: .5vw;
+				left: .5vw;
+				&.is-valid, &.is-invalid{
+					~ .custom-control-label{
+						color: inherit;
+					} 
+				} 
+				&:checked ~ .custom-control-label{
+					&::before{
+						background-color: lighter($theme-color-3, 2);
+						border-color: lighter($theme-color-3, 2);
+					}
+					&::after{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 1.5vw;
+						font-weight: 400;
+						background-image: none;
+						font-family: "Font Awesome 5 Free"; 
+						content: "\f058";
+					}
+				}	
 			}
 			&-label{
+				display: flex;
+				align-items: center;
+				min-height: 2vw;
+				cursor: pointer;
 				&:before{
 					left: -2.5vw;
 					top: 0;
 					width: 2vw;
 					height: 2vw;
+					background-color: lighter($theme-color-3, 2);
 					border-radius: $border-radius-sm;
+					border-color: lighter($theme-color-3, 2);
 				}
 				&:after{
 					width: 2vw;

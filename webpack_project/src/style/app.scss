@@ -1,14 +1,20 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-//libares
-@import "~swiper/css/swiper";
-@import "~bootstrap-select/sass/variables";
-@import "~bootstrap-select/sass/bootstrap-select";
+
+
 
 // Variables
 @import 'mixins/mixins';
 @import 'variables';
+
+//libares
+@import "~swiper/css/swiper";
+@import "~bootstrap-select/sass/variables";
+@import "~bootstrap-select/sass/bootstrap-select";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
 
 //requared Bootstrap
 @import "~bootstrap/scss/functions";

@@ -1,10 +1,15 @@
 .btn{
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
+	text-align: center;
 	&__spinner, &__icon{
 		margin: 0 .15vw;
 		height: 1vw;
 		width: 1vw;
 		font-size: 1vw;
+	}
+	&-long{
+		min-width: 10vw;
 	}
 }
