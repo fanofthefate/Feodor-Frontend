@@ -14,6 +14,7 @@
 	}
 	&-buy{
 		transition: none;
+		@include bg-gradient($theme-color-text, darker($theme-color-text, 4));
 		&:hover{
 			@include bg-gradient($primary, darker($primary, 3));
 			border-color: darker($primary, 1);
