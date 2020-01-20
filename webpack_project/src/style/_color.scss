@@ -1,0 +1,33 @@
+// Функция осветления цвета
+@function lighter($color, $tone) {
+    $adjust: 16*$tone;
+    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+// Функция затемнения цвета
+@function darker($color, $tone) {
+    $adjust: -16*$tone;
+    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+
+@mixin text-gradient($color-start, $color-end) {
+    background: -webkit-linear-gradient($color-start, $color-end);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-start;
+}
+
+@mixin bg-gradient($color-start, $color-end) {
+    background-color: $color-start;
+    background: -webkit-linear-gradient($color-start, $color-end);
+}
+
+@mixin box-shadow($color, $dispersion) {
+    box-shadow: 0 0 $dispersion rgba($color, .75)
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}

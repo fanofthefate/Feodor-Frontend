@@ -12,4 +12,12 @@
 	&-long{
 		min-width: 10vw;
 	}
+	&-buy{
+		transition: none;
+		&:hover{
+			@include bg-gradient($primary, darker($primary, 3));
+			border-color: darker($primary, 1);
+			color: $theme-color-text;
+		}
+	}
 }
