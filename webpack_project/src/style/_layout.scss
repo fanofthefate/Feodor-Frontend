@@ -29,11 +29,11 @@ body{
 
 .courses{
 	margin: 0 auto;
-	width: 55vw;
+	width: 60vw;
+	max-height: 80vh;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	height: 70vh;
 	&__sidebar{
 		flex: 0 0 25%;
 		padding-right: 1vw;
