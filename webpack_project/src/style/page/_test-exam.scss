@@ -4,12 +4,11 @@
 	position: relative;
 	display: flex;
 	width: 65vw;
-	@extend %overflow-scroll-hide;
+	max-height: 80vh;
 	.disabled{
 		color: darker($theme-color-text, 4);
 	}
 	.list-group{
-		@extend %overflow-scroll-hide;
 		&-item{
 			padding: .25vw 1vw;
 			margin-left: 1vw;
@@ -30,11 +29,18 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-end;
+		max-height: 100%;
 		&__header{
 			width: 100%;
 		}
 		&__body{
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
 			width: 100%;
+			max-height: 100%;
+			overflow-y: scroll;
+			@include custom-scroll-bar();
 		}
 		&__footer{
 			width: 100%;
@@ -49,17 +55,33 @@
 			}
 		}
 	}
+	&__right{
+		display: flex;
+		flex-direction: column;
+	}
 	&__content{
+		flex: 1 1 auto;
 		overflow-y: scroll;
+		height: 35vh;
+		max-height: 60vh;
 		@include custom-scroll-bar();
-		max-height: 18vw;
+		border-bottom: solid 2px $theme-color-text;
+		resize: vertical;
 	}
 	&__footer{
 		text-align: center;
 	}
 	&__answer{
+		flex: 1 1 auto;
+		height: 35vh;
+		max-height: 100%;
+		overflow-y: scroll;
+		@include custom-scroll-bar();
 		&-list{
-			margin: .5vw 0
+			margin: .5vw 0;
+			font-size: .85vw;
+			line-height: 1.4;
+
 		}
 		.custom-control{
 			display: flex;

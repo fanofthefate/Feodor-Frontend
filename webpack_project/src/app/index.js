@@ -1,4 +1,4 @@
-import jQuery from 'jquery';
+import $ from 'jquery';
 import popper from 'popper.js';
 import bootstrap from 'bootstrap';
 import Swiper from 'swiper';
@@ -14,18 +14,12 @@ import '../style/app.scss';
 
   let sidebarRight = $('.sidebar-right');
 
-  $('.card__exam').on('click', function(){
-   $('.personal-cabinet__home-page').hide();
-   $('.personal-cabinet__interface').show();
- });
-
   $('[data-toggle="popover"]').popover();
   $('select').selectpicker();
-  $('[data-toggle="tooltip"]').tooltip()
-
+  $('[data-toggle="tooltip"]').tooltip();
 
   let  schoolItemsSlider = new Swiper('.school-items-slider', {
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 20,
     navigation: {
       nextEl: '.school-items-slider__navigation__next',
@@ -40,7 +34,7 @@ import '../style/app.scss';
       }
     }
   });
-
+ 
   $('.messanger-control__close').on('click', function(){
     $('.messanger-wrapper').toggleClass('open');
   });

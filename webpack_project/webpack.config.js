@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
+const jQuery = require('jquery');
 
 const path = require('path');
 
@@ -68,6 +70,11 @@ module.exports = {
   	template: __dirname + "/src/public/index.html",
   	inject: 'body'
   }),
+  new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'windows.jQuery': 'jquery',
+    }),
   new CopyPlugin([
         { from: './src/public/img', to: './img'}
     ])

@@ -8,11 +8,12 @@ body{
 	min-height: 100%;
 	padding-top: $header-height;
 }
-.wrapper{
+.wrapper-main{
 	min-height: 100%;
 	position: relative;
 }
-.content-wrapper{
+
+.wrapper-content{
 	margin-left: $nav-sidebar-width;
 	transition: margin-left $transition-speed $transition-fn;
     transition-property: margin-left;
@@ -23,4 +24,42 @@ body{
     display: flex;
     min-height: 100vh;
     align-items: center;
+    min-height: 100vh;
+}
+
+.courses{
+	margin: 0 auto;
+	width: 55vw;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	height: 70vh;
+	&__sidebar{
+		flex: 0 0 25%;
+		padding-right: 1vw;
+	}
+	&__body{
+		width: 75%;
+	}
+}
+
+.home{
+	justify-content: center;
+	margin: 0 auto;
+	&__nav{
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	&__h2{
+		font-size: 1rem;
+		font-weight: normal;
+		letter-spacing: 3px;
+		display: inline-block;
+		text-shadow: 0 0 3px rgba($black , 0.75);
+		border-bottom: solid 1px $white;
+		text-transform: uppercase;
+		color: $white;
+		margin: 0 auto;
+	}
 }

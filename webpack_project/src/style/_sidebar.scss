@@ -162,7 +162,7 @@
 		border-top-right-radius: $nav-sidebar-border-radius;
 		border-bottom-right-radius: $nav-sidebar-border-radius;
 		&-collapse{
-			.content-wrapper{
+			.wrapper-content{
 				margin-left: $nav-sidebar-width-collapse;
 			}
 			.sidebar{
