@@ -18,12 +18,12 @@ import '../style/app.scss';
   $('select').selectpicker();
   $('[data-toggle="tooltip"]').tooltip();
 
-  let  schoolItemsSlider = new Swiper('.school-items-slider', {
+  let  schoolItemsSlider = new Swiper('.courses-level-slider', {
     slidesPerView: 3,
     spaceBetween: 20,
     navigation: {
-      nextEl: '.school-items-slider__navigation__next',
-      prevEl: '.school-items-slider__navigation__prev',
+      nextEl: '.courses-level__navigation__next',
+      prevEl: '.courses-level__navigation__prev',
     },
     mousewheel: {
       sensitivity: 1

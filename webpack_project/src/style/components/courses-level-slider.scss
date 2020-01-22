@@ -1,41 +1,67 @@
-.school-items-slider{
+.courses-level{
 	overflow-x: hidden;
 	margin: 0 auto;
 	max-width: 100%;
 	&__wrapper{
 		width: 100%;
 	}
+	&__footer{
+		margin: 1vw;
+		margin-top: auto;
+		z-index: 1;
+		.btn{
+			font-size: .9vw;
+			width: 100%;
+			margin-bottom: .25vw;
+			min-height: 2.25vw;
+			&-buy{
+				@include bg-gradient(lighter($primary, 1), $green);
+				border-color: transparent;
+				color: $theme-color-text;
+				&:hover{
+				@include bg-gradient(darker($primary, 3), $green );
+				}
+			}
+			&-treal{
+				font-size: .75vw;
+			}
+		}
+	}
+	&__price{
+		color: lighter($theme-color-3, 1);
+		font-size: 2.5vw;
+		font-weight: 600;
+		line-height: 1.1;
+		margin: 1vw 0;
+		margin-left: 3vw;
+		z-index: 1;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		&__old{
+			text-decoration: line-through;
+			font-size: .9vw;
+			color: lighter($theme-color-3, 4);
+			font-weight: 200;
+			display: inline-flex;
+		}
+	}
 	&__item{
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-end;
 		overflow: hidden;
 		box-sizing: border-box;
 		@include bg-gradient($white, $gray-500);
 		border-radius: $base-border-radius;
-		height: 60vh;
+		height: 30vw;
 		min-height: 100%;
 		padding: 0 .75rem;
 		transition: .25s ease;
 		&:hover{
-			.school-items-slider__item__img{
-				transform: scale(1.1);
-			}
-		}
-		&__sale-shevron{
-			bottom: 0;
-			right: 0;
-			width: 100%;
-			position: absolute;
-			text-align: center;
-			@include bg-gradient(lighter(red, 6), lighter(red, 5));
-			z-index: 2;
-			padding: 2%;
-			box-shadow: 0 0 4px rgba($black, 0.75);
-			&__number{
-				font-size: .95rem;
-				font-weight: bold;
-				display: inline-block;
+			.courses-level__item__img{
+				opacity: .5;
 			}
 		}
 		&__title{
@@ -46,35 +72,22 @@
 			color: $gray-800;
 			font-weight: $font-weight-bold;
 			z-index: 2;
-		}
-		&__info{
-			z-index: 1;
-			margin-top: 1.5vmax;
-			font-size: 1vmax;
-			margin-bottom: .5vmax;
-			color: $gray-700;
-			margin-left: .75vmax;
+			font-weight: 400;
 		}
 		&__list{
 			z-index: 1;
-			font-size: 1.15vmax;
-			text-transform: uppercase;
-			font-weight: 800;
 			list-style-type: none;
 			padding-left: 0;
 			margin-bottom: 0;
-			margin-left: .75vmax;
+			margin-left: .75vw;
 			&__item{
-				margin-bottom: .25vmax;
+				color: $gray-600;
+				font-size: .9vw;
+				list-style: none;
+				padding-left: 0;
+				margin-left: 0;
 				&:last-child{
 					margin-bottom: 0;
-				}
-				&__link{
-					color: $gray-700;
-					text-decoration: underline;
-					&:hover{
-						color: $primary;
-					}
 				}
 			}
 		}
@@ -85,7 +98,10 @@
 			right: 0;
 			bottom: 0;
 			object-fit: fill;
+			opacity: .25;
 			z-index: 0;
+			pointer-events: none;
+			visibility: visible;
 
 		}
 		&__lock{
