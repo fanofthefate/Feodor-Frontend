@@ -81,7 +81,7 @@ import '../style/app.scss';
       case 'sign-submit':
       $('.sign__form__phone').hide(); 
       $('.sign__form__verifiled').show(); 
-      $('#btnSignSubmit').html('Отправить <i class="fas fa-arrow-right"></i>'); 
+      $('#btnSignSubmit').html('Отправить'); 
       $('[name="typeSignForm"]').attr('disabled', 'disabled'); 
     }
   });
