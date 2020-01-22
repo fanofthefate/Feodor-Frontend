@@ -179,6 +179,8 @@
 	&__body{
 		@extend %overflow-scroll-hide;
 		flex: 1 1 auto;
+		background-image: url("/img/icon-pattern-charcoal.png");
+		background-size: contain;
 		&__offer{
 			margin: .5vw;
 			display: flex;
@@ -298,7 +300,7 @@
 		display: block;
 		height: $messanger-dialog-card-height;
 		&:hover{
-			background: lighter($messanger-warapper-bg, 1);
+			background: rgba(lighter($messanger-warapper-bg, 1), .5);
 		}
 		&__status{
 			color: $gray-800;
