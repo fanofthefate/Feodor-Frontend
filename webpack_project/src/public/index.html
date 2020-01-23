@@ -10,38 +10,52 @@
 	<!-- content wrapper -->
 	<div class="wrapper">		
 		<div class="sign-wrapper">
-				<img id="SignLogoStudent" width="100%" src="./img/logo-feodor.png" alt="Система обучения" class="brand-logo sign-logo" >
-				<img id="SignLogoTeacher" width="100%" src="./img/logo-feodor__sigin--partner.png" alt="Партнёрская программа" class="brand-logo sign-logo" style="display: none;">
-			<div class="sign__form">
-				<form action="#" class="sign__form__up">
-					<div class="btn-group btn-group-sm sign__form__btn-group btn-group-toggle" data-toggle="buttons">
-						<label class="btn active" data-action="switch-logo" data-target="#SignLogoStudent">
-							<input type="radio" name="typeSignForm" id="SignStudent" autocomplete="off" checked><i class="fas fa-user-graduate"></i> Ученик
+			<img id="SignLogoStudent" src="./img/logo-feodor.png" alt="Система обучения" class="brand-logo sign-logo" >
+			<img id="SignLogoTeacher" src="./img/logo-feodor__sigin--partner.png" alt="Партнёрская программа" class="brand-logo sign-logo" style="display: none;">
+			<form action="#" class="sign__form">
+				<div id="formField" class="form-group">
+					<!-- Тип регистрации -->
+					<div class="btn-group btn-group-sm sign__chose-sign btn-group-toggle mt-3" data-toggle="buttons">
+						<label id="SignStudent" for="radioStudent" class="btn active sign-student" data-action="chose-type-sign">
+							<i class="btn__icon fas fa-graduation-cap"></i> Ученик
+							<input id="radioStudent" type="radio" name="typeSignForm" value="Ученик" checked>
 						</label>
-						<label class="btn" data-action="switch-logo" data-target="#SignLogoTeacher">
-							<i class="fas fa-chalkboard-teacher"></i> Учитель
-							<input type="radio" name="typeSignForm" id="SignTeacher" autocomplete="off">
+						<label id="SignTeacher" for="radioTeacher" class="btn sign-teacher" data-action="chose-type-sign">
+							<i class="btn__icon fas fa-handshake"></i> Партнёр
+							<input id="radioTeacher" type="radio" name="typeSignForm" value="Партнёр">
 						</label>
 					</div>
-					<div class="input-group sign__form__input-group sign__form__phone mb-3">
+					<!-- Тип агента -->
+					<select id="selectPartner" class="selectpicker form-control select--transparent mt-2" data-style="select--transparent">
+						<option value="noselect">Тип партнёрства</option>
+						<option value="agent">Агент</option>
+						<option value="vuz">ВУЗ</option>
+					</select>
+					<!-- Номер телефона -->
+					<div class="input-group input-group--transparent mt-3">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><img class="sign__form__ico" src="./img/flag-russia.svg" alt="Россия" width="100%"></span>
 						</div>
 						<input type="text"class="form-control" aria-label="Номер телефона" placeholder="+7 (***) ***-**-**">
 						<div class="input-group-append">
-							<button class="btn" type="button" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="За номером привяжется, индивидуальный личный кабинет. Так же он будет использоваться для авторизации в системе"><i class="far fa-question-circle"></i></button>
+							<button class="btn" type="button" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="За номером телефона привяжется индивидуальный личный кабинет. Так же он будет использоваться для последующих авторизаций в системе."><i class="far fa-question-circle"></i></button>
 						</div>
 					</div>
-					<div class="input-group sign__form__input-group sign__form__verifiled" style="display: none;">
-						<input type="text" class="form-control" placeholder="Код из СМС" aria-label="Имя пользователя">
-							<div class="input-group-append">
-							<button class="btn" type="button" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Запросить пароль ещё раз."><i class="far fa-question-circle"></i></button>
+					<button  type="submit" class="btn btn-submit btn-light mt-4" data-action="formConfirm">Подтвердить</button>
+				</div>
+				<div id="formConfirm"class="form-group" style="display: none;">
+					<!-- Подтверждение по СМС -->
+					<div class="input-group input-group-sms input-group--transparent">
+						<input type="text" class="form-control is-invalid" placeholder="Код из СМС">
+						<div class="invalid-feedback">
+							Неверный код.
 						</div>
+						<a class="sublink" href="#">Выслать СМС: <span>0:29</span></a>
+						
 					</div>
-					<button id="btnSignSubmit" type="submit" class="btn btn-submit btn-light" data-action="sign-submit">Зарегистрироваться <i class="fas fa-arrow-right"></i></button>
-				</form>
-			</div>
-			
+					<button id="btnSignSubmit" type="submit" class="btn btn-submit btn-light mt-3" data-action="sign-submit" >Отправить</button>
+				</div>
+			</form>			
 		</div>
 	</div> 
 	<!-- end wrapper -->

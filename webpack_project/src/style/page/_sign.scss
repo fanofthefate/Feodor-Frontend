@@ -10,68 +10,83 @@ body{
 		justify-content: center;
 	}
 	&-logo{
-		width: 50vw;
+		width: auto;
+		height: 25vw;
 		&.hide{
 			display: none;
 		}
 	}
-	&__form{
-		background: $white;
-		width: 33vw;
-		height: 22vw;
-		padding: 1vw;
-		margin-top: -2vw;
-		border-radius: $base-border-radius;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		&__ico{
-			width: 1.25vw;
-		}
-		&__verifiled{
-			width: 10vw;
-		}
-		&__btn-group{
-			margin-bottom: .5vw;
-			border-radius: $btn-border-radius;
-			box-shadow: $box-shadow;
+	&__chose-sign{
+		border-radius: $btn-border-radius;
+		.btn{
 			font-size: 1vw;
-			.btn.active{
-				background: $theme-color-2;
-				color: $theme-color-text;
+			color: $theme-color-text;
+			&.active{
+				font-weight: 600;
 			}
-		}
-		&__input-group{
-			margin: 2.5vw 0;
-			max-width: 50%;
-			.input-group-text, .btn, .form-control{
-				color: $theme-color-2;
-				background: transparent;
-				border: none;
-				border-bottom: 2px solid $theme-color-2;
-				border-radius: 0;
-				padding: 0 .5vw;
-				&:focus{
-					border-color: $primary;
-					box-shadow: none;
-				}
-			}
-			.form-control{
-				@include placeholder {
-					color: $theme-color-2;
-				}
-			}
-		}
-		&__up, &__in{
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			.btn-submit{
-				box-shadow: $box-shadow
+			.btn__icon{
+				width: 2vw;
+				height: 2vw;
+				margin-right: .25vw;
 			}
 		}
 	}
-	
+	&__form{
+		width: 33vw;
+		min-height: 20vw;
+		padding: 1vw;
+		margin-top: -2vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		&__ico{
+			width: 1.25vw;
+		}
+		.form-group{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.input-group{
+			width: 15vw;
+		}
+		.input-group-sms{
+			width: 10vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.form-control{
+				text-align: center;
+				padding: 0;
+			}
+		}
+		.form-control{
+			background: transparent;
+			font-size: 1.25vw;
+		}
+		.btn-submit{
+			box-shadow: $box-shadow;
+			padding: .75vw 1vw;
+			position: relative;
+			border-radius: $border-radius-lg;
+			padding-right: 2vw;
+			line-height: 1;
+			text-transform: uppercase;
+			font-size: .75vw;
+			&:before{
+				@include pseudo();
+				top: 50%;
+				transform: translateY(-50%);
+				right: 5%;
+				color: $theme-color-2;
+				font-size: 1vw;
+				font-family: "Font Awesome 5 Free"; 
+				font-weight: 900;
+				line-height: 1;
+				content: "\f054";
+			}
+		}
+	}
 }
