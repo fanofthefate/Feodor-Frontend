@@ -17,7 +17,7 @@ import '../style/app.scss';
   $('[data-toggle="popover"]').popover();
   $('select').selectpicker();
   $('[data-toggle="tooltip"]').tooltip();
-
+  $('#selectPartner').selectpicker('hide'); //Скрываем по умолчанию выбор типа регестрации
   let  schoolItemsSlider = new Swiper('.courses-level-slider', {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -34,7 +34,7 @@ import '../style/app.scss';
       }
     }
   });
- 
+
   $('.messanger-control__close').on('click', function(){
     $('.messanger-wrapper').toggleClass('open');
   });
@@ -59,8 +59,10 @@ import '../style/app.scss';
     if (!sidebarRight.hasClass('sidebar-mini')) {
       sidebarRight.addClass('sidebar-mini');
     }
-    
-    
+
+  });
+  $('[data-type-sign]').on('click', function(){
+    let activeTypeSign = $(this).data('type-sign');
 
   });
 
@@ -71,18 +73,28 @@ import '../style/app.scss';
       case 'dialog':
       $(target).show();
       break;
-      case 'back-link':
-
-      break;
       case 'switch-logo':
       $('.sign-logo').hide();
       $(target).show();
       break;
-      case 'sign-submit':
-      $('.sign__form__phone').hide(); 
-      $('.sign__form__verifiled').show(); 
-      $('#btnSignSubmit').html('Отправить'); 
-      $('[name="typeSignForm"]').attr('disabled', 'disabled'); 
+      case 'formConfirm':
+      $('#formField').hide(); //Скрыли поля для заполнения 
+      $('#formConfirm').show();  //Показали подтверждение по СМС
+      break;
+      case 'chose-type-sign': // Выбрать тип регистрации
+      if ($('.sign-teacher').hasClass('active')) {
+        $('#selectPartner').selectpicker('show');
+        $('#SignLogoStudent').hide();
+        $('#SignLogoTeacher').show();
+      } else{
+        $('#selectPartner').selectpicker('hide');
+        $('#selectPartner').val('noselect'); // Сброс селекта
+        $('#selectPartner').selectpicker('refresh'); // Сброс селекта
+        $('#SignLogoTeacher').hide();
+        $('#SignLogoStudent').show();
+        
+      }
+      break;
     }
   });
 
