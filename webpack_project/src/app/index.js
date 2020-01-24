@@ -37,15 +37,15 @@ import '../style/app.scss';
 
   $('.messanger-control__close').on('click', function(){
     $('.messanger-wrapper').toggleClass('open');
+    $('body').toggleClass('chat-open');
   });
 
   $('[data-sidebar]').on('click', function(){
     let sidebar_push = $(this).data('sidebar');
     $('.sidebar-'+sidebar_push).toggleClass('sidebar-mini');
-    if (sidebar_push == 'left') {
-      $('body').toggleClass('sidebar-'+sidebar_push+'-collapse');
-    }
   });
+
+
 
   $('[data-toggle="pill"]').on('click', function(e){
     let navLink = $('[data-toggle="nav-link"]');
@@ -54,7 +54,8 @@ import '../style/app.scss';
 
     if (!wrapper.hasClass('open')) {
       wrapper.addClass('open');
-    }   
+      $('body').addClass('chat-open');
+    } 
 
     if (!sidebarRight.hasClass('sidebar-mini')) {
       sidebarRight.addClass('sidebar-mini');

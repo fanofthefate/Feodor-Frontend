@@ -179,7 +179,7 @@
 	&__body{
 		@extend %overflow-scroll-hide;
 		flex: 1 1 auto;
-		background-image: url("/img/icon-pattern-charcoal.png");
+		background-image: $messanger-warapper-bg-image;
 		background-size: contain;
 		&__offer{
 			margin: .5vw;

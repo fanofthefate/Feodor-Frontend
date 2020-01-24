@@ -162,10 +162,6 @@
 		border-top-right-radius: $nav-sidebar-border-radius;
 		border-bottom-right-radius: $nav-sidebar-border-radius;
 		&-collapse{
-			.wrapper-content{
-				margin-left: $nav-sidebar-width-collapse;
-				margin-right: $nav-sidebar-width-collapse;
-			}
 			.sidebar{
 				&-left{
 					&__header{

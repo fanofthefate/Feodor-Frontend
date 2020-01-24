@@ -14,7 +14,7 @@ $grid-breakpoints: (
 
 // Body
 $body-bg-color: #f8fafc;
-$body-bg-image: url('../public/img/bg.jpg');
+$body-bg-image: url('../public/img/bg-pattern.jpg');
 
 // Transition global options
 $transition-speed: 0.3s;
@@ -153,6 +153,7 @@ $audio-player-z-index: $nav-sidebar-z-index + 10;
 //Чат
 $messanger-warapper-width: 25vw;
 $messanger-warapper-bg: $theme-color-3;
+$messanger-warapper-bg-image: url("../public/img/icon-pattern-charcoal.png");
 $messanger-warapper-z-index: $nav-sidebar-z-index - 10;
 $messanger-dialog-card-height: 5vw;
 $messanger-message-bg--recent: $theme-color-2;

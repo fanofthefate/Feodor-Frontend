@@ -14,9 +14,10 @@ body{
 }
 
 .wrapper-content{
-	margin-left: $nav-sidebar-width;
-	transition: margin-left $transition-speed $transition-fn;
-	transition-property: margin-left;
+	margin-right: $nav-sidebar-width-collapse;
+	margin-left: $nav-sidebar-width-collapse;
+	transition: margin-right $transition-speed $transition-fn;
+	transition-property: margin-right;
 	transition-duration: $transition-speed;
 	transition-timing-function: $transition-fn;
 	transition-delay: 0s;
@@ -26,7 +27,11 @@ body{
 	align-items: center;
 	min-height: 100vh;
 }
-
+.chat-open{
+	.wrapper-content{
+		margin-right: $messanger-warapper-width;
+	}
+}
 .courses{
 	margin: 0 auto;
 	width: 70vw;
