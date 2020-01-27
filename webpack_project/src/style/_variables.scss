@@ -142,9 +142,10 @@ $nav-sidebar-z-index: 900;
 $header-z-index: $nav-sidebar-z-index - 10;
 
 //card
-$card-bg: rgba($gray-600, 0.2);
+$card-bg: $theme-color-3;
 $card-border-width: $border-width-lg;
-$card-border-color: $primary;
+$card-border-color: $theme-color-3;
+$card-border-radius: $border-radius;
 
 //Аудио плейер
 $audio-player-width: 42vw;
