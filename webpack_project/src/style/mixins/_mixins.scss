@@ -4,6 +4,7 @@
     position: absolute;
     content: "";
 }
+
 @mixin clearfix() {
   &::after {
     display: block;
@@ -11,6 +12,7 @@
     clear: both;
   }
 }
+//Трик для fancybox нужен для компиляции sass
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
@@ -18,6 +20,7 @@
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
 @mixin custom-scroll-bar() {
   &::-webkit-scrollbar {
     border-radius: 100%;
