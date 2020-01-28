@@ -7,13 +7,14 @@ import Swiper from 'swiper';
 import '@fortawesome/fontawesome-free/js/all'
 
 import 'bootstrap-select';
+// Gallary and Video Modal
+import '@fancyapps/fancybox/dist/jquery.fancybox';
 
 import '../style/app.scss';
 
 (function ($) {
 
   let sidebarRight = $('.sidebar-right');
-
   $('[data-toggle="popover"]').popover();
   $('select').selectpicker();
   $('[data-toggle="tooltip"]').tooltip();

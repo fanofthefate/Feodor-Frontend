@@ -1,46 +1,82 @@
 .card{
+	&:hover{
+		.card-hover{
+			opacity: .2;
+		}
+		.card-img-icon{
+			&:after{
+				color: rgba($primary, 1);
+			}
+		}
+	}
 	&-body{
 		padding: 1rem;
+		z-index: 6;
 	}
 	&-text{
 		font-size: .85rem;
 		line-height: 1.4;
 		margin-bottom: 0;
 	}
-	&-img-wrapper{
-		border-top-right-radius: $card-border-radius;
-		border-top-left-radius: $card-border-radius;
-		overflow: hidden;
-		position: relative;
-		z-index: 1;
-		&:after{
-			position: absolute;
-			content: '';
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: rgba($black, .5);
+	&-img{
+		&-top{
+			object-fit: cover;
+			z-index: 3;
+		}
+		&__wrapper{
+			border-top-right-radius: $card-border-radius;
+			border-top-left-radius: $card-border-radius;
+			overflow: hidden;
+			position: relative;
 			z-index: 2;
 		}
-	}
-	&--video{
-		.card-img-wrapper{
+		&__fade{
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 4
+		}
+		&-icon{
 			&:after{
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				content: '\f35d';
 				font-family: "Font Awesome 5 Free";
-				content: '\f144';
-				font-size: 5vw;
-				color: darker($theme-color-text, 5);
-
+				font-weight: 600;
+				font-size: 4rem;
+				color: rgba($theme-color-text, .75);
+				transition: $transition-speed $transition-fn;
 			}
-			&:hover{
+			
+			&--video{
 				&:after{
-					color: $theme-color-text;
+					font-family: "Font Awesome 5 Free";
+					content: '\f04b';
 				}
+				
 			}
 		}
 	}
+	&-hover{
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: $card-border-radius;
+		transition: $transition-speed $transition-fn;
+		opacity: 0;
+		background-color: $theme-color-2;
+	}
+
 }
