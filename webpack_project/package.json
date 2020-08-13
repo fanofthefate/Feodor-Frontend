@@ -163,7 +163,7 @@
     "safe-buffer": "^5.2.0",
     "safe-regex": "^2.1.1",
     "semver": "^6.3.0",
-    "serialize-javascript": "^2.1.0",
+    "serialize-javascript": "^3.1.0",
     "set-blocking": "^2.0.0",
     "set-value": "^3.0.1",
     "setimmediate": "^1.0.5",
