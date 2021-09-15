@@ -165,7 +165,7 @@
     "semver": "^6.3.0",
     "serialize-javascript": "^2.1.0",
     "set-blocking": "^2.0.0",
-    "set-value": "^3.0.1",
+    "set-value": "^4.0.1",
     "setimmediate": "^1.0.5",
     "sha.js": "^2.4.11",
     "shebang-command": "^2.0.0",
