@@ -201,7 +201,7 @@
     "file-loader": "^5.0.2",
     "inputmask": "^5.0.1",
     "jquery": "^3.4.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^4.0.0",
